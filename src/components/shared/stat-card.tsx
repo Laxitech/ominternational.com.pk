@@ -78,18 +78,7 @@ export default function StatCard({ stat, index, active }: StatCardProps) {
         </p>
       )}
 
-      <span
-        aria-hidden="true"
-        className="relative z-10 mt-auto block h-[2px] w-full overflow-hidden bg-primary-200 pt-6"
-      >
-        <span
-          className={cn(
-            "block h-full origin-left bg-primary transition-transform duration-700 ease-out motion-reduce:scale-x-100 motion-reduce:transition-none",
-            active ? "scale-x-100" : "scale-x-0",
-          )}
-          style={active ? { transitionDelay: `${index * 120 + 240}ms` } : undefined}
-        />
-      </span>
+
     </li>
   );
 }

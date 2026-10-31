@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock, Gift, HelpCircle, Sparkles } from "lucide-react";
+import { Clock, Gift } from "lucide-react";
 import type { Offer } from "@/types/programme";
 import { cn } from "@/lib/utils";
 
@@ -9,7 +9,7 @@ type OffersListProps = {
   universityName?: string;
 };
 
-export default function OffersList({ offers, universityName = "Partner University" }: OffersListProps) {
+export default function OffersList({ offers }: OffersListProps) {
   const now = new Date();
   const activeOffers = offers.filter(
     (offer) => !offer.validUntil || new Date(offer.validUntil) >= now,

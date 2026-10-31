@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import UniversityCard from "@/components/universities/university-card";
 import { universities } from "@/data/universities";
 import { programmes } from "@/data/programmes";
@@ -13,10 +13,7 @@ export default function PartnerUniversities() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-primary-200 bg-primary-subtle px-3 py-1 text-xs font-semibold text-primary">
-              <Sparkles className="size-3.5 text-accent" aria-hidden="true" />
-              <span>International Partnerships</span>
-            </div>
+
             <h2
               id="home-partner-universities-heading"
               className="mt-3 text-balance font-serif text-[clamp(1.875rem,4vw,2.5rem)] font-semibold tracking-tight text-heading sm:text-[2.75rem] leading-[1.15]"

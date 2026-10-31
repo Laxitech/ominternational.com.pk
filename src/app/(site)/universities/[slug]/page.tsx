@@ -16,7 +16,6 @@ import UniversityAbout from "@/components/universities/university-about";
 import RecognitionList from "@/components/universities/recognition-list";
 import StudyModes from "@/components/universities/study-modes";
 import OffersList from "@/components/universities/offers-list";
-import AdmissionRequirements from "@/components/universities/admission-requirements";
 import DownloadsList from "@/components/universities/downloads-list";
 import HowItWorks from "@/components/universities/how-it-works";
 import UniversityCta from "@/components/universities/university-cta";
@@ -59,8 +58,6 @@ export default async function UniversityPage({
   if (!university) {
     notFound();
   }
-
-  const otherUniversity = universities.find((u) => u.slug !== university.slug);
 
   const activeOffers =
     university.slug === "asia-e-university" ? aeuOffers : offers;
@@ -132,8 +129,6 @@ export default async function UniversityPage({
         universityName={university.shortName}
       />
 
-      {/* 8. Admission Requirements */}
-      <AdmissionRequirements universityName={university.name} />
 
       {/* 9. Official Literature Downloads */}
       <DownloadsList

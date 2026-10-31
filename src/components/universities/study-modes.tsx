@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 
 type StudyModeItem = {
   title: string;
-  badge: string;
   description: string;
   features: string[];
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -14,7 +13,6 @@ type StudyModeItem = {
 const MODES: StudyModeItem[] = [
   {
     title: "Conventional (On-Campus)",
-    badge: "Kuala Lumpur Campus",
     description:
       "Full on-campus immersion in Kuala Lumpur with classroom lectures, faculty consultations, and campus amenities.",
     features: [
@@ -26,7 +24,6 @@ const MODES: StudyModeItem[] = [
   },
   {
     title: "Open Distance Learning (ODL)",
-    badge: "Hybrid Flexibility",
     description:
       "Structured distance learning combining interactive digital classrooms with localized examination support across Pakistan.",
     features: [
@@ -38,7 +35,6 @@ const MODES: StudyModeItem[] = [
   },
   {
     title: "100% Online Delivery",
-    badge: "Maximum Executive Flexibility",
     description:
       "Self-directed digital learning designed for working executives, with round-the-clock LMS access and remote assessments.",
     features: [
@@ -91,9 +87,7 @@ export default function StudyModes() {
                   <div className="inline-flex size-12 items-center justify-center rounded-2xl border border-primary-200 bg-primary-subtle text-primary shrink-0">
                     <mode.Icon className="size-6" aria-hidden="true" />
                   </div>
-                  <span className="rounded-full bg-secondary px-2.5 py-0.5 text-[11px] font-semibold text-primary">
-                    {mode.badge}
-                  </span>
+
                 </div>
 
                 <h3 className="mt-5 text-lg font-semibold text-heading sm:text-xl">

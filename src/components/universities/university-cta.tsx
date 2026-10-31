@@ -1,7 +1,6 @@
 "use client";
 
 import { Mail, Phone, MapPin } from "lucide-react";
-import EnquiryForm from "@/components/forms/enquiry-form";
 import WhatsappButton from "@/components/shared/whatsapp-button";
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";

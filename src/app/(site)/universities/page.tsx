@@ -6,7 +6,6 @@ import {
   HelpCircle,
   Laptop,
   ShieldCheck,
-  Sparkles,
   TrendingUp,
 } from "lucide-react";
 import PageHeader from "@/components/shared/page-header";
@@ -192,10 +191,7 @@ export default function UniversitiesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-primary-200 bg-primary-subtle px-3 py-1 text-xs font-semibold text-primary">
-              <Sparkles className="size-3.5 text-accent" aria-hidden="true" />
-              <span>Official University Directory</span>
-            </div>
+
             <h2
               id="universities-list-heading"
               className="mt-4 text-balance font-serif text-[clamp(1.875rem,4.5vw,2.75rem)] font-semibold tracking-tight text-heading sm:text-[3rem] leading-[1.12]"
@@ -241,18 +237,7 @@ export default function UniversitiesPage() {
               <p className="mt-4 text-base leading-relaxed text-body sm:text-lg">
                 Malaysia has emerged as a premier global education destination, renowned for academic excellence, state-of-the-art digital infrastructure, and British-patterned degree structures.
               </p>
-              <div className="mt-8">
-                <Link
-                  href="/study-in-malaysia"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-surface transition-colors hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
-                >
-                  <span>Explore Study in Malaysia Guide</span>
-                  <ChevronRight
-                    className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
-                    aria-hidden="true"
-                  />
-                </Link>
-              </div>
+
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:col-span-7">
@@ -370,22 +355,20 @@ export default function UniversitiesPage() {
       {/* 8. Conversion CTA Section */}
       <section
         aria-labelledby="universities-cta-heading"
-        className="relative isolate overflow-hidden bg-surface-dark py-16 sm:py-20 lg:py-24"
+        className="relative isolate overflow-hidden m-10 rounded-3xl bg-surface-dark py-16 sm:py-20 lg:py-24"
       >
         <div
           aria-hidden="true"
           className="absolute inset-0 -z-10 text-primary-900 opacity-15"
           style={{
-            backgroundImage: "radial-gradient(currentColor 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(currentColor 15px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-block rounded-full bg-gold/20 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
-              Begin Your Pathway
-            </span>
+
             <h2
               id="universities-cta-heading"
               className="mt-4 font-serif text-[clamp(2rem,5vw,3rem)] font-semibold tracking-tight text-surface sm:text-[3.25rem] leading-[1.12]"

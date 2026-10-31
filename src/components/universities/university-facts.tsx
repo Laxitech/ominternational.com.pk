@@ -6,7 +6,6 @@ import {
   Calendar,
   Globe,
   GraduationCap,
-  Sparkles,
 } from "lucide-react";
 import type { University } from "@/types/university";
 import type { Programme } from "@/types/programme";

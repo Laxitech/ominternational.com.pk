@@ -1,6 +1,9 @@
-// Placeholder: Center type definition
 export interface Center {
+  id: string;
+  slug: string;
   city: string;
-  address: string;
-  phone: string;
+  country: string;
+  name: string;
+  role: string;
+  summary: string;
 }

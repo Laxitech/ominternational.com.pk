@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
+  CheckCircle2,
   Clock,
   HelpCircle,
   Mail,
@@ -12,6 +13,7 @@ import {
 import ContactForm from "@/components/forms/contact-form";
 import FaqAccordion from "@/components/shared/faq-accordion";
 import PageHeader from "@/components/shared/page-header";
+import WhatsappButton from "@/components/shared/whatsapp-button";
 import { faqs } from "@/data/faqs";
 import { siteConfig } from "@/data/site-config";
 
@@ -37,31 +39,99 @@ export default function ContactPage() {
         ]}
       />
 
-      {/* 2. Contact Form Section */}
+      {/* 2. Contact Form & Visual Advisory Section */}
       <section
         aria-labelledby="contact-form-heading"
         className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8"
       >
-        <div className="mx-auto max-w-3xl">
-          <div className="text-center">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-14 items-start">
+          {/* Left Column: Form Heading & Form */}
+          <div className="lg:col-span-7">
+            <div className="mb-8">
 
 
-            <h2
-              id="contact-form-heading"
-              className="mt-3 text-2xl font-semibold tracking-tight text-heading sm:text-3xl lg:text-4xl"
-            >
-              Send Us a Message
-            </h2>
+              <h2
+                id="contact-form-heading"
+                className="text-2xl font-semibold tracking-tight text-heading sm:text-3xl lg:text-4xl"
+              >
+                Send Us a Message
+              </h2>
 
-            <p className="mt-2.5 text-balance text-sm leading-relaxed text-body sm:text-base">
-              Have questions about our university degree pathways, entry
-              criteria, or tuition fees? Fill out the form below and an OM
-              International advisor will respond to you promptly.
-            </p>
+              <p className="mt-2.5 text-balance text-sm leading-relaxed text-body sm:text-base">
+                Have questions about our university degree pathways, entry
+                criteria, or tuition fees? Fill out the form below and an OM
+                International advisor will respond to you promptly.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-border bg-surface p-6 sm:p-8 lg:p-10 shadow-xs">
+              <ContactForm />
+            </div>
           </div>
 
-          <div className="mt-10 rounded-2xl border border-border bg-surface p-6 shadow-xs sm:p-10">
-            <ContactForm />
+          {/* Right Column: Visual Image Composition & Advisory Support */}
+          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-24 self-start">
+            {/* Image Card Frame */}
+            <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-secondary shadow-lg sm:aspect-[16/11] lg:aspect-[4/3]">
+              <Image
+                src="/images/cntactUs.jpeg"
+                alt="OM International student advisor and academic consultation"
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                priority
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-primary-900/85 via-primary-900/25 to-transparent"
+              />
+
+              {/* Floating Badges on the Image */}
+              <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2">
+
+                <span className="inline-flex items-center gap-1 rounded-xl bg-surface-dark/85 px-3 py-1.5 text-xs font-medium text-surface backdrop-blur-md">
+                  <Clock className="size-3 text-gold" aria-hidden="true" />
+                  <span>24h Response</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Advisory Reassurance Card */}
+            <div className="rounded-3xl border border-border bg-secondary/30 p-6 sm:p-7 shadow-2xs space-y-4">
+              <div className="flex items-center gap-2.5 text-primary">
+                <CheckCircle2 className="size-5 text-accent shrink-0" aria-hidden="true" />
+                <h3 className="font-serif text-lg font-bold text-heading">
+                  Why Consult OM International?
+                </h3>
+              </div>
+
+              <p className="text-xs sm:text-sm text-body leading-relaxed">
+                Our certified admissions counselors in Pakistan provide free qualification evaluation and end-to-end enrollment support.
+              </p>
+
+              <ul className="space-y-2.5 text-xs sm:text-sm text-body pt-2 border-t border-border/80">
+                <li className="flex items-start gap-2">
+                  <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                  <span>Free credit exemption audit for ACCA, ICAP &amp; diploma holders</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                  <span>Official representative for UNIRAZAK &amp; Asia e University</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                  <span>Assistance with HEC Pakistan equivalence clearance</span>
+                </li>
+              </ul>
+
+              <div className="pt-2">
+                <WhatsappButton
+                  label="Direct WhatsApp Chat"
+                  className="w-full text-xs"
+                  message="Hello OM International, I am interested in getting academic advice on university degree programs."
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -101,7 +171,7 @@ export default function ContactPage() {
                     Monday to Saturday
                   </p>
                   <p className="text-xs text-muted">
-                    9:00 AM – 6:00 PM Pakistan Standard Time (PKT)
+                    10:00 AM – 6:00 PM Pakistan Standard Time (PKT)
                   </p>
                 </div>
               </div>
@@ -124,27 +194,8 @@ export default function ContactPage() {
                   <p className="text-sm font-medium text-heading">
                     Gulberg III, Lahore, Punjab, Pakistan
                   </p>
-                  <p className="text-xs font-medium text-muted">
-                    [Placeholder: Official address to be confirmed]
-                  </p>
-                  <p className="pt-1 text-xs text-body">
-                    Flagship International Center: London, United Kingdom{" "}
-                    <span className="text-muted">
-                      [Placeholder: London address to be confirmed]
-                    </span>
-                  </p>
-                  <div className="pt-2">
-                    <Link
-                      href="/centers"
-                      className="group inline-flex items-center gap-1.5 text-xs font-semibold text-accent transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
-                    >
-                      <span>Explore all 12 Learning Centers</span>
-                      <ArrowRight
-                        className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none"
-                        aria-hidden="true"
-                      />
-                    </Link>
-                  </div>
+
+
                 </div>
               </div>
 
@@ -166,10 +217,7 @@ export default function ContactPage() {
                   >
                     {siteConfig.contact.email}
                   </a>
-                  <p className="text-xs text-muted">
-                    Official email for degree evaluation, eligibility checks,
-                    and document submissions.
-                  </p>
+
                 </div>
               </div>
 
@@ -188,12 +236,7 @@ export default function ContactPage() {
                   <p className="text-sm font-medium text-heading">
                     {siteConfig.contact.phoneDisplay}
                   </p>
-                  <p className="text-xs font-medium text-muted">
-                    [Placeholder: Official contact number to be confirmed]
-                  </p>
-                  <p className="text-xs text-muted">
-                    Standard helpline support during business hours.
-                  </p>
+
                 </div>
               </div>
 
@@ -212,13 +255,7 @@ export default function ContactPage() {
                   <p className="text-sm font-medium text-heading">
                     {siteConfig.contact.whatsappDisplay}
                   </p>
-                  <p className="text-xs font-medium text-muted">
-                    [Placeholder: Official WhatsApp line to be confirmed]
-                  </p>
-                  <p className="text-xs text-muted">
-                    Quick consultations, programme brochures, and instant
-                    inquiries.
-                  </p>
+
                 </div>
               </div>
             </div>

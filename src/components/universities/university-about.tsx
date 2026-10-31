@@ -73,24 +73,23 @@ export default function UniversityAbout({ university }: UniversityAboutProps) {
               </div>
             </div>
 
-            {/* Quick Profile Card */}
-            <div className="rounded-2xl     shadow-2xs">
-
-
-              {university.website && (
-                <div className=" border-border/80 ">
-                  <a
-                    href={university.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-l font-semibold text-primary hover:text-primary-hover transition-colors"
-                  >
-                    <span>Visit {university.shortName} Official Portal</span>
-                    <ExternalLink className="size-3" aria-hidden="true" />
-                  </a>
-                </div>
-              )}
-            </div>
+            {/* Official Portal CTA */}
+            {university.website && (
+              <div className="pt-1">
+                <a
+                  href={university.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex min-h-12 w-full items-center justify-center gap-2.5 rounded-2xl border border-primary/20 bg-primary-subtle px-6 py-3.5 text-sm font-semibold text-primary shadow-2xs transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary hover:text-surface hover:shadow-md active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+                >
+                  <span>Visit {university.shortName} Official Portal</span>
+                  <ExternalLink
+                    className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Right Column: Narrative paragraphs + pull quote + distinctions */}
@@ -107,7 +106,7 @@ export default function UniversityAbout({ university }: UniversityAboutProps) {
             {/* Styled Pull quote */}
             <blockquote
               className={cn(
-                "relative mt-6 rounded-1xl border-l-4 border-primary bg-secondary/40 p-5 sm:p-6",
+                "relative mt-6 rounded-2xl border-l-4 border-primary bg-secondary/40 p-5 sm:p-6",
                 "text-base leading-relaxed text-heading sm:text-lg",
               )}
             >

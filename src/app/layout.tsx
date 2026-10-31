@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
-import { Roboto, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Geist_Mono } from "next/font/google";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import ScrollToTop from "@/components/layout/scroll-to-top";
 import "./globals.css";
 
-const roboto = Roboto({
+const roboto = localFont({
   variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  style: ["normal", "italic"],
+  src: [
+    {
+      path: "../../public/Fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "../../public/Fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
   display: "swap",
 });
 

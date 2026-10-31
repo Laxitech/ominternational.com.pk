@@ -24,12 +24,17 @@ export const navigation: NavigationItem[] = [
     label: "Programmes",
     href: "/programmes",
     children: [
-      { label: "Doctoral", href: "/programmes?level=doctoral" },
-      { label: "Master's", href: "/programmes?level=masters" },
-      { label: "Bachelor's", href: "/programmes?level=bachelors" },
       {
-        label: "Graduate Diplomas",
-        href: "/programmes?level=graduate-diplomas",
+        label: "Master of Business Administration (MBA)",
+        href: "/programmes/master-of-business-administration",
+      },
+      {
+        label: "BS Accounting and Finance",
+        href: "/programmes/bs-accounting-and-finance",
+      },
+      {
+        label: "Phd Programme",
+        href: "/programmes/doctor-of-philosophy",
       },
     ],
   },

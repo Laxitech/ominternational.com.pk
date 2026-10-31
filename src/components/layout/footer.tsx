@@ -6,11 +6,12 @@ import { Award, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
 
 const PROGRAMME_LINKS = [
-  { label: "Fast-Track Top-Up Degrees", href: "/programmes?level=bachelors" },
-  { label: "Executive MBA & BBA", href: "/programmes?level=masters" },
-  { label: "ACCA Degree Progression", href: "/programmes?level=bachelors" },
-  { label: "ICAP Graduate Route", href: "/programmes?level=bachelors" },
-  { label: "Doctoral (PhD & DBA)", href: "/programmes?level=doctoral" },
+  { label: "Master of Business Administration (MBA)", href: "/programmes/master-of-business-administration" },
+  { label: "BS Accounting & Finance", href: "/programmes/bs-accounting-and-finance" },
+  { label: "PhD Programme", href: "/programmes/doctor-of-philosophy" },
+  { label: "Executive Master's Pathways", href: "/programmes?level=masters" },
+  { label: "Bachelor's Degree Pathways", href: "/programmes?level=bachelors" },
+  { label: "ICAP & ACCA Route", href: "/programmes/bs-accounting-and-finance" },
   { label: "Malaysian Dual Awards", href: "/universities" },
 ];
 

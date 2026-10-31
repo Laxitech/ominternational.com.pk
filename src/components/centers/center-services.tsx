@@ -3,12 +3,9 @@
 import Image from "next/image";
 import {
   Award,
-  CheckCircle2,
   Compass,
   FileCheck,
-  MapPin,
   Send,
-  Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 

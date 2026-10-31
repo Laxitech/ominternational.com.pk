@@ -169,7 +169,7 @@ export default function MegaMenu({
         )}
         onKeyDown={handlePanelKeyDown}
       >
-        <ul className="w-64 overflow-hidden rounded-xl border border-border bg-surface p-2 shadow-xl shadow-primary/10">
+        <ul className="w-72 sm:w-80 overflow-hidden rounded-xl border border-border bg-surface p-2 shadow-xl shadow-primary/10">
           {item.children?.map((child) => {
             const isChildActive =
               !child.href.includes("?") &&

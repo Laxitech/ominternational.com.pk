@@ -6,7 +6,7 @@ export async function submitEnquiry(
   // Simulate network latency for client-side static handling
   await new Promise((resolve) => setTimeout(resolve, 600));
 
-  if (!input.name || !input.email || !input.message) {
+  if (!input.name || !input.phone || !input.message) {
     return { ok: false };
   }
 

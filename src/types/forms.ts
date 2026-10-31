@@ -1,6 +1,6 @@
 export interface EnquiryInput {
   name: string;
-  email: string;
+  email?: string;
   phone: string;
   programme?: string;
   message: string;

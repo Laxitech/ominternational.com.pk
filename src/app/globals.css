@@ -1,0 +1,335 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   OM International design tokens
+   Tailwind CSS v4 CSS-first theme, light mode only.
+
+   Structure:
+   - --palette-* : raw values, defined once.
+   - --role-*    : semantic roles for the current (light) theme.
+   - @theme      : Tailwind token names exposed to components.
+
+   A future dark theme can override the --role-* variables under `.dark`
+   without renaming any component-facing token.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ------------------------------------------------------------------------
+     Raw brand palette (source of truth)
+     ------------------------------------------------------------------------ */
+  --palette-white: #ffffff;
+  --palette-charcoal: #111827;
+  --palette-royal-blue: #02509d;
+  --palette-pale-blue: #eaf3fc;
+  --palette-interactive-blue: #167dab;
+  --palette-body: #4b5563;
+  --palette-muted: #6b7280;
+  --palette-border: #e5e7eb;
+  --palette-border-strong: #d1d5db;
+  --palette-footer: #030d22; /* derived, adjustable */
+  --palette-gold: #C5A059; /* derived, adjustable */
+  --palette-success: #15803d;
+  --palette-success-50: #f0fdf4; /* derived, adjustable */
+  --palette-warning: #b45309;
+  --palette-warning-50: #fffbeb; /* derived, adjustable */
+  --palette-danger: #b91c1c;
+  --palette-danger-50: #fef2f2; /* derived, adjustable */
+  --palette-info-50: #eff8fc; /* derived, adjustable */
+
+  /* ------------------------------------------------------------------------
+     Primary scale (derived, adjustable)
+     Generated around #02509d. 600 is the source brand primary.
+     ------------------------------------------------------------------------ */
+  --palette-primary-50: #ebf7ff;
+  --palette-primary-100: #d7edff;
+  --palette-primary-200: #b7dbff;
+  --palette-primary-300: #87bbfd;
+  --palette-primary-400: #4f91e2;
+  --palette-primary-500: #0761bb;
+  --palette-primary-600: #02509d; /* source brand primary */
+  --palette-primary-700: #003e8f;
+  --palette-primary-800: #002c6f;
+  --palette-primary-900: #001e54;
+
+  /* ------------------------------------------------------------------------
+     Semantic roles — light theme
+     Dark theme overrides belong here under a future `.dark` selector.
+     ------------------------------------------------------------------------ */
+  --role-primary: var(--palette-primary-600);
+  --role-primary-hover: var(--palette-primary-700);
+  --role-primary-pressed: var(--palette-primary-800);
+  --role-primary-subtle: var(--palette-primary-50);
+
+  --role-secondary: var(--palette-pale-blue);
+  --role-accent: var(--palette-interactive-blue);
+  --role-heading: var(--palette-charcoal);
+  --role-body: var(--palette-body);
+  --role-muted: var(--palette-muted);
+
+  --role-border: var(--palette-border);
+  --role-border-strong: var(--palette-border-strong);
+
+  --role-surface: var(--palette-white);
+  --role-surface-alt: var(--palette-pale-blue);
+  --role-surface-dark: var(--palette-footer);
+  --role-gold: var(--palette-gold);
+
+  --role-success: var(--palette-success);
+  --role-success-50: var(--palette-success-50);
+  --role-warning: var(--palette-warning);
+  --role-warning-50: var(--palette-warning-50);
+  --role-danger: var(--palette-danger);
+  --role-danger-50: var(--palette-danger-50);
+  --role-info: var(--palette-interactive-blue);
+  --role-info-50: var(--palette-info-50);
+
+  --role-focus-ring: var(--palette-interactive-blue);
+  --role-on-dark: var(--palette-white);
+
+  /* ------------------------------------------------------------------------
+     Motion
+     ------------------------------------------------------------------------ */
+  --motion-duration-reveal: 700ms;
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Tailwind theme mapping
+   `inline` keeps utilities pointing at the --role-* / --palette-* variables,
+   so a future `.dark` override works without changing utility class names.
+   -------------------------------------------------------------------------- */
+@theme inline {
+  /* Primary scale (derived, adjustable) */
+  --color-primary-50: var(--palette-primary-50);
+  --color-primary-100: var(--palette-primary-100);
+  --color-primary-200: var(--palette-primary-200);
+  --color-primary-300: var(--palette-primary-300);
+  --color-primary-400: var(--palette-primary-400);
+  --color-primary-500: var(--palette-primary-500);
+  --color-primary-600: var(--palette-primary-600);
+  --color-primary-700: var(--palette-primary-700);
+  --color-primary-800: var(--palette-primary-800);
+  --color-primary-900: var(--palette-primary-900);
+
+  /* Semantic colors */
+  --color-primary: var(--role-primary);
+  --color-primary-hover: var(--role-primary-hover);
+  --color-primary-pressed: var(--role-primary-pressed);
+  --color-primary-subtle: var(--role-primary-subtle);
+
+  --color-secondary: var(--role-secondary);
+  --color-accent: var(--role-accent);
+  --color-heading: var(--role-heading);
+  --color-body: var(--role-body);
+  --color-muted: var(--role-muted);
+
+  --color-border: var(--role-border);
+  --color-border-strong: var(--role-border-strong);
+
+  --color-surface: var(--role-surface);
+  --color-surface-alt: var(--role-surface-alt);
+  --color-surface-dark: var(--role-surface-dark);
+  --color-gold: var(--role-gold);
+
+  --color-success: var(--role-success);
+  --color-success-50: var(--role-success-50);
+  --color-warning: var(--role-warning);
+  --color-warning-50: var(--role-warning-50);
+  --color-danger: var(--role-danger);
+  --color-danger-50: var(--role-danger-50);
+  --color-info: var(--role-info);
+  --color-info-50: var(--role-info-50);
+
+  --color-focus-ring: var(--role-focus-ring);
+  --color-on-dark: var(--role-on-dark);
+
+  /* Typography */
+  --font-sans: var(--font-roboto), "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--font-roboto), "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-roboto), "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html,
+body,
+input,
+button,
+select,
+textarea {
+  font-family: var(--font-roboto), "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Hero entrance
+   Transform-only so primary content is readable immediately, even before the
+   animation starts. Removed entirely for reduced-motion users.
+   -------------------------------------------------------------------------- */
+@keyframes hero-reveal {
+  from {
+    transform: translateY(14px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .hero-reveal {
+    animation: hero-reveal 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-reveal {
+      animation: none;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Impact stats card reveal
+   Transform + opacity only. `backwards` fills the staggered delay, then hands
+   the element back to its base styles so hover transforms still work.
+   -------------------------------------------------------------------------- */
+@keyframes stat-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .stat-rise {
+    animation: stat-rise var(--motion-duration-reveal) var(--motion-ease-out)
+      backwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stat-rise {
+      animation: none;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   About OM section entrance
+   Transform + opacity only. `backwards` fills the staggered delay.
+   -------------------------------------------------------------------------- */
+@keyframes about-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .about-reveal {
+    animation: about-reveal var(--motion-duration-reveal) var(--motion-ease-out)
+      backwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-reveal {
+      animation: none;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Testimonial slide transition
+   Transform + opacity only. Respects reduced-motion.
+   -------------------------------------------------------------------------- */
+@keyframes testimonial-fade {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .testimonial-fade {
+    animation: testimonial-fade 500ms var(--motion-ease-out) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-fade {
+      animation: none;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Subtle float animation for portrait image
+   Transform-only loop, disabled under reduced-motion.
+   -------------------------------------------------------------------------- */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@layer utilities {
+  .float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .float-slow {
+      animation: none;
+    }
+  }
+}
+
+/* ==========================================================================
+   Custom Theme Scrollbar
+   Uses OM International primary brand tokens for a smooth, branded scrollbar.
+   ========================================================================== */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--palette-primary-500) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--palette-primary-400);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 200ms ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--palette-primary-600);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--palette-primary-800);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+

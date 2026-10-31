@@ -1,0 +1,6 @@
+// Placeholder: Error page
+'use client';
+
+export default function Error() {
+  return <main>Error</main>;
+}

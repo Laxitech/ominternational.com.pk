@@ -1,0 +1,51 @@
+export type NavigationChild = {
+  label: string;
+  href: string;
+};
+
+export type NavigationItem = {
+  label: string;
+  href: string;
+  children?: NavigationChild[];
+};
+
+export const navigation: NavigationItem[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  {
+    label: "Universities",
+    href: "/universities",
+    children: [
+      { label: "Asia e University", href: "/universities/asia-e-university" },
+      { label: "UNIRAZAK", href: "/universities/unirazak" },
+    ],
+  },
+  {
+    label: "Programmes",
+    href: "/programmes",
+    children: [
+      { label: "Doctoral", href: "/programmes?level=doctoral" },
+      { label: "Master's", href: "/programmes?level=masters" },
+      { label: "Bachelor's", href: "/programmes?level=bachelors" },
+      {
+        label: "Graduate Diplomas",
+        href: "/programmes?level=graduate-diplomas",
+      },
+    ],
+  },
+  { label: "Learning Centers", href: "/centers" },
+  { label: "Contact", href: "/contact" },
+];
+
+export function isNavigationItemActive(
+  pathname: string,
+  href: string,
+): boolean {
+  const path = href.split(/[?#]/)[0];
+
+  if (path === "/") {
+    return pathname === "/";
+  }
+
+  return pathname === path || pathname.startsWith(`${path}/`);
+}

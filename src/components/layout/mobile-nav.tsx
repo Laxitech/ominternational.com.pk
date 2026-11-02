@@ -28,7 +28,12 @@ export default function MobileNav() {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const isOpen = menuState?.path === pathname ? menuState.open : false;
   const activeSection = navigation.find(
-    (item) => item.children && isNavigationItemActive(pathname, item.href),
+    (item) =>
+      item.children &&
+      (isNavigationItemActive(pathname, item.href) ||
+        item.children.some((child) =>
+          isNavigationItemActive(pathname, child.href),
+        )),
   );
   const expandedSection =
     expandedState?.path === pathname
@@ -129,7 +134,12 @@ export default function MobileNav() {
           >
             <ul className="flex flex-col gap-1">
               {navigation.map((item) => {
-                const isActive = isNavigationItemActive(pathname, item.href);
+                const isAnyChildActive = item.children?.some((child) =>
+                  isNavigationItemActive(pathname, child.href),
+                );
+                const isActive =
+                  isNavigationItemActive(pathname, item.href) ||
+                  Boolean(isAnyChildActive);
 
                 if (item.children) {
                   const isExpanded = expandedSection === item.href;

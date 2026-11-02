@@ -11,7 +11,14 @@ export type NavigationItem = {
 
 export const navigation: NavigationItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  {
+    label: "About Us",
+    href: "/about",
+    children: [
+      { label: "About Us", href: "/about" },
+      { label: "Governing Board", href: "/governing-board" },
+    ],
+  },
   {
     label: "Universities",
     href: "/universities",

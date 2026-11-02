@@ -28,7 +28,11 @@ export default function MegaMenu({
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const focusTargetRef = useRef<"first" | "last" | null>(null);
-  const isActive = isNavigationItemActive(pathname, item.href);
+  const isAnyChildActive = item.children?.some((child) =>
+    isNavigationItemActive(pathname, child.href),
+  );
+  const isActive =
+    isNavigationItemActive(pathname, item.href) || Boolean(isAnyChildActive);
 
   function getLinks() {
     return Array.from(

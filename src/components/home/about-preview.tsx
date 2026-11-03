@@ -76,38 +76,64 @@ export default function AboutPreview() {
             {/* Circular experience counter at bottom-right corner */}
             <div
               className={cn(
-                "absolute z-20 rounded-full border border-primary-200 bg-primary-900 shadow-xl text-on-dark",
+                "absolute z-20 rounded-full border-2 border-primary-200/60 bg-primary-900 shadow-xl text-on-dark",
                 // Inside bounds on mobile/tablet to avoid clipping
                 "bottom-4 right-4 w-16 h-16 sm:w-20 sm:h-20",
                 // Desktop: overlaps outside the corner for prominence
                 "lg:-bottom-8 lg:-right-8 lg:w-28 lg:h-28",
               )}
             >
-              <div className="flex flex-col items-center justify-center h-full px-1 sm:px-2">
+              <div
+                className="flex items-center justify-center h-full px-1 sm:px-2"
+                aria-hidden="true"
+              >
                 <span
                   className={cn(
-                    "text-[clamp(1.125rem,4vw,2rem)] font-bold text-on-dark leading-none",
-                    "tabular-nums",
+                    "text-[clamp(1.35rem,4.5vw,2.5rem)] font-extrabold text-white leading-none",
+                    "tabular-nums tracking-tight",
                   )}
                 >
                   {display}
                 </span>
-                <span className="text-[0.55em] font-semibold text-primary-200/90 mt-0.5">
+                <span
+                  className={cn(
+                    "text-2xl sm:text-3xl lg:text-4xl font-black text-primary-200 leading-none",
+                    "ml-0.5 inline-block -translate-y-0.5",
+                  )}
+                  aria-hidden="true"
+                >
                   +
                 </span>
               </div>
 
-              <p
-                className={cn(
-                  "absolute bottom-[-12px] right-1/2 -translate-x-1/2",
-                  "text-[10px] font-medium uppercase tracking-wider",
-                  "text-primary-200/80",
-                  "whitespace-nowrap",
-                  "hidden sm:block",
-                )}
+              <svg
+                viewBox="0 0 120 120"
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 hidden size-full overflow-visible text-primary-200 sm:block"
               >
-                Years of experience
-              </p>
+                <defs>
+                  <path
+                    id="experience-text-path"
+                    d="M 8,60 A 52,52 0 1,1 112,60 A 52,52 0 1,1 8,60"
+                  />
+                </defs>
+                <text
+                  fill="currentColor"
+                  fontSize="10"
+                  fontWeight="600"
+                  letterSpacing="1.3"
+                >
+                  <textPath
+                    href="#experience-text-path"
+                    startOffset="25%"
+                    textAnchor="middle"
+                  >
+                    YEARS OF EXPERIENCE
+                  </textPath>
+                </text>
+              </svg>
+
+              <span className="sr-only">{display}+ years of experience</span>
             </div>
           </div>
 

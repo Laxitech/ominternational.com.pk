@@ -45,6 +45,7 @@ export const navigation: NavigationItem[] = [
       },
     ],
   },
+  { label: "INCEIF Collaboration", href: "/inceif" },
   { label: "Learning Centers", href: "/centers" },
   { label: "Contact", href: "/contact" },
 ];

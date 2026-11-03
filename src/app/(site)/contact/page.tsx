@@ -168,10 +168,10 @@ export default function ContactPage() {
                     <span>Advisory Hours</span>
                   </div>
                   <p className="mt-1.5 text-sm font-medium text-heading">
-                    Monday to Saturday
+                    {siteConfig.contact.hours}
                   </p>
                   <p className="text-xs text-muted">
-                    10:00 AM – 6:00 PM Pakistan Standard Time (PKT)
+                    Pakistan Standard Time (PKT)
                   </p>
                 </div>
               </div>
@@ -189,10 +189,10 @@ export default function ContactPage() {
                 </span>
                 <div className="space-y-1">
                   <h3 className="text-base font-semibold text-heading">
-                    Office Location
+                    Head Office Pakistan
                   </h3>
                   <p className="text-sm font-medium text-heading">
-                    Gulberg III, Lahore, Punjab, Pakistan
+                    {siteConfig.contact.address}
                   </p>
 
 

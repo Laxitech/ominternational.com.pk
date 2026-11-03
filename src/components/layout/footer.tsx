@@ -18,6 +18,7 @@ const PROGRAMME_LINKS = [
 const COMPANY_LINKS = [
   { label: "About OM International", href: "/about" },
   { label: "Governing Board", href: "/governing-board" },
+  { label: "INCEIF Collaboration", href: "/inceif" },
   { label: "What's New", href: "/scholarships" },
   { label: "Partner Universities", href: "/universities" },
   { label: "Student Stories", href: "/about#leadership-governance-heading" },

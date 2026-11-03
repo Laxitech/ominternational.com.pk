@@ -27,10 +27,10 @@ export default function Header() {
           <DesktopNav />
 
           <Link
-            href="/apply"
+            href="/contact"
             className="group inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-surface shadow-sm transition-colors duration-200 hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none"
           >
-            Apply Now
+            Contact Us
             <ArrowRight
               aria-hidden="true"
               className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none"

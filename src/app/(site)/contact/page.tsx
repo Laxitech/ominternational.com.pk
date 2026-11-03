@@ -116,7 +116,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />
-                  <span>Official representative for UNIRAZAK &amp; Asia e University</span>
+                  <span>Official representative for UNIRAZAK </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />

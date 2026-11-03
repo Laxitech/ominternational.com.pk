@@ -14,18 +14,14 @@ export const navigation: NavigationItem[] = [
   {
     label: "About Us",
     href: "/about",
-    children: [
-      { label: "About Us", href: "/about" },
-      { label: "Governing Board", href: "/governing-board" },
-    ],
   },
   {
-    label: "Universities",
-    href: "/universities",
-    children: [
-      { label: "Asia e University", href: "/universities/asia-e-university" },
-      { label: "UNIRAZAK", href: "/universities/unirazak" },
-    ],
+    label: "Governing Board",
+    href: "/governing-board",
+  },
+  {
+    label: "UNIRAZAK",
+    href: "/universities/unirazak",
   },
   {
     label: "Programmes",
@@ -47,7 +43,6 @@ export const navigation: NavigationItem[] = [
   },
   { label: "INCEIF Collaboration", href: "/inceif" },
   { label: "Learning Centers", href: "/centers" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export function isNavigationItemActive(

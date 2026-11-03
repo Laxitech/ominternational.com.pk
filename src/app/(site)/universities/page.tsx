@@ -18,7 +18,7 @@ import { programmes } from "@/data/programmes";
 export const metadata: Metadata = {
   title: "Partner Universities in Malaysia | OM International",
   description:
-    "Explore accredited Malaysian partner universities through OM International. Discover degree pathways from Universiti Tun Abdul Razak (UNIRAZAK) and Asia e University (AeU) with conventional, ODL, and online options.",
+    "Explore accredited Malaysian partner universities through OM International. Discover degree pathways from Universiti Tun Abdul Razak (UNIRAZAK) with conventional, ODL, and online options.",
 };
 
 const PATHWAY_BENEFITS = [
@@ -104,9 +104,9 @@ const ADMISSION_STEPS = [
 
 const UNIVERSITY_FAQS = [
   {
-    question: "Are degrees from UNIRAZAK and AeU recognized in Pakistan?",
+    question: "Are degrees from UNIRAZAK in Pakistan?",
     answer:
-      "Yes. Both Universiti Tun Abdul Razak (UNIRAZAK) and Asia e University (AeU) are recognized by the Ministry of Higher Education Malaysia and accredited by the Malaysian Qualifications Agency (MQA). Graduates are eligible to apply for degree equivalence with the Higher Education Commission (HEC) of Pakistan in accordance with prevailing HEC regulations.",
+      "Yes. Universiti Tun Abdul Razak (UNIRAZAK) recognized by the Ministry of Higher Education Malaysia and accredited by the Malaysian Qualifications Agency (MQA). Graduates are eligible to apply for degree equivalence with the Higher Education Commission (HEC) of Pakistan in accordance with prevailing HEC regulations.",
   },
   {
     question: "Can ACCA or ICAP students obtain credit exemptions?",

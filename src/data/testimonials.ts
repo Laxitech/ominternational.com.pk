@@ -14,7 +14,7 @@ export const testimonials: Testimonial[] = [
     id: "testimonial-hamza",
     name: "Hamza Siddiqui",
     role: "Senior Finance Manager",
-    program: "Doctor of Business Administration (DBA)",
+    program: "Doctor of Business Administration",
     quote:
       "The team made every part of my application clear and manageable. I could focus on my studies knowing local guidance was always available.",
 

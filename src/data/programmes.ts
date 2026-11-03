@@ -179,7 +179,8 @@ export const programmes: Programme[] = [
     modes: ["conventional", "odl"],
     fullyOnline: true,
     duration: null,
-    summary: "Develops core managerial capabilities across functions, with a focus on practical leadership and decision-making.",
+    summary:
+      "Develops core managerial capabilities across functions, with a focus on practical leadership and decision-making.",
   },
   {
     id: "4",
@@ -192,7 +193,8 @@ export const programmes: Programme[] = [
     modes: ["conventional", "odl"],
     fullyOnline: false,
     duration: null,
-    summary: "Prepares educators for leadership roles in curriculum design, instruction, and institutional management.",
+    summary:
+      "Prepares educators for leadership roles in curriculum design, instruction, and institutional management.",
   },
   {
     id: "5",
@@ -205,7 +207,8 @@ export const programmes: Programme[] = [
     modes: ["odl"],
     fullyOnline: false,
     duration: null,
-    summary: "Equips public sector professionals with modern governance, policy analysis, and administrative skills.",
+    summary:
+      "Equips public sector professionals with modern governance, policy analysis, and administrative skills.",
   },
   // Bank Rakyat School of Business, Innovation, Technology and Entrepreneurship (BRSBITE)
   {
@@ -215,11 +218,13 @@ export const programmes: Programme[] = [
     level: "bachelors",
     universitySlug: "unirazak",
     schoolSlug: "brsbite",
-    schoolName: "Bank Rakyat School of Business, Innovation, Technology and Entrepreneurship (BRSBITE)",
+    schoolName:
+      "Bank Rakyat School of Business, Innovation, Technology and Entrepreneurship (BRSBITE)",
     modes: ["conventional", "odl"],
     fullyOnline: true,
     duration: null,
-    summary: "A broad business degree covering core management disciplines with flexibility to specialise through majors.",
+    summary:
+      "A broad business degree covering core management disciplines with flexibility to specialise through majors.",
     majors: [
       "Social Media",
       "Digital Marketing",
@@ -236,11 +241,13 @@ export const programmes: Programme[] = [
     level: "bachelors",
     universitySlug: "unirazak",
     schoolSlug: "brsbite",
-    schoolName: "Bank Rakyat School of Business, Innovation, Technology and Entrepreneurship (BRSBITE)",
+    schoolName:
+      "Bank Rakyat School of Business, Innovation, Technology and Entrepreneurship (BRSBITE)",
     modes: ["conventional", "odl"],
     fullyOnline: true,
     duration: null,
-    summary: "Builds foundational management knowledge with opportunities to focus on entrepreneurship and international business.",
+    summary:
+      "Builds foundational management knowledge with opportunities to focus on entrepreneurship and international business.",
     majors: [
       "Entrepreneurship",
       "International Business",
@@ -260,7 +267,8 @@ export const programmes: Programme[] = [
     modes: ["conventional", "odl"],
     fullyOnline: true,
     duration: null,
-    summary: "A professional accounting degree preparing graduates for careers in audit, tax, and financial reporting.",
+    summary:
+      "A professional accounting degree preparing graduates for careers in audit, tax, and financial reporting.",
   },
   {
     id: "9",
@@ -273,7 +281,8 @@ export const programmes: Programme[] = [
     modes: ["conventional"],
     fullyOnline: false,
     duration: null,
-    summary: "Specialised taxation degree covering Malaysian and international tax principles and practice.",
+    summary:
+      "Specialised taxation degree covering Malaysian and international tax principles and practice.",
   },
   // Tun Ahmad Sarji School of Government and Public Services (TASSGSP)
   {
@@ -283,11 +292,13 @@ export const programmes: Programme[] = [
     level: "bachelors",
     universitySlug: "unirazak",
     schoolSlug: "tassgsp",
-    schoolName: "Tun Ahmad Sarji School of Government and Public Services (TASSGSP)",
+    schoolName:
+      "Tun Ahmad Sarji School of Government and Public Services (TASSGSP)",
     modes: ["conventional"],
     fullyOnline: false,
     duration: null,
-    summary: "Examines governance structures, public policy formulation, and the role of institutions in national development.",
+    summary:
+      "Examines governance structures, public policy formulation, and the role of institutions in national development.",
   },
   {
     id: "11",
@@ -296,11 +307,13 @@ export const programmes: Programme[] = [
     level: "bachelors",
     universitySlug: "unirazak",
     schoolSlug: "tassgsp",
-    schoolName: "Tun Ahmad Sarji School of Government and Public Services (TASSGSP)",
+    schoolName:
+      "Tun Ahmad Sarji School of Government and Public Services (TASSGSP)",
     modes: ["odl"],
     fullyOnline: true,
     duration: null,
-    summary: "Prepares students for public sector management roles with a focus on service delivery and policy implementation.",
+    summary:
+      "Prepares students for public sector management roles with a focus on service delivery and policy implementation.",
   },
   // School of Education & Humanities (SEH)
   {
@@ -314,7 +327,8 @@ export const programmes: Programme[] = [
     modes: ["odl"],
     fullyOnline: true,
     duration: null,
-    summary: "A pathway for graduates seeking to enter the teaching profession with practical classroom skills.",
+    summary:
+      "A pathway for graduates seeking to enter the teaching profession with practical classroom skills.",
   },
   {
     id: "13",
@@ -327,7 +341,8 @@ export const programmes: Programme[] = [
     modes: ["conventional", "odl"],
     fullyOnline: true,
     duration: null,
-    summary: "Scientific study of mind and behaviour, preparing graduates for further professional training in psychology.",
+    summary:
+      "Scientific study of mind and behaviour, preparing graduates for further professional training in psychology.",
   },
   {
     id: "14",
@@ -340,7 +355,8 @@ export const programmes: Programme[] = [
     modes: ["conventional", "odl"],
     fullyOnline: true,
     duration: null,
-    summary: "Initial teacher education programme preparing graduates for classroom practice and school leadership.",
+    summary:
+      "Initial teacher education programme preparing graduates for classroom practice and school leadership.",
     majors: [
       "Special Education",
       "Teaching English as a Second Language",
@@ -359,100 +375,10 @@ export const programmes: Programme[] = [
     modes: ["conventional", "odl"],
     fullyOnline: true,
     duration: null,
-    summary: "Focuses on early childhood development, curriculum, and pedagogy for educators of young learners.",
+    summary:
+      "Focuses on early childhood development, curriculum, and pedagogy for educators of young learners.",
   },
-  // Asia e University (AeU) Flagship Programmes
-  {
-    id: "16",
-    slug: "aeu-doctor-of-philosophy-business-administration",
-    title: "Doctor of Philosophy (Business Administration)",
-    level: "doctoral",
-    universitySlug: "asia-e-university",
-    schoolSlug: "som",
-    schoolName: "School of Management (SOM)",
-    modes: ["conventional", "odl"],
-    fullyOnline: true,
-    duration: "3-4 Years",
-    summary: "Rigorous research degree for experienced executives and academics focused on strategic enterprise leadership and applied Asian business dynamics.",
-  },
-  {
-    id: "17",
-    slug: "aeu-doctor-of-philosophy-education",
-    title: "Doctor of Philosophy (Education)",
-    level: "doctoral",
-    universitySlug: "asia-e-university",
-    schoolSlug: "secs",
-    schoolName: "School of Education & Cognitive Science (SECS)",
-    modes: ["conventional", "odl"],
-    fullyOnline: true,
-    duration: "3-4 Years",
-    summary: "Advanced doctoral research program developing thought leaders in curriculum innovation, distance education methodology, and educational management.",
-  },
-  {
-    id: "18",
-    slug: "aeu-master-of-business-administration",
-    title: "Master of Business Administration (MBA)",
-    level: "masters",
-    universitySlug: "asia-e-university",
-    schoolSlug: "som",
-    schoolName: "School of Management (SOM)",
-    modes: ["conventional", "odl"],
-    fullyOnline: true,
-    duration: "1-2 Years",
-    summary: "Flexible, internationally recognized MBA with modern case-study curricula designed specifically for working professionals in Pakistan and Asia.",
-  },
-  {
-    id: "19",
-    slug: "aeu-master-of-education",
-    title: "Master of Education (MEd)",
-    level: "masters",
-    universitySlug: "asia-e-university",
-    schoolSlug: "secs",
-    schoolName: "School of Education & Cognitive Science (SECS)",
-    modes: ["conventional", "odl"],
-    fullyOnline: true,
-    duration: "1.5-2 Years",
-    summary: "Empowering educators, trainers, and school administrators with cutting-edge learning technologies and advanced pedagogical leadership.",
-  },
-  {
-    id: "20",
-    slug: "aeu-bachelor-of-business-administration",
-    title: "Bachelor of Business Administration (Hons)",
-    level: "bachelors",
-    universitySlug: "asia-e-university",
-    schoolSlug: "som",
-    schoolName: "School of Management (SOM)",
-    modes: ["conventional", "odl"],
-    fullyOnline: true,
-    duration: "3 Years",
-    summary: "Comprehensive undergraduate degree in contemporary business administration, offering accelerated entry for diploma and qualification holders.",
-  },
-  {
-    id: "21",
-    slug: "aeu-bachelor-of-information-technology",
-    title: "Bachelor of Information & Communication Technology (Hons)",
-    level: "bachelors",
-    universitySlug: "asia-e-university",
-    schoolSlug: "sst",
-    schoolName: "School of Science & Technology (SST)",
-    modes: ["conventional", "odl"],
-    fullyOnline: true,
-    duration: "3 Years",
-    summary: "Industry-aligned computing curriculum covering software engineering, cybersecurity, data management, and modern cloud technologies.",
-  },
-  {
-    id: "22",
-    slug: "aeu-graduate-diploma-in-business",
-    title: "Graduate Diploma in Business Management",
-    level: "graduate-diplomas",
-    universitySlug: "asia-e-university",
-    schoolSlug: "som",
-    schoolName: "School of Management (SOM)",
-    modes: ["odl"],
-    fullyOnline: true,
-    duration: "1 Year",
-    summary: "Accelerated postgraduate bridge qualification for ambitious professionals seeking direct transition into executive MBA and managerial pathways.",
-  },
+
   {
     id: "bs-accounting-and-finance",
     slug: "bs-accounting-and-finance",
@@ -461,7 +387,8 @@ export const programmes: Programme[] = [
     // TODO(confirm): awarding university not confirmed
     universitySlug: "unirazak",
     schoolSlug: "brsbite",
-    schoolName: "Bank Rakyat School of Business, Innovation, Technology & Entrepreneurship",
+    schoolName:
+      "Bank Rakyat School of Business, Innovation, Technology & Entrepreneurship",
     awardingBodyConfirmed: false,
     modes: ["conventional", "odl"],
     fullyOnline: true,
@@ -493,10 +420,7 @@ export const programmes: Programme[] = [
       },
       exemptions: {
         subjectCount: 18,
-        basis: [
-          "CAF qualification (ICAP)",
-          "ACCA part qualification",
-        ],
+        basis: ["CAF qualification (ICAP)", "ACCA part qualification"],
       },
     },
     eligibility: {

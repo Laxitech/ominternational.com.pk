@@ -30,7 +30,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "OM International",
-  description: "Education facilitation for Asia e University and UNIRAZAK programmes",
+  description: "Education facilitation for UNIRAZAK programmes",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

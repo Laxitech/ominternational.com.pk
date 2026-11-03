@@ -37,7 +37,7 @@ export default function PartnerUniversities() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 gap-8 lg:gap-10">
           {universities.map((university, index) => (
             <UniversityCard
               key={university.slug}

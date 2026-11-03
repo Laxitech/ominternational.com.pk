@@ -182,7 +182,6 @@ export default function EnquiryForm({
           <option value="doctoral">Doctoral (DBA / PhD) Programmes</option>
           <option value="acca-topup">ACCA / ICAP Qualification Credit Transfer</option>
           <option value="unirazak">Universiti Tun Abdul Razak (UNIRAZAK)</option>
-          <option value="aeu">Asia e University (AeU)</option>
         </select>
       </FormField>
 

@@ -51,40 +51,6 @@ const BENEFITS = [
   },
 ];
 
-const OPPORTUNITIES = [
-  {
-    badge: "Accelerated Top-Up",
-    title: "ACCA & ICAP Pathways",
-    icon: Award,
-    audience: "Students, Affiliates & Members",
-    outcome:
-      "Qualified candidates can translate completed professional exam papers into credit exemptions toward accredited Bachelor's degrees in Accounting or Business Administration.",
-  },
-  {
-    badge: "Postgraduate Study",
-    title: "Executive & Master's (MBA)",
-    icon: Briefcase,
-    audience: "Graduates & Working Professionals",
-    outcome:
-      "Structured for working professionals seeking managerial advancement, featuring blended scheduling and internationally recognized curricula.",
-  },
-  {
-    badge: "Terminal Research",
-    title: "Doctoral Programmes (DBA / PhD)",
-    icon: GraduationCap,
-    audience: "Master's Holders & Senior Leaders",
-    outcome:
-      "Applied and academic research tracks in Business Administration designed for experienced executives aiming for academic distinction.",
-  },
-  {
-    badge: "Degree Foundation",
-    title: "Undergraduate Degrees",
-    icon: Layers,
-    audience: "Intermediate, A-Levels & Diploma Holders",
-    outcome:
-      "Comprehensive bachelor's degree pathways supported by interactive online coursework and local guidance across our learning centers.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -246,8 +212,7 @@ export default function AboutPage() {
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-body sm:text-base">
                       We collaborate with partner institutions—including
-                      Universiti Tun Abdul Razak (UNIRAZAK) and Asia e University
-                      (AeU)—to map existing credentials to degree requirements.
+                      Universiti Tun Abdul Razak (UNIRAZAK) map existing credentials to degree requirements.
                       This eliminates redundant learning and accelerates
                       graduation timelines.
                     </p>

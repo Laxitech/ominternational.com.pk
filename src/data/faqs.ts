@@ -11,7 +11,7 @@ export const faqs: FAQItem[] = [
     category: "Academic Programmes",
     question: "What academic programmes are offered through OM International?",
     answer:
-      "OM International facilitates degree pathways in partnership with accredited Malaysian institutions, including Universiti Tun Abdul Razak (UNIRAZAK) and Asia e University (AeU). Options include Bachelor's, Master's, and Doctoral (PhD/DBA) programmes across Business Administration, Management, Accounting, and related fields.",
+      "OM International facilitates degree pathways in partnership with accredited Malaysian institutions, including Universiti Tun Abdul Razak (UNIRAZAK). Options include Bachelor's, Master's, and Doctoral (PhD/DBA) programmes across Business Administration, Management, Accounting, and related fields.",
   },
   {
     id: "eligibility",
@@ -53,7 +53,7 @@ export const faqs: FAQItem[] = [
     category: "Recognition",
     question: "Are the partner universities internationally recognized?",
     answer:
-      "Yes. Partner universities including UNIRAZAK and Asia e University are accredited by the Malaysian Qualifications Agency (MQA) and recognized by the Ministry of Higher Education Malaysia. Students are advised to verify equivalence regulations with their respective local accreditation bodies or employer requirements.",
+      "Yes. Partner universities including UNIRAZAK is accredited by the Malaysian Qualifications Agency (MQA) and recognized by the Ministry of Higher Education Malaysia. Students are advised to verify equivalence regulations with their respective local accreditation bodies or employer requirements.",
   },
   {
     id: "admissions-contact",

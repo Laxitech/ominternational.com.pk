@@ -11,37 +11,31 @@ const COMPARISON_ROWS = [
   {
     category: "Accreditation & Standing",
     unirazak: "Malaysian Qualifications Agency (MQA) & MOHE Malaysia; SETARA 5-Star Rating; ISO 9001 certified",
-    aeu: "MQA & MOHE Malaysia accredited; Member of Association of Commonwealth Universities (ACU) & ICDE",
+
   },
   {
     category: "Campus & Location",
     unirazak: "City Campus on Jalan Tun Razak, central Kuala Lumpur, Malaysia",
-    aeu: "Headquartered in Cyberjaya / Kuala Lumpur, Malaysia with international study network",
   },
   {
     category: "Study Delivery Modes",
     unirazak: "Conventional (On-Campus in KL), Open Distance Learning (ODL), and 100% Online",
-    aeu: "Conventional (Cyberjaya/KL campus), Open Distance Learning (ODL), and 100% Online LMS",
   },
   {
     category: "Professional Credit Exemptions",
     unirazak: "Specialized direct credit mappings for ACCA, ICAP, PIPFA, CA, and related qualifications",
-    aeu: "Flexible prior learning credit assessments & modular credits for experienced professionals",
   },
   {
     category: "Flagship Disciplines",
     unirazak: "Accounting, Business Administration, Public Management, Education, Leadership",
-    aeu: "Management, Information Technology, Digital Media, Cognitive Sciences, Education",
   },
   {
     category: "Pakistani Student Support",
     unirazak: "Full facilitation through OM International learning centers in Karachi, Lahore, Islamabad",
-    aeu: "Comprehensive admissions, LMS orientation, and local examination center support across Pakistan",
   },
   {
     category: "HEC Equivalence Pathway",
-    unirazak: "Eligible for Higher Education Commission (HEC) Pakistan degree equivalence upon completion",
-    aeu: "Eligible for Higher Education Commission (HEC) Pakistan degree equivalence upon completion",
+    unirazak: "Eligible for Higher Education Commission (HEC) Pakistan degree equivalence upon completion"
   },
 ];
 
@@ -49,9 +43,8 @@ export default function UniversityComparison({
   universities,
 }: UniversityComparisonProps) {
   const unirazak = universities.find((u) => u.slug === "unirazak");
-  const aeu = universities.find((u) => u.slug === "asia-e-university");
 
-  if (!unirazak || !aeu) return null;
+  if (!unirazak) return null;
 
   return (
     <section
@@ -106,16 +99,8 @@ export default function UniversityComparison({
                       <span className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-accent">
                         34 ACD Nations
                       </span>
-                      <p className="font-serif text-lg font-bold text-heading">
-                        {aeu.name}
-                      </p>
-                      <Link
-                        href={`/universities/${aeu.slug}`}
-                        className="inline-flex items-center gap-1 text-xs font-medium text-accent hover:underline"
-                      >
-                        <span>View Profile</span>
-                        <ChevronRight className="size-3" aria-hidden="true" />
-                      </Link>
+
+
                     </div>
                   </th>
                 </tr>
@@ -149,7 +134,7 @@ export default function UniversityComparison({
                           className="size-4 shrink-0 text-accent mt-1"
                           aria-hidden="true"
                         />
-                        <span>{row.aeu}</span>
+
                       </div>
                     </td>
                   </tr>

@@ -44,7 +44,7 @@ export const stats: Stat[] = [
     suffix: "",
     tag: "MQA Accredited",
     label: "Partner universities",
-    description: "UNIRAZAK & Asia e University",
+    description: "UNIRAZAK University",
     icon: GraduationCap,
     pad: 2,
   },

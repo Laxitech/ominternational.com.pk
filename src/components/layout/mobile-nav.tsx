@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ChevronDown, Menu as MenuIcon, X } from "lucide-react";
@@ -117,9 +118,10 @@ export default function MobileNav() {
         className="inline-flex size-10 items-center justify-center rounded-lg text-heading transition-colors duration-200 hover:bg-primary-subtle hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none"
       >
         {isOpen ? (
-          <X aria-hidden="true" className="size-5" />
+          <Image src="/icons/close.png" className="cursor-pointer" alt="Menu" width={30} height={30} />
         ) : (
-          <MenuIcon aria-hidden="true" className="size-5" />
+
+          <Image src="/icons/humburger.png" className="cursor-pointer" alt="Menu" width={30} height={30} />
         )}
       </button>
 
@@ -235,7 +237,7 @@ export default function MobileNav() {
               onClick={() => setIsOpen(false)}
               className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-surface shadow-sm transition-colors duration-200 hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none"
             >
-              Apply Now
+              Contact Us
               <ArrowRight
                 aria-hidden="true"
                 className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none"

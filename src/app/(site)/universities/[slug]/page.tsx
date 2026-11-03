@@ -8,8 +8,7 @@ import { programmes } from "@/data/programmes";
 import {
   offers,
   downloads,
-  aeuOffers,
-  aeuDownloads,
+
 } from "@/data/unirazak-requirements";
 import UniversityFacts from "@/components/universities/university-facts";
 import UniversityAbout from "@/components/universities/university-about";
@@ -59,10 +58,7 @@ export default async function UniversityPage({
     notFound();
   }
 
-  const activeOffers =
-    university.slug === "asia-e-university" ? aeuOffers : offers;
-  const activeDownloads =
-    university.slug === "asia-e-university" ? aeuDownloads : downloads;
+
 
   return (
     <main className="min-h-full bg-surface">
@@ -123,18 +119,10 @@ export default async function UniversityPage({
 
 
 
-      {/* 7. Scholarships and Rebates */}
-      <OffersList
-        offers={activeOffers}
-        universityName={university.shortName}
-      />
 
 
-      {/* 9. Official Literature Downloads */}
-      <DownloadsList
-        downloads={activeDownloads}
-        universityName={university.shortName}
-      />
+
+
 
       {/* 10. How It Works Timeline */}
       <HowItWorks />

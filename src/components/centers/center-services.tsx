@@ -24,7 +24,7 @@ const SERVICES: ServiceItem[] = [
     badge: "Advisory & Planning",
     title: "Choosing a programme that matches your qualifications",
     description:
-      "We assess your academic background, transcripts, and career aspirations to identify the ideal bachelor's, master's, or doctoral qualification at UNIRAZAK or Asia e University.",
+      "We assess your academic background, transcripts, and career aspirations to identify the ideal bachelor's, master's, or doctoral qualification at UNIRAZAK University.",
     tags: ["Transcript Evaluation", "Pathway Mapping", "Career Consultation"],
     icon: Compass,
   },

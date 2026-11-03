@@ -32,7 +32,6 @@ const RESOURCE_LINKS = [
   { label: "Admissions & Fees Guide", href: "/contact" },
   { label: "HEC Attestation Support", href: "/study-in-malaysia" },
   { label: "Help & FAQs", href: "/contact#faq-section-heading" },
-  { label: "Student Portal Login", href: "https://portal.aeu.edu.my" },
 ];
 
 export default function Footer() {
@@ -168,12 +167,7 @@ export default function Footer() {
                     MQA Malaysia
                   </span>
                 </div>
-                <div className="inline-flex items-center gap-2 text-white/90">
-                  <Award className="size-5 text-accent" aria-hidden="true" />
-                  <span className="text-xs sm:text-sm font-semibold tracking-wide">
-                    UNIRAZAK &bull; AeU
-                  </span>
-                </div>
+
               </div>
             </div>
           </div>

@@ -75,12 +75,6 @@ export const universities: University[] = [
       { title: "MSC Malaysia status", verified: true },
       { title: "SIRIM ISO 9001 certification", verified: true },
       { title: "Export Outstanding Achievement Award", verified: false },
-      {
-        title: "Brand Laureate Awards",
-        detail:
-          "Best Brands in Education (Tertiary) and Best Brands in Brand Management",
-        verified: false,
-      },
     ],
     modes: ["conventional", "odl", "online"],
   },

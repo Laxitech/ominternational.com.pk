@@ -78,10 +78,7 @@ export default function RecognitionList({
                 )}
               </div>
 
-              <div className="mt-4 flex items-center gap-1.5 border-t border-border/70 pt-3 text-[11px] font-medium text-success">
-                <CheckCircle2 className="size-3.5" aria-hidden="true" />
-                <span>MQA / MOHE Verified Standard</span>
-              </div>
+
             </div>
           ))}
         </div>

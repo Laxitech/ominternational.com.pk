@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import PageHeader from "@/components/shared/page-header";
 import UniversityCard from "@/components/universities/university-card";
-import UniversityComparison from "@/components/universities/university-comparison";
 import WhatsappButton from "@/components/shared/whatsapp-button";
 import { universities } from "@/data/universities";
 import { programmes } from "@/data/programmes";
@@ -264,8 +263,6 @@ export default function UniversitiesPage() {
         </div>
       </section>
 
-      {/* 5. Direct Side-by-Side Comparison Matrix */}
-      <UniversityComparison universities={universities} />
 
       {/* 6. Admission & Credit Transfer Timeline */}
       <section

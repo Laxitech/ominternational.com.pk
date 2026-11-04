@@ -195,16 +195,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* WhatsApp Quick Advisory */}
-              <div className="flex items-start gap-4 rounded-xl border border-border bg-surface p-5 transition-colors sm:p-6 hover:border-primary-200">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex size-11 shrink-0 items-center justify-center rounded-lg border border-primary-200 bg-primary-subtle text-primary"
-                >
-                  <MessageSquare className="size-5" />
-                </span>
 
-              </div>
             </div>
           </div>
         </div>

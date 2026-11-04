@@ -6,9 +6,9 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://ominternational.edu.pk",
   contact: {
     email: "ceo@ominternational.com.pk",
-    phone: "+92 300 8564854",
-    phoneDisplay: "+92 300 8564854",
-    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+923008564854",
+    phone: "(051) 8438171",
+    phoneDisplay: "(051) 8438171",
+    whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "(051) 8438171",
     address:
       "OM Building, Plot 1B, Street-2, Al-Fatah Market, G-9/3, Islamabad, Pakistan",
     hours: "Mon – Sat: 10:00 – 17:30 (PKT)",

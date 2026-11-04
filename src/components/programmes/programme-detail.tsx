@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import FaqAccordion from "@/components/shared/faq-accordion";
 import PageHeader from "@/components/shared/page-header";
-import WhatsappButton from "@/components/shared/whatsapp-button";
 import { cn } from "@/lib/utils";
 import type { Programme } from "@/types/programme";
 import type { University } from "@/types/university";
@@ -666,11 +665,7 @@ export default function ProgrammeDetail({
               Request programme guidance
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
-            <WhatsappButton
-              label="Chat with an advisor"
-              className="min-h-12 w-full px-6 py-3 sm:w-auto"
-              message={`Hello OM International, I am interested in ${programme.title}. Please share eligibility and admissions information.`}
-            />
+
           </div>
         </div>
       </section>

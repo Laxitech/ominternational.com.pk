@@ -70,7 +70,7 @@ export default function EnquiryForm({
         setErrors({});
       } else {
         setSubmitError(
-          "Unable to send enquiry right now. Please try again or message us on WhatsApp.",
+          "Unable to send enquiry right now. Please try again.",
         );
       }
     } catch {
@@ -145,7 +145,7 @@ export default function EnquiryForm({
 
         <FormField
           id="phone"
-          label="Phone / WhatsApp"
+          label="Phone Number"
           required
           error={errors.phone}
         >

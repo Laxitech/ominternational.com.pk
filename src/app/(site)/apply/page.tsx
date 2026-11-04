@@ -53,7 +53,7 @@ const checkerSteps = [
     number: "03",
     title: "Confirm with an advisor",
     description:
-      "Review your preliminary result, then continue through WhatsApp or the Contact Us page.",
+      "Review your preliminary result, then continue through the Contact Us page.",
   },
 ];
 

@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import PageHeader from "@/components/shared/page-header";
 import UniversityCard from "@/components/universities/university-card";
-import WhatsappButton from "@/components/shared/whatsapp-button";
 import { universities } from "@/data/universities";
 import { programmes } from "@/data/programmes";
 
@@ -383,10 +382,7 @@ export default function UniversitiesPage() {
                 <span>Apply for Degree Assessment</span>
                 <ChevronRight className="size-4" aria-hidden="true" />
               </Link>
-              <WhatsappButton
-                label="Chat with an Advisor"
-                className="min-h-12 w-full sm:w-auto px-6 py-3.5"
-              />
+
             </div>
           </div>
         </div>

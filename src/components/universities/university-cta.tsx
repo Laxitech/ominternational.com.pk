@@ -1,7 +1,6 @@
 "use client";
 
 import { Mail, Phone, MapPin } from "lucide-react";
-import WhatsappButton from "@/components/shared/whatsapp-button";
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
 
@@ -66,13 +65,7 @@ export default function UniversityCta({
 
 
 
-            <div className="pt-2">
-              <WhatsappButton
-                label="Direct WhatsApp Consultation"
-                className="w-full sm:w-auto"
-                message={`Hello OM International, I would like to consult with an advisor regarding ${universityName}.`}
-              />
-            </div>
+
           </div>
 
           {/* Right Column: Embedded Enquiry Form */}

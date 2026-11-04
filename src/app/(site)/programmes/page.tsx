@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import ProgrammeFilters from "@/components/programmes/programme-filters";
 import PageHeader from "@/components/shared/page-header";
-import WhatsappButton from "@/components/shared/whatsapp-button";
 import { programmes } from "@/data/programmes";
 import { universities } from "@/data/universities";
 
@@ -243,20 +242,7 @@ export default function ProgrammesPage() {
             International advisor will help you identify relevant options and
             next steps.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
-              href="/contact"
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-surface transition-colors hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface sm:w-auto"
-            >
-              Request an eligibility review
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
-            <WhatsappButton
-              label="Chat with an advisor"
-              className="min-h-12 w-full px-6 py-3 sm:w-auto"
-              message="Hello OM International, I would like help choosing the right degree programme for my qualifications."
-            />
-          </div>
+
         </div>
       </section>
     </main>

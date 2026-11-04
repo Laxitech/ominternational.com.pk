@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, Clock, FileCheck2, GraduationCap, Sparkles } from "lucide-react";
+import { BookOpen, Clock, FileCheck2, GraduationCap, Sparkles } from "lucide-react";
 import type { Programme } from "@/types/programme";
-import WhatsappButton from "@/components/shared/whatsapp-button";
 
 interface ProgrammeSummaryCardProps {
   programme: Programme;
@@ -161,11 +160,7 @@ export default function ProgrammeSummaryCard({
               Enquire Now
             </Link>
 
-            <WhatsappButton
-              label="Chat on WhatsApp"
-              className="w-full py-3"
-              message={`Hello OM International, I am interested in ${programme.title}. Please provide more information about eligibility and admissions.`}
-            />
+
           </div>
         </div>
       </aside>

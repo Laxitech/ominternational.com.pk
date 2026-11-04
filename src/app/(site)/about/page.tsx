@@ -59,7 +59,6 @@ export default function AboutPage() {
       <PageHeader
         title="About Us"
         subtitle="Empowering Your Academic Journey"
-        eyebrow="OM International"
         imageSrc="/images/page header/unirazak.jpg"
         imageAlt="University campus architecture and modern academic facilities"
         breadcrumbs={[

@@ -15,7 +15,7 @@ export default function HomePage() {
       <PartnerUniversities />
       <WhyChooseUs />
       <JourneySection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
     </main>
   );
 }

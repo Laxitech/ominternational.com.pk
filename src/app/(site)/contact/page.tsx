@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  CheckCircle2,
   Clock,
-  HelpCircle,
+  ExternalLink,
   Mail,
   MapPin,
   MessageSquare,
@@ -13,7 +12,6 @@ import {
 import ContactForm from "@/components/forms/contact-form";
 import FaqAccordion from "@/components/shared/faq-accordion";
 import PageHeader from "@/components/shared/page-header";
-import WhatsappButton from "@/components/shared/whatsapp-button";
 import { faqs } from "@/data/faqs";
 import { siteConfig } from "@/data/site-config";
 
@@ -24,13 +22,16 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const googleMapsQuery = encodeURIComponent(siteConfig.contact.address);
+  const googleMapsEmbedUrl = `https://www.google.com/maps?q=${googleMapsQuery}&output=embed`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${googleMapsQuery}`;
+
   return (
     <main className="min-h-full bg-surface">
       {/* 1. Reusable Page Header */}
       <PageHeader
         title="Contact Us"
         subtitle="Connect with Us — Let’s Hear from You"
-        eyebrow="Get in Touch"
         imageSrc="/images/page header/unirazak.jpg"
         imageAlt="UNIRAZAK campus and OM International educational pathway"
         breadcrumbs={[
@@ -96,42 +97,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Advisory Reassurance Card */}
-            <div className="rounded-3xl border border-border bg-secondary/30 p-6 sm:p-7 shadow-2xs space-y-4">
-              <div className="flex items-center gap-2.5 text-primary">
-                <CheckCircle2 className="size-5 text-accent shrink-0" aria-hidden="true" />
-                <h3 className="font-serif text-lg font-bold text-heading">
-                  Why Consult OM International?
-                </h3>
-              </div>
 
-              <p className="text-xs sm:text-sm text-body leading-relaxed">
-                Our certified admissions counselors in Pakistan provide free qualification evaluation and end-to-end enrollment support.
-              </p>
-
-              <ul className="space-y-2.5 text-xs sm:text-sm text-body pt-2 border-t border-border/80">
-                <li className="flex items-start gap-2">
-                  <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />
-                  <span>Free credit exemption audit for ACCA, ICAP &amp; diploma holders</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />
-                  <span>Official representative for UNIRAZAK </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="size-1.5 rounded-full bg-primary shrink-0 mt-2" />
-                  <span>Assistance with HEC Pakistan equivalence clearance</span>
-                </li>
-              </ul>
-
-              <div className="pt-2">
-                <WhatsappButton
-                  label="Direct WhatsApp Chat"
-                  className="w-full text-xs"
-                  message="Hello OM International, I am interested in getting academic advice on university degree programs."
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -162,18 +128,7 @@ export default function ContactPage() {
                   Reach out today!
                 </p>
 
-                <div className="mt-6 rounded-xl border border-primary-200/80 bg-primary-subtle/50 p-4.5">
-                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                    <Clock className="size-3.5 text-accent" aria-hidden="true" />
-                    <span>Advisory Hours</span>
-                  </div>
-                  <p className="mt-1.5 text-sm font-medium text-heading">
-                    {siteConfig.contact.hours}
-                  </p>
-                  <p className="text-xs text-muted">
-                    Pakistan Standard Time (PKT)
-                  </p>
-                </div>
+
               </div>
             </div>
 
@@ -248,31 +203,84 @@ export default function ContactPage() {
                 >
                   <MessageSquare className="size-5" />
                 </span>
-                <div className="space-y-1">
-                  <h3 className="text-base font-semibold text-heading">
-                    WhatsApp Advisory Support
-                  </h3>
-                  <p className="text-sm font-medium text-heading">
-                    {siteConfig.contact.whatsappDisplay}
-                  </p>
 
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Frequently Asked Questions Section */}
+      {/* 4. Office Location Map */}
+      <section
+        aria-labelledby="office-location-heading"
+        className="border-b border-border py-16 sm:py-20 lg:py-24"
+      >
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-14 lg:px-8">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              Our Location
+            </p>
+            <h2
+              id="office-location-heading"
+              className="mt-3 text-2xl font-semibold tracking-tight text-heading sm:text-3xl lg:text-4xl"
+            >
+              Visit Our Islamabad Office
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-body sm:text-base">
+              Meet our academic advisory team for programme guidance,
+              qualification reviews, and application support.
+            </p>
+
+            <div className="mt-6 rounded-2xl border border-border bg-secondary/35 p-5">
+              <div className="flex items-start gap-3">
+                <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-surface text-primary">
+                  <MapPin className="size-5" aria-hidden="true" />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+                    Head Office Pakistan
+                  </p>
+                  <address className="mt-1 text-sm font-medium not-italic leading-6 text-heading">
+                    {siteConfig.contact.address}
+                  </address>
+                  <p className="mt-2 text-xs text-muted">
+                    {siteConfig.contact.hours}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-surface transition-colors hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+            >
+              Open in Google Maps
+              <ExternalLink className="size-4" aria-hidden="true" />
+            </a>
+          </div>
+
+          <div className="overflow-hidden rounded-3xl border border-border bg-secondary shadow-lg lg:col-span-8">
+            <iframe
+              title="Google Maps location of OM International Islamabad office"
+              src={googleMapsEmbedUrl}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block h-[360px] w-full sm:h-[440px] lg:h-[500px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Frequently Asked Questions Section */}
       <section
         aria-labelledby="faq-section-heading"
         className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24"
       >
         <div className="text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-primary-200 bg-primary-subtle px-3.5 py-1 text-xs font-semibold text-primary">
-            <HelpCircle className="size-3.5 text-accent" aria-hidden="true" />
-            <span>Common Questions</span>
-          </div>
+
 
           <h2
             id="faq-section-heading"

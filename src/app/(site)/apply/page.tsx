@@ -9,12 +9,8 @@ import {
   MessageSquare,
   ShieldCheck,
 } from "lucide-react";
-import ApplyForm from "@/components/forms/apply-form";
 import PageHeader from "@/components/shared/page-header";
-import { programmes } from "@/data/programmes";
-import { siteConfig } from "@/data/site-config";
-import { unirazakRequirements } from "@/data/unirazak-requirements";
-import { universities } from "@/data/universities";
+
 
 export const metadata: Metadata = {
   title: "Degree Eligibility Checker | OM International",
@@ -67,7 +63,6 @@ export default function ApplyPage() {
       <PageHeader
         title="Check Your Programme Eligibility"
         subtitle="Compare your academic and professional background with the entry level of your chosen degree pathway before speaking with an admissions advisor."
-        eyebrow="Free preliminary assessment"
         imageSrc="/images/page header/unirazak.jpg"
         imageAlt="International university campus representing degree eligibility assessment"
         breadcrumbs={[
@@ -98,9 +93,8 @@ export default function ApplyPage() {
           {checkerBenefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className={`flex items-start gap-3 border-border px-4 py-5 sm:px-6 sm:py-7 ${
-                index > 0 ? "border-t sm:border-l sm:border-t-0" : ""
-              }`}
+              className={`flex items-start gap-3 border-border px-4 py-5 sm:px-6 sm:py-7 ${index > 0 ? "border-t sm:border-l sm:border-t-0" : ""
+                }`}
             >
               <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-surface text-primary shadow-2xs">
                 <benefit.icon className="size-5" aria-hidden="true" />
@@ -142,14 +136,7 @@ export default function ApplyPage() {
           </div>
 
           <div className="mt-10 grid items-start gap-8 lg:grid-cols-12 lg:gap-10">
-            <div className="lg:col-span-8">
-              <ApplyForm
-                programmes={programmes}
-                universities={universities}
-                requirements={unirazakRequirements}
-                whatsappNumber={siteConfig.contact.whatsapp}
-              />
-            </div>
+
 
             <aside className="space-y-5 lg:sticky lg:top-24 lg:col-span-4">
               <div className="rounded-3xl border border-border bg-secondary/35 p-6 sm:p-7">

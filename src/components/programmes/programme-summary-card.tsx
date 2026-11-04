@@ -152,13 +152,7 @@ export default function ProgrammeSummaryCard({
 
           {/* CTAs */}
           <div className="mt-6 space-y-3 pt-2">
-            <a
-              href="#exemption-check"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-on-primary shadow-sm transition-colors hover:bg-primary-hover active:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none text-white"
-            >
-              <span>{checkActionLabel}</span>
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
+
 
             <Link
               href="/contact"

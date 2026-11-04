@@ -35,7 +35,7 @@ export default function StatsStrip() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16 items-center">
           {/* Left Column: Heading, Subheading, Eyebrow */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary-50 text-primary border border-primary-200/70 mb-3.5 w-fit">
+            <div className="inline-flex items-center gap-1.5  py-1  text-xs font-semibold text-primary  mb-3.5 w-fit">
               Our Reach &amp; Impact
             </div>
 

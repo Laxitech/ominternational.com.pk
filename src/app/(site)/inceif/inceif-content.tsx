@@ -31,7 +31,6 @@ export default function InceifContent() {
       <PageHeader
         title="Lead Pakistan's Islamic Finance Transformation."
         subtitle="An online postgraduate-style Certificate in Islamic Finance, delivered by OM International in exclusive collaboration with INCEIF University, Malaysia, through ISRA Associates."
-        eyebrow="INCEIF Collaboration"
         imageSrc="/images/page header/unirazak.jpg"
         imageAlt="INCEIF University — Global University of Islamic Finance, Malaysia"
         breadcrumbs={[
@@ -540,20 +539,23 @@ export default function InceifContent() {
         </div>
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-surface shadow-xs">
-          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr]">
-            {/* Photo */}
-            <div className="relative min-h-[320px] bg-primary-subtle lg:min-h-[460px]">
-              <Image
-                src="/images/drShahid.jpeg"
-                alt="Shahid Muhammad Khan Ghauri — Lead Advisor"
-                fill
-                sizes="(min-width: 1024px) 300px, 100vw"
-                className="object-cover object-top"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-primary-900/40 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-surface/10"
-              />
+          <div className="flex flex-col lg:flex-row">
+            {/* Photo — fixed aspect ratio so it never gets a tall awkward strip */}
+            <div className="relative w-full shrink-0 lg:w-72 xl:w-80">
+              {/* aspect-[3/4] on mobile keeps a portrait ratio; on lg the div fills the row height */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden lg:aspect-auto lg:h-full lg:min-h-[360px]">
+                <Image
+                  src="/images/drShahid.jpeg"
+                  alt="Shahid Muhammad Khan Ghauri — Lead Advisor"
+                  fill
+                  sizes="(min-width: 1024px) 320px, 100vw"
+                  className="object-cover object-center"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-gradient-to-t from-primary-900/50 via-primary-900/10 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-surface/20"
+                />
+              </div>
             </div>
 
             {/* Body */}

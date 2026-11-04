@@ -106,7 +106,7 @@ export default function UniversityAbout({ university }: UniversityAboutProps) {
             {/* Styled Pull quote */}
             <blockquote
               className={cn(
-                "relative mt-6 rounded-2xl border-l-4 border-primary bg-secondary/40 p-5 sm:p-6",
+                "relative mt-6  border-l-4 border-primary bg-secondary/40 p-5 sm:p-6",
                 "text-base leading-relaxed text-heading sm:text-lg",
               )}
             >

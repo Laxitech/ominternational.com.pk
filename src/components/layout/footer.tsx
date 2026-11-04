@@ -9,28 +9,18 @@ const PROGRAMME_LINKS = [
   { label: "Master of Business Administration (MBA)", href: "/programmes/master-of-business-administration" },
   { label: "BS Accounting & Finance", href: "/programmes/bs-accounting-and-finance" },
   { label: "PhD Programme", href: "/programmes/doctor-of-philosophy" },
-  { label: "Executive Master's Pathways", href: "/programmes?level=masters" },
-  { label: "Bachelor's Degree Pathways", href: "/programmes?level=bachelors" },
   { label: "ICAP & ACCA Route", href: "/programmes/bs-accounting-and-finance" },
-  { label: "Malaysian Dual Awards", href: "/universities" },
 ];
 
 const COMPANY_LINKS = [
   { label: "About OM International", href: "/about" },
   { label: "Governing Board", href: "/governing-board" },
   { label: "INCEIF Collaboration", href: "/inceif" },
-  { label: "What's New", href: "/scholarships" },
-  { label: "Partner Universities", href: "/universities" },
-  { label: "Student Stories", href: "/about#leadership-governance-heading" },
   { label: "Learning Centers", href: "/centers" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 const RESOURCE_LINKS = [
-  { label: "Degree Eligibility Checker", href: "/apply" },
-  { label: "Programme Prospectus", href: "/programmes" },
-  { label: "Admissions & Fees Guide", href: "/contact" },
-  { label: "HEC Attestation Support", href: "/study-in-malaysia" },
   { label: "Help & FAQs", href: "/contact#faq-section-heading" },
 ];
 
@@ -155,21 +145,7 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Recognition & Accreditation Badges (paralleling G2 & Capterra in Astra) */}
-            <div className="mt-8 pt-5">
-              <p className="text-xs font-normal text-slate-400">
-                Accredited &amp; recognised by
-              </p>
-              <div className="mt-3 flex flex-wrap items-center gap-4 sm:gap-6">
-                <div className="inline-flex items-center gap-2 text-white/90">
-                  <ShieldCheck className="size-5 text-primary-300" aria-hidden="true" />
-                  <span className="text-xs sm:text-sm font-semibold tracking-wide">
-                    MQA Malaysia
-                  </span>
-                </div>
 
-              </div>
-            </div>
           </div>
 
           {/* Column 2: Programmes (corresponds to Pentest in Astra) */}
@@ -230,32 +206,13 @@ export default function Footer() {
         </div>
 
         {/* Elevated Bottom Capsule Card matching Astra's rounded bar */}
-        <div className="rounded-2xl sm:rounded-3xl border border-white/5 bg-white/[0.04] px-6 py-5 sm:px-8 sm:py-6 backdrop-blur-md">
-          <div className="flex flex-col items-center justify-between gap-4 text-xs sm:text-sm text-slate-400 sm:flex-row">
-            <p className="text-center sm:text-left">
+        <div className=" border-t-4 border-white/5 text-center  px-6 py-5 sm:px-8 sm:py-6 backdrop-blur-md">
+          <div className="flex flex-col items-center justify-center gap-4 text-xs sm:text-sm text-slate-400 sm:flex-row">
+            <p className="text-center">
               Copyright &copy; {currentYear} OM International (Pvt) Ltd. All Rights Reserved.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
-              <Link
-                href="/privacy-policy"
-                className="text-slate-300 transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-slate-300 transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="/contact"
-                className="text-slate-300 transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
-              >
-                Report an Inquiry
-              </Link>
-            </div>
+
           </div>
         </div>
       </div>

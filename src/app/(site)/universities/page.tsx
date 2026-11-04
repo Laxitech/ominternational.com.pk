@@ -131,7 +131,6 @@ export default function UniversitiesPage() {
       <PageHeader
         title="Partner Universities"
         subtitle="Premier Malaysian Higher Education Pathways for Pakistani Students &amp; Professionals"
-        eyebrow="Global Academic Partnerships"
         imageSrc="/images/page header/unirazak.jpg"
         imageAlt="Modern university campus architecture in Malaysia"
         breadcrumbs={[
@@ -147,7 +146,7 @@ export default function UniversitiesPage() {
           <ChevronRight className="size-4" aria-hidden="true" />
         </a>
         <Link
-          href="/apply"
+          href="/contact"
           className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-surface/40 bg-surface/10 px-5 py-2.5 text-sm font-semibold text-surface transition-colors hover:border-surface hover:bg-surface/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface"
         >
           <span>Apply for Evaluation</span>
@@ -378,7 +377,7 @@ export default function UniversitiesPage() {
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/apply"
+                href="/contact"
                 className="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-base font-semibold text-surface transition-colors hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface"
               >
                 <span>Apply for Degree Assessment</span>

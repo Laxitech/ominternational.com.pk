@@ -11,7 +11,6 @@ export type BreadcrumbItem = {
 export type PageHeaderProps = {
   title: string;
   subtitle?: string;
-  eyebrow?: string;
   imageSrc?: string;
   imageAlt?: string;
   breadcrumbs?: BreadcrumbItem[];
@@ -22,7 +21,6 @@ export type PageHeaderProps = {
 export default function PageHeader({
   title,
   subtitle,
-  eyebrow,
   imageSrc = "/images/page header/unirazak.jpg",
   imageAlt = "OM International educational pathway banner",
   breadcrumbs,
@@ -97,12 +95,7 @@ export default function PageHeader({
             </nav>
           )}
 
-          {/* Eyebrow */}
-          {eyebrow && (
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary-200 sm:text-sm">
-              {eyebrow}
-            </p>
-          )}
+
 
           {/* Main Title */}
           <h1

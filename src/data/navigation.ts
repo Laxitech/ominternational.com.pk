@@ -16,8 +16,19 @@ export const navigation: NavigationItem[] = [
     href: "/about",
   },
   {
-    label: "Governing Board",
+    label: "Management",
     href: "/governing-board",
+
+    children: [
+      {
+        label: "Governing Board",
+        href: "/governing-board",
+      },
+      {
+        label: "Advisory Board",
+        href: "/advisory-board",
+      },
+    ],
   },
   {
     label: "UNIRAZAK",

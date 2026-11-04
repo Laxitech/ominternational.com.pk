@@ -1,17 +1,15 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
-  Award,
   Building2,
-  CheckCircle2,
   ExternalLink,
-  GraduationCap,
   MapPin,
+  Star,
 } from "lucide-react";
-import type { University } from "@/types/university";
-import type { Programme } from "@/types/programme";
 import { cn } from "@/lib/utils";
+import type { Programme } from "@/types/programme";
+import type { University } from "@/types/university";
 
 type UniversityCardProps = {
   university: University;
@@ -24,123 +22,140 @@ export default function UniversityCard({
   programmes = [],
   featured = false,
 }: UniversityCardProps) {
-  const uniProgrammes = programmes.filter(
-    (p) => p.universitySlug === university.slug,
+  const universityProgrammes = programmes.filter(
+    (programme) => programme.universitySlug === university.slug,
   );
-  const programmeCount = uniProgrammes.length;
-  const schoolCount =
-    university.schools?.length ||
-    new Set(uniProgrammes.map((p) => p.schoolSlug)).size;
+  const programmeCount = universityProgrammes.length;
+  const programmeSchoolCount = new Set(
+    universityProgrammes
+      .map((programme) => programme.schoolSlug)
+      .filter(Boolean),
+  ).size;
+  const schoolCount = university.schools?.length || programmeSchoolCount;
+  const detailHref = `/universities/${university.slug}`;
 
   return (
     <article
       className={cn(
-        "group relative overflow-hidden rounded-3xl border border-border bg-surface",
-        "shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl",
-        featured && "ring-1 ring-primary/20",
+        "group flex h-full flex-col overflow-hidden rounded-3xl border bg-surface shadow-xs transition-all duration-300",
+        "hover:-translate-y-1 hover:border-primary-300 hover:shadow-lg motion-reduce:transition-none motion-reduce:hover:translate-y-0",
+        featured ? "border-primary-200" : "border-border",
       )}
     >
-      <div className="flex flex-col sm:flex-row">
-        {/* Left image column — visible only when aboutImage is set */}
-        {university.aboutImage && (
-          <div className="relative w-full shrink-0 overflow-hidden sm:w-52 lg:w-60">
-            {/* min-height on mobile so image has room; on sm+ it fills the row naturally */}
-            <div className="relative h-52 w-full sm:h-full">
-              <Image
-                src={university.aboutImage}
-                alt={`${university.shortName} campus`}
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 640px) 100vw, 208px"
-              />
-              {/* Gradient: bottom-to-top on mobile, right-to-left on desktop so text stays readable */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent sm:bg-gradient-to-r sm:from-transparent sm:to-surface/20" />
-            </div>
-            {/* Elevation spacer — pushes the image up slightly from the card bottom on mobile */}
-            <div className="-mb-4 sm:hidden" />
+      <div className="relative h-48 overflow-hidden bg-secondary sm:h-56 lg:h-60">
+        {university.aboutImage ? (
+          <Image
+            src={university.aboutImage}
+            alt={`${university.name} campus`}
+            fill
+            priority={featured}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center bg-surface-dark text-primary-200">
+            <Building2 className="size-14" aria-hidden="true" />
           </div>
         )}
 
-        {/* Right content column */}
-        <div className="flex flex-1 flex-col justify-between p-6 sm:p-8 lg:p-10">
-          {/* Top accent badge & location strip */}
-          <div>
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="inline-flex items-center gap-1.5 text-xs font-medium text-muted">
-                <MapPin className="size-3.5 text-accent" aria-hidden="true" />
-                <span>{university.city}, Malaysia</span>
-              </div>
-            </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-surface-dark/35 via-transparent to-surface-dark/10"
+        />
 
-            {/* University Name & Tagline */}
-            <div className="mt-5 sm:mt-6">
-              <h3 className="font-serif text-2xl font-semibold tracking-tight text-heading sm:text-3xl transition-colors duration-200 group-hover:text-primary">
-                <Link
-                  href={`/universities/${university.slug}`}
-                  className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
-                >
-                  {university.name}
-                </Link>
-              </h3>
-              {university.tagline && (
-                <p className="mt-2 text-sm font-medium text-accent">
-                  {university.tagline}
-                </p>
-              )}
-              <p className="mt-4 text-sm leading-relaxed text-body sm:text-base sm:leading-7">
-                {university.summary}
-              </p>
-            </div>
+        <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-4">
+          {university.badge ? (
+            <span className="max-w-[70%] rounded-full border border-surface/30 bg-surface/90 px-3 py-1 text-[11px] font-semibold text-primary shadow-sm backdrop-blur-sm">
+              {university.badge}
+            </span>
+          ) : (
+            <span />
+          )}
 
-            {/* Highlights List */}
-            {university.highlights && university.highlights.length > 0 && (
-              <div className="mt-6 space-y-2.5 border-t border-border/80 pt-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                  Key Academic Highlights
-                </p>
-                <ul className="space-y-2 text-sm text-body">
-                  {university.highlights.slice(0, 3).map((item, index) => (
-                    <li key={index} className="flex items-start gap-2.5">
-                      <CheckCircle2
-                        className="size-4 shrink-0 text-success mt-0.5"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+          {featured && (
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary px-3 py-1 text-[11px] font-semibold text-surface shadow-sm">
+              <Star className="size-3 fill-current" aria-hidden="true" />
+              Featured
+            </span>
+          )}
+        </div>
+      </div>
 
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <span className="rounded-full border border-primary-200 bg-primary-subtle px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+            {university.shortName}
+          </span>
+          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted">
+            <MapPin className="size-3.5 text-accent" aria-hidden="true" />
+            {university.city}, {university.country}
+          </span>
+        </div>
 
+        <h3 className="mt-4 text-xl font-semibold leading-snug tracking-tight text-heading transition-colors group-hover:text-primary sm:text-2xl">
+          <Link
+            href={detailHref}
+            className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+          >
+            {university.name}
+          </Link>
+        </h3>
+
+        {university.tagline && (
+          <p className="mt-2 text-sm font-medium leading-6 text-accent">
+            {university.tagline}
+          </p>
+        )}
+
+        <p className="mt-3 text-sm leading-7 text-body">
+          {university.summary}
+        </p>
+
+        <div className="mt-6 grid grid-cols-2 divide-x divide-border border-y border-border py-4 text-center">
+          <div className="px-2">
+            <p className="text-lg font-bold tracking-tight text-heading sm:text-xl">
+              {programmeCount}
+            </p>
+            <p className="mt-0.5 text-[11px] font-medium text-muted sm:text-xs">
+              Programmes
+            </p>
           </div>
 
-          {/* Action Footer */}
-          <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3 border-t border-border pt-6">
-            <Link
-              href={`/universities/${university.slug}`}
-              className="group/btn inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-surface transition-all duration-200 hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+          <div className="px-2">
+            <p className="text-lg font-bold tracking-tight text-heading sm:text-xl">
+              {university.established}
+            </p>
+            <p className="mt-0.5 text-[11px] font-medium text-muted sm:text-xs">
+              Established
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-auto flex items-center gap-3 pt-5">
+          <Link
+            href={detailHref}
+            aria-label={`View details for ${university.name}`}
+            className="group/link inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-surface transition-colors hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+          >
+            View University
+            <ArrowRight
+              className="size-4 transition-transform group-hover/link:translate-x-1 motion-reduce:transition-none"
+              aria-hidden="true"
+            />
+          </Link>
+
+          {university.website && (
+            <a
+              href={university.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit the official ${university.shortName} website`}
+              title={`Official ${university.shortName} website`}
+              className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-border-strong bg-surface text-heading transition-colors hover:border-primary hover:bg-primary-subtle hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
             >
-              <span>View University</span>
-              <ArrowRight
-                className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1 motion-reduce:transition-none"
-                aria-hidden="true"
-              />
-            </Link>
-
-            {university.website && (
-              <a
-                href={university.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-xl border border-border-strong bg-surface px-4 py-2.5 text-sm font-medium text-heading transition-colors duration-200 hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
-                title={`Visit official ${university.shortName} website`}
-              >
-                <span>Official Portal</span>
-                <ExternalLink className="size-3.5 text-muted" aria-hidden="true" />
-              </a>
-            )}
-          </div>
+              <ExternalLink className="size-4" aria-hidden="true" />
+            </a>
+          )}
         </div>
       </div>
     </article>

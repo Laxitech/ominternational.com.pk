@@ -146,15 +146,7 @@ export default function UniversityFacts({
       badge: "Legacy",
       icon: Calendar,
     },
-    {
-      id: "schools",
-      targetNumber: schoolCount > 0 ? schoolCount : 4,
-      suffix: " Faculties",
-      label: "Academic Faculties",
-      sublabel: "Specialized schools of excellence",
-      badge: "Structure",
-      icon: Building2,
-    },
+
     {
       id: "programmes",
       targetNumber: uniProgrammes.length > 0 ? uniProgrammes.length : 15,
@@ -213,7 +205,7 @@ export default function UniversityFacts({
         </div>
 
         {/* Animated Fact Cards Grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
           {facts.map((fact, index) => (
             <AnimatedFactCard
               key={fact.id}

@@ -233,7 +233,7 @@ export default function MobileNav() {
             </ul>
 
             <Link
-              href="/apply"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-surface shadow-sm transition-colors duration-200 hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none"
             >

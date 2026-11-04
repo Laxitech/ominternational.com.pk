@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/shared/page-header";
 import GoverningBoardSection from "@/components/board/governing-board-section";
-import AdvisoryBoardSection from "@/components/board/advisory-board-section";
 import {
   boardMembers,
   GOVERNING_BOARD_HEADLINE,
@@ -12,11 +11,11 @@ import {
 export const metadata: Metadata = {
   title: "Governing Board | OM International",
   description:
-    "Meet the Governing Board and Advisory Board of OM International, providing academic governance, strategic direction, and leadership across global degrees.",
+    "Meet the Governing Board of OM International, providing academic governance, strategic direction, and leadership across global degrees.",
   openGraph: {
     title: "Governing Board | OM International",
     description:
-      "Meet the Governing Board and Advisory Board of OM International, providing academic governance, strategic direction, and leadership across global degrees.",
+      "Meet the Governing Board of OM International, providing academic governance, strategic direction, and leadership across global degrees.",
     type: "website",
   },
 };
@@ -28,7 +27,6 @@ export default function GoverningBoardPage() {
       <PageHeader
         title={GOVERNING_BOARD_HEADLINE}
         subtitle={GOVERNING_BOARD_SUBHEADING}
-        eyebrow="Leadership & Governance"
         imageSrc="/images/page header/unirazak.jpg"
         imageAlt="OM International leadership and governance"
         breadcrumbs={[
@@ -40,10 +38,7 @@ export default function GoverningBoardPage() {
       {/* 2. Governing Board Section */}
       <GoverningBoardSection members={boardMembers} />
 
-      {/* 3. Advisory Board Section */}
-      <AdvisoryBoardSection members={boardMembers} />
-
-      {/* 4. Closing Note */}
+      {/* 3. Closing Note */}
       <section
         aria-label="More about OM International"
         className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8"

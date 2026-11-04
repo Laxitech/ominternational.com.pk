@@ -89,7 +89,7 @@ export default function AboutPreview() {
               >
                 <span
                   className={cn(
-                    "text-[clamp(1.35rem,4.5vw,2.5rem)] font-extrabold text-white leading-none",
+                    "text-[clamp(1.3rem,4.5vw,2.5rem)] font-extrabold text-white leading-none",
                     "tabular-nums tracking-tight",
                   )}
                 >
@@ -161,7 +161,7 @@ export default function AboutPreview() {
 
             {/* Highlighted introduction */}
             <div className={cn(
-              "mt-6 rounded-lg border-l-4 border-accent bg-primary-50 p-4",
+              "mt-6  border-l-4 border-accent bg-primary-50 p-4",
               "sm:p-5",
             )}>
               <p className={cn(

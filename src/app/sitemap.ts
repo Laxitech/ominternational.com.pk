@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/governing-board`, lastModified: new Date() },
+    { url: `${baseUrl}/advisory-board`, lastModified: new Date() },
     { url: `${baseUrl}/programmes`, lastModified: new Date() },
     { url: `${baseUrl}/universities`, lastModified: new Date() },
     { url: `${baseUrl}/centers`, lastModified: new Date() },

@@ -72,7 +72,6 @@ export default async function UniversityPage({
             ? `${university.tagline} — ${university.summary}`
             : university.summary
         }
-        eyebrow={`Partner University • ${university.city}, ${university.country}`}
         imageSrc={university.heroImage ?? "/images/page header/unirazak.jpg"}
         imageAlt={`${university.name} campus architecture and facilities`}
         breadcrumbs={[

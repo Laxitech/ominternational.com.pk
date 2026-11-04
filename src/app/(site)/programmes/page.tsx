@@ -78,7 +78,6 @@ export default function ProgrammesPage() {
       <PageHeader
         title="Find a Programme for Your Next Step"
         subtitle="Explore flexible Malaysian degree pathways for students and working professionals, with options to study online, through ODL, or on campus."
-        eyebrow="International degree pathways"
         imageSrc="/images/page header/unirazak.jpg"
         imageAlt="University campus representing international degree programmes"
         breadcrumbs={[
@@ -110,11 +109,9 @@ export default function ProgrammesPage() {
             {directoryStats.map((stat, index) => (
               <div
                 key={stat.label}
-                className={`flex items-center gap-3 py-5 sm:gap-4 sm:py-7 ${
-                  index % 2 === 1 ? "border-l border-border pl-4 sm:pl-6" : "pr-4 sm:pr-6"
-                } ${index > 1 ? "border-t border-border lg:border-t-0" : ""} ${
-                  index > 0 ? "lg:border-l lg:border-border lg:pl-8" : ""
-                }`}
+                className={`flex items-center gap-3 py-5 sm:gap-4 sm:py-7 ${index % 2 === 1 ? "border-l border-border pl-4 sm:pl-6" : "pr-4 sm:pr-6"
+                  } ${index > 1 ? "border-t border-border lg:border-t-0" : ""} ${index > 0 ? "lg:border-l lg:border-border lg:pl-8" : ""
+                  }`}
               >
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-surface text-primary shadow-2xs sm:size-11">
                   <stat.icon className="size-5" aria-hidden="true" />
@@ -248,7 +245,7 @@ export default function ProgrammesPage() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              href="/apply"
+              href="/contact"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-surface transition-colors hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface sm:w-auto"
             >
               Request an eligibility review

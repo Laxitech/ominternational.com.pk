@@ -3,7 +3,6 @@ import type {
   ProgrammeEligibility,
   ProgrammeStructureExemptions,
 } from "@/types/programme";
-import ExemptionCheckForm from "@/components/forms/exemption-check-form";
 
 interface ProgrammeExemptionsProps {
   exemptions?: ProgrammeStructureExemptions;
@@ -15,7 +14,6 @@ interface ProgrammeExemptionsProps {
 export default function ProgrammeExemptions({
   exemptions,
   eligibility,
-  programmeTitle = "BS Accounting and Finance",
   isPostgraduate = false,
 }: ProgrammeExemptionsProps) {
   const hasExemptions = Boolean(exemptions && exemptions.subjectCount > 0);
@@ -102,9 +100,7 @@ export default function ProgrammeExemptions({
         <div className="lg:col-span-6">
           <div className="rounded-2xl border border-border bg-surface-elevated/50 p-6 sm:p-8">
             <div className="mb-6">
-              <h3 className="text-lg font-semibold text-heading sm:text-xl">
-                {isPostgraduate ? "Check MBA Eligibility" : "Check my exemptions"}
-              </h3>
+
               <p className="mt-1 text-xs text-muted leading-relaxed">
                 {isPostgraduate
                   ? "Enter your academic credentials and an advisor will verify your Level-6 eligibility for 1-year fast-track entry."
@@ -112,10 +108,7 @@ export default function ProgrammeExemptions({
               </p>
             </div>
 
-            <ExemptionCheckForm
-              programmeTitle={programmeTitle}
-              isPostgraduate={isPostgraduate}
-            />
+
           </div>
         </div>
       </div>

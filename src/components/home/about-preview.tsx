@@ -36,15 +36,19 @@ export default function AboutPreview() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-1 lg:gap-16 items-center max-w-[1200px] mx-auto">
           {/* Left: Portrait + overlapping experience counter */}
           <div
             className={cn(
-              "relative group lg:col-span-1 max-w-sm mx-auto w-full",
+              "relative  group lg:col-span-1 max-w-sm mx-auto w-full",
               active ? "about-reveal" : "opacity-0 motion-reduce:opacity-100",
             )}
           >
-            <div
+
+
+
+
+            {/* <div
               className={cn(
                 "relative aspect-[1/1] w-full max-w-md overflow-hidden rounded-3xl border border-primary-200/50 bg-surface shadow-lg",
                 "sm:aspect-[1/1] lg:max-w-none lg:aspect-[1/1]",
@@ -58,23 +62,11 @@ export default function AboutPreview() {
                 className="object-cover object-center"
               />
 
-              {/* Vertical leadership label along the left edge */}
-              <div
-                aria-hidden="true"
-                className={cn(
-                  "absolute left-4 top-1/2 -translate-y-1/2",
-                  "writing-mode-vertical-rl",
-                  "text-[10px] font-semibold uppercase tracking-widest",
-                  "text-primary/60",
-                  "hidden sm:block",
-                )}
-              >
-                LEADERSHIP ROOTED IN EDUCATION
-              </div>
-            </div>
+
+            </div> */}
 
             {/* Circular experience counter at bottom-right corner */}
-            <div
+            {/* <div
               className={cn(
                 "absolute z-20 rounded-full border-2 border-primary-200/60 bg-primary-900 shadow-xl text-on-dark",
                 // Inside bounds on mobile/tablet to avoid clipping
@@ -134,7 +126,7 @@ export default function AboutPreview() {
               </svg>
 
               <span className="sr-only">{display}+ years of experience</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Right: Content */}

@@ -38,10 +38,10 @@ export default function BoardMemberProfile({
   const photoSrc = member.photo || "/images/board/placeholder-person.svg";
   const hasProfileSections = Boolean(
     profile?.bio?.length ||
-      profile?.specializations?.length ||
-      profile?.governmentsAdvised?.length ||
-      profile?.books?.length ||
-      profile?.portfolio?.length,
+    profile?.specializations?.length ||
+    profile?.governmentsAdvised?.length ||
+    profile?.books?.length ||
+    profile?.portfolio?.length,
   );
 
   return (
@@ -183,36 +183,7 @@ export default function BoardMemberProfile({
         </div>
       </section>
 
-      {profile?.highlights && profile.highlights.length > 0 && (
-        <section
-          aria-label={`${member.name} profile highlights`}
-          className="border-b border-border bg-secondary/35"
-        >
-          <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-4 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-6 lg:px-8">
-            {profile.highlights.map((item, index) => (
-              <div
-                key={item.label}
-                className="flex items-center gap-4 py-6 sm:block sm:px-6 sm:py-8 sm:text-center first:sm:pl-0 last:sm:pr-0"
-              >
-                <span
-                  aria-hidden="true"
-                  className="font-mono text-xs font-semibold text-accent"
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="sm:mt-2">
-                  <p className="font-display text-xl font-bold tracking-tight text-heading sm:text-2xl">
-                    {item.value}
-                  </p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                    {item.label}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+
 
       {profile ? (
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-24">

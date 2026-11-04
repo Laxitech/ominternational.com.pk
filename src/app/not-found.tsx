@@ -52,14 +52,14 @@ export default function NotFound() {
           </Link>
 
           <Link
-            href="/programmes"
+            href="/about"
             className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border-strong bg-surface px-6 py-2.5 text-sm font-semibold text-heading transition-colors duration-200 hover:border-primary hover:bg-secondary hover:text-primary active:bg-primary-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none sm:min-h-12"
           >
             <BookOpen
               aria-hidden="true"
               className="size-4 text-accent transition-colors duration-200 group-hover:text-primary motion-reduce:transition-none"
             />
-            <span>Explore Programmes</span>
+            <span>Learn More</span>
           </Link>
         </div>
       </div>

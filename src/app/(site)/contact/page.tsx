@@ -307,10 +307,10 @@ export default function ContactPage() {
               <span>Submit Your Question</span>
             </a>
             <Link
-              href="/programmes"
+              href="/about"
               className="inline-flex items-center gap-2 rounded-lg border border-border-strong bg-surface px-5 py-2.5 text-sm font-semibold text-heading transition-colors duration-200 hover:border-primary hover:text-primary active:bg-primary-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none"
             >
-              <span>Explore Programmes</span>
+              <span>Learn More</span>
             </Link>
           </div>
         </div>

@@ -28,7 +28,7 @@ const steps: JourneyStep[] = [
     id: "programme-advisory",
     step: "01",
     stage: "Consultation",
-    title: "Explore Programmes",
+    title: "Learn About Us",
     description:
       "Explore your options with an advisor.",
     Icon: Compass,

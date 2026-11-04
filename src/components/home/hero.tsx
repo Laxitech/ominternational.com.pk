@@ -44,10 +44,10 @@ export default function Hero() {
 
           <div className="hero-reveal mt-4 flex flex-col gap-3 [animation-delay:180ms] sm:mt-8 sm:flex-row sm:items-center">
             <Link
-              href="/programmes"
+              href="/about"
               className="group inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-surface shadow-lg shadow-primary-900/30 transition-colors duration-200 hover:bg-primary-hover active:bg-primary-pressed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface motion-reduce:transition-none sm:min-h-12 sm:w-auto"
             >
-              Explore Programmes
+              Learn More
               <ArrowRight
                 aria-hidden="true"
                 className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none"

@@ -520,91 +520,120 @@ export default function InceifContent() {
       <section
         id="advisor"
         aria-labelledby="advisor-heading"
-        className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+        className="bg-surface py-16 sm:py-20 lg:py-24"
       >
-        <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Lead Advisor
-          </p>
-          <h2
-            id="advisor-heading"
-            className="mt-3 text-2xl font-semibold tracking-tight text-heading sm:text-3xl lg:text-4xl"
-          >
-            Guided by leadership that has built Shariah-compliant institutions from the inside.
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-body sm:text-base">
-            Every module is designed, aligned and overseen by practitioners who have led the
-            transition themselves — starting with the programme&apos;s lead advisor.
-          </p>
-        </div>
-
-        <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-surface shadow-xs">
-          <div className="flex flex-col lg:flex-row">
-            {/* Photo — fixed aspect ratio so it never gets a tall awkward strip */}
-            <div className="relative w-full shrink-0 lg:w-72 xl:w-80">
-              {/* aspect-[3/4] on mobile keeps a portrait ratio; on lg the div fills the row height */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden lg:aspect-auto lg:h-full lg:min-h-[360px]">
-                <Image
-                  src="/images/drShahid.jpeg"
-                  alt="Shahid Muhammad Khan Ghauri — Lead Advisor"
-                  fill
-                  sizes="(min-width: 1024px) 320px, 100vw"
-                  className="object-cover object-center"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-primary-900/50 via-primary-900/10 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-surface/20"
-                />
-              </div>
-            </div>
-
-            {/* Body */}
-            <div className="p-8 sm:p-10">
-              <span className="inline-flex items-center rounded-full bg-primary-subtle px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
-                Programme Leadership
-              </span>
-              <h3 className="mt-4 text-2xl font-semibold text-heading sm:text-3xl">
-                Shahid Muhammad Khan Ghauri
-              </h3>
-              <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-accent">
-                Banking Executive · Author · Corporate Governance Specialist
-              </p>
-              <div className="mt-5 space-y-3 text-sm leading-relaxed text-body">
-                <p>
-                  A banking executive, author, and governance specialist with over two decades of
-                  leadership across conventional, microfinance, and Islamic banking institutions.
-                  He brings operational mastery in converting conventional financial frameworks
-                  into robust, Shariah-compliant models, alongside deep expertise in corporate
-                  risk governance and branch networks.
-                </p>
-                <p>
-                  A Fellow of the Pakistan Institute of Corporate Governance and author of{" "}
-                  <em className="text-heading">
-                    Islamic Banking – the philosophy and fundamentals
-                  </em>{" "}
-                  and the bestseller{" "}
-                  <em className="text-heading">The Rightful Way of Banking</em>, Shahid bridges
-                  practical executive leadership with academic rigor.
-                </p>
-              </div>
-              <ul className="mt-6 space-y-3 border-t border-dashed border-border pt-6">
-                {[
-                  "Fellow of the Pakistan Institute of Corporate Governance",
-                  "Active peer reviewer for international research journals",
-                  "Visiting faculty across leading financial institutions",
-                  "Leads programme design, delivery standards & Shariah alignment",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-body">
-                    <CheckCircle2
-                      className="mt-0.5 size-4 shrink-0 text-accent"
-                      aria-hidden="true"
-                    />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-14 lg:px-8">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+              Lead Advisor
+            </p>
+            <h2
+              id="advisor-heading"
+              className="mt-3 text-balance text-3xl font-semibold tracking-tight text-heading sm:text-4xl lg:leading-tight"
+            >
+              Practical leadership behind the programme.
+            </h2>
+            <p className="mt-4 max-w-xl text-sm leading-7 text-body sm:text-base">
+              Every module is designed, aligned, and overseen by practitioners
+              who have built Shariah-compliant institutions from the inside —
+              starting with the programme&apos;s lead advisor.
+            </p>
           </div>
+
+          <article className="rounded-3xl border border-border bg-surface p-6 shadow-xs sm:p-8 lg:col-span-8 lg:p-10">
+            <div className="grid items-start gap-7 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-8">
+              <div className="mx-auto w-36 sm:mx-0 sm:w-44">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-secondary shadow-sm">
+                  <Image
+                    src="/images/drShahid.jpeg"
+                    alt="Shahid Muhammad Khan Ghauri — Lead Advisor"
+                    fill
+                    sizes="(min-width: 640px) 176px, 144px"
+                    className="object-cover object-[64%_center]"
+                  />
+                </div>
+                <p className="mt-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-primary sm:text-left">
+                  Lead Advisor
+                </p>
+              </div>
+
+              <div className="text-center sm:text-left">
+                <span className="inline-flex rounded-full border border-primary-200 bg-primary-subtle px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                  Programme Leadership
+                </span>
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-heading sm:text-3xl">
+                  Shahid Muhammad Khan Ghauri
+                </h3>
+                <p className="mt-2 text-xs font-semibold uppercase leading-5 tracking-[0.1em] text-accent sm:text-sm">
+                  Banking Executive · Author · Corporate Governance Specialist
+                </p>
+                <p className="mt-5 text-left text-sm leading-7 text-body sm:text-base sm:leading-8">
+                  A banking executive, author, and governance specialist with
+                  over two decades of leadership across conventional,
+                  microfinance, and Islamic banking institutions. He brings
+                  operational mastery in converting conventional financial
+                  frameworks into robust, Shariah-compliant models, alongside
+                  deep expertise in corporate risk governance and branch
+                  networks.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-8 border-t border-border pt-8 md:grid-cols-2">
+              <div>
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary-subtle text-primary">
+                    <BookOpen className="size-4" aria-hidden="true" />
+                  </span>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+                    Published Works
+                  </p>
+                </div>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-body">
+                  <li>
+                    <cite className="font-semibold not-italic text-heading">
+                      Islamic Banking – the philosophy and fundamentals
+                    </cite>
+                  </li>
+                  <li>
+                    <cite className="font-semibold not-italic text-heading">
+                      The Rightful Way of Banking
+                    </cite>{" "}
+                    <span className="text-muted">— Bestseller</span>
+                  </li>
+                </ul>
+                <p className="mt-4 text-sm leading-6 text-body">
+                  His published work bridges practical executive leadership
+                  with academic rigor.
+                </p>
+              </div>
+
+              <div className="md:border-l md:border-border md:pl-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                  Advisory Credentials
+                </p>
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Fellow of the Pakistan Institute of Corporate Governance",
+                    "Active peer reviewer for international research journals",
+                    "Visiting faculty across leading financial institutions",
+                    "Leads programme design, delivery standards & Shariah alignment",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2.5 text-sm leading-6 text-body"
+                    >
+                      <CheckCircle2
+                        className="mt-0.5 size-4 shrink-0 text-accent"
+                        aria-hidden="true"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 

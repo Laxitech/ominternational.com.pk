@@ -276,47 +276,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          {/* Core Mission Pillars */}
-          <div className="relative z-10 mt-12 grid grid-cols-1 gap-6 border-t border-surface/15 pt-10 sm:grid-cols-3 sm:gap-8">
-            <div>
-              <p className="font-mono text-xs font-semibold text-primary-200">
-                01 / RECOGNITION
-              </p>
-              <h3 className="mt-2 text-base font-semibold text-on-dark">
-                Prior Learning Value
-              </h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-on-dark/70 sm:text-sm">
-                Respecting prior exam success to ensure completed coursework is
-                credited toward graduation.
-              </p>
-            </div>
 
-            <div>
-              <p className="font-mono text-xs font-semibold text-primary-200">
-                02 / FLEXIBILITY
-              </p>
-              <h3 className="mt-2 text-base font-semibold text-on-dark">
-                Work-Study Balance
-              </h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-on-dark/70 sm:text-sm">
-                Distance and blended study frameworks designed to fit around
-                full-time employment commitments.
-              </p>
-            </div>
-
-            <div>
-              <p className="font-mono text-xs font-semibold text-primary-200">
-                03 / INTEGRITY
-              </p>
-              <h3 className="mt-2 text-base font-semibold text-on-dark">
-                Clear Advisory
-              </h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-on-dark/70 sm:text-sm">
-                Transparent information regarding admissions, accredited partner
-                degrees, and evaluation policies.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

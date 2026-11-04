@@ -9,7 +9,6 @@ const PROGRAMME_LINKS = [
   { label: "Master of Business Administration (MBA)", href: "/programmes/master-of-business-administration" },
   { label: "BS Accounting & Finance", href: "/programmes/bs-accounting-and-finance" },
   { label: "PhD Programme", href: "/programmes/doctor-of-philosophy" },
-  { label: "ICAP & ACCA Route", href: "/programmes/bs-accounting-and-finance" },
 ];
 
 const COMPANY_LINKS = [
@@ -110,22 +109,7 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* YouTube */}
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit OM International on YouTube"
-                className="group inline-flex size-9 sm:size-10 items-center justify-center rounded-full bg-white text-surface-dark shadow-sm transition-all duration-300 hover:scale-110 hover:bg-slate-100 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none"
-              >
-                <svg
-                  className="size-4 fill-current transition-transform duration-300 group-hover:scale-110"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-              </a>
+
 
               {/* LinkedIn */}
               <a

@@ -532,77 +532,7 @@ export default function ProgrammeDetail({
         </section>
       )}
 
-      {programme.scholarship && (
-        <section
-          aria-labelledby="scholarship-heading"
-          className="py-16 sm:py-20 lg:py-24"
-        >
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="overflow-hidden rounded-3xl border border-warning/20 bg-surface shadow-xs">
-              <div className="grid gap-8 bg-warning-50 p-6 sm:p-8 lg:grid-cols-12 lg:gap-12 lg:p-10">
-                <div className="lg:col-span-8">
-                  <span className="flex size-11 items-center justify-center rounded-xl border border-warning/20 bg-surface text-warning">
-                    <Award className="size-5" aria-hidden="true" />
-                  </span>
-                  <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-warning">
-                    Scholarship opportunity
-                  </p>
-                  <h2
-                    id="scholarship-heading"
-                    className="mt-2 text-balance text-2xl font-semibold tracking-tight text-heading sm:text-3xl"
-                  >
-                    {programme.scholarship.title}
-                  </h2>
-                  <p className="mt-4 text-sm leading-7 text-body sm:text-base">
-                    {programme.scholarship.description}
-                  </p>
-                </div>
 
-                <div className="flex flex-col justify-center rounded-2xl border border-warning/20 bg-surface p-6 text-center lg:col-span-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                    Total programme fee
-                  </p>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-warning">
-                    {programme.scholarship.totalFee}
-                  </p>
-                  <p className="mt-2 text-xs text-muted">
-                    Subject to scholarship terms and confirmation
-                  </p>
-                </div>
-              </div>
-
-              {programme.scholarship.instalmentPlan &&
-                programme.scholarship.instalmentPlan.length > 0 && (
-                  <div className="p-6 sm:p-8 lg:p-10">
-                    <h3 className="text-lg font-semibold text-heading">
-                      Instalment plan
-                    </h3>
-                    <div className="mt-5 divide-y divide-border border-y border-border">
-                      {programme.scholarship.instalmentPlan.map((item) => (
-                        <div
-                          key={item.label}
-                          className="grid gap-2 py-4 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-6"
-                        >
-                          <div>
-                            <p className="text-sm font-semibold text-heading">
-                              {item.label}
-                            </p>
-                            <p className="mt-1 text-xs leading-5 text-muted">
-                              {item.when}
-                            </p>
-                          </div>
-                          <p className="text-sm font-bold text-primary sm:text-right">
-                            {item.amount}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-            </div>
-          </div>
-        </section>
-      )}
 
       {faqItems.length > 0 && (
         <section

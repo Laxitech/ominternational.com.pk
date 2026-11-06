@@ -89,7 +89,7 @@ export default function AboutPage() {
 
             <p className="mt-5 text-balance text-base leading-relaxed text-body sm:text-lg sm:leading-8">
               OM International facilitates streamlined academic pathways with
-              premier Malaysian universities. We help ambitious learners and
+              UniRazak Malaysia. We help ambitious learners and
               professionals across Pakistan convert their hard-earned exams,
               diplomas, and practical experience into accredited university
               qualifications.

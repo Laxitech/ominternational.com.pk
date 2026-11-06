@@ -131,106 +131,7 @@ export const boardMembers: BoardMember[] = [
       ],
     },
   },
-  {
-    slug: "mohammad-maqbool",
-    name: "Mohammad Maqbool",
-    role: "Academic Advisor",
-    board: "governing",
-    tier: "member",
-    profile: {
-      qualification:
-        "M.Com, FCA, FCA (England & Wales), FCCA (UK), CPA, CA (Ontario), CPFA (UK)",
-      email: "omaqbool@hotmail.com",
-      headline:
-        "Chartered Accountant (England & Wales, Canada & Pakistan), Fellow ACCA & CIPFA UK, Senior Partner & Corporate Governance Specialist",
-      bio: [
-        "Muhammad Maqbool is a Chartered Accountant from England & Wales, Canada and Pakistan. He is also fellow member of ACCA and CIPFA UK. He is specialist of training in IFRS, Financial Management, Taxation, Corporate Governance and Business Reporting disciplines. He is senior partner in Tariq Abdul Ghani Maqbool & Co. Chartered Accountants and Andersen Chartered Accountants (UAE).",
-        "He had been a Council Member of Institute of Chartered Accountants of Pakistan (ICAP) in the term 1993-97 and 2013-17. He had been the President of Pakistan Institute of Public Finance Accountants (PIPFA) in 1995 and 2015. He had been Vice President, Chairman Investigation Committee and Chairman of Education & Training Committee of ICAP for year 2014-15. He was Chairman of Technical Advisory Committee of ICAP for period from 2015-17. He represented ICAP as member on various committees of South Asian Federation of Accountants (SAFA). He had been contact person in Pakistan for Institute of Chartered Accountants in England and Wales (ICAEW) for two years (2011-13).",
-        "Currently he is member of Accounting Standards Board of Pakistan. He is Academic Advisor to various Higher Educational Instituitions. He is elected independent director and Chairman of Audit Committee of Bata Pakistan since September, 2013. He was also member of Policy Board constituted by Auditor General of Pakistan. Since November, 2016 he is co-opted as a council member of Chartered Institute of Public Finance Accountants (CIPFA) of UK.",
-      ],
-      highlights: [
-        { label: "Professional Practice", value: "30+ Years" },
-        { label: "Chartered Qualifications", value: "3 Jurisdictions" },
-        { label: "Professional Fellowships", value: "6 Bodies" },
-      ],
-      specializations: [
-        "IFRS (International Financial Reporting Standards)",
-        "Financial Management & Corporate Valuation",
-        "Corporate Governance & Audit Committee Oversight",
-        "Taxation & Regulatory Advisory",
-        "Business Reporting & Assurance",
-        "Public Sector Accounting Standards",
-      ],
-      portfolio: [
-        {
-          role: "Academic Advisor",
-          organization:
-            "OM International & Higher Educational Institutions",
-          description:
-            "Providing academic advisory on curriculum standards, international pathways, and professional accounting accreditations.",
-        },
-        {
-          role: "Senior Partner",
-          organization:
-            "Tariq Abdul Ghani Maqbool & Co. Chartered Accountants",
-          description:
-            "Senior partner leading audit engagements, corporate governance advisory, tax consultancy, and executive training.",
-        },
-        {
-          role: "Senior Partner",
-          organization: "Andersen Chartered Accountants (UAE)",
-          description:
-            "Overseeing cross-border advisory, assurance, international tax planning, and corporate compliance services.",
-        },
-        {
-          role: "Independent Director & Audit Committee Chairman",
-          organization: "Bata Pakistan",
-          description:
-            "Elected independent director and chairman of the audit committee since September 2013, overseeing financial reporting integrity and internal controls.",
-        },
-        {
-          role: "Council Member",
-          organization:
-            "Chartered Institute of Public Finance Accountants (CIPFA), UK",
-          description:
-            "Co-opted council member since November 2016 representing international public sector accounting standards.",
-        },
-        {
-          role: "Member",
-          organization: "Accounting Standards Board of Pakistan",
-          description:
-            "Formulating and reviewing statutory national accounting standards and financial reporting frameworks.",
-        },
-        {
-          role: "Former President (1995 & 2015)",
-          organization:
-            "Pakistan Institute of Public Finance Accountants (PIPFA)",
-          description:
-            "Served as president for two terms, driving public finance education, training, and institutional capacity building.",
-        },
-        {
-          role: "Former Vice President & Council Member",
-          organization:
-            "Institute of Chartered Accountants of Pakistan (ICAP)",
-          description:
-            "Council member (1993-97, 2013-17), Vice President, Chairman of Investigation Committee, Chairman of Education & Training Committee (2014-15), and Chairman of Technical Advisory Committee (2015-17).",
-        },
-        {
-          role: "Former Policy Board Member",
-          organization: "Auditor General of Pakistan",
-          description:
-            "Served as member of the policy board constituted to advise on state audit practices and governance.",
-        },
-        {
-          role: "Former Contact Person in Pakistan (2011-13)",
-          organization:
-            "Institute of Chartered Accountants in England and Wales (ICAEW)",
-          description:
-            "Official contact and representative for ICAEW in Pakistan fostering bilateral professional accounting relations.",
-        },
-      ],
-    },
-  },
+
   {
     slug: "prof-malik-mumtaz",
     name: "Prof. Malik Mumtaz",
@@ -274,8 +175,7 @@ export const boardMembers: BoardMember[] = [
         },
         {
           role: "Deputy Secretary",
-          organization:
-            "Ministry of Finance (External Finance) – Islamabad",
+          organization: "Ministry of Finance (External Finance) – Islamabad",
           description:
             "Managed external bilateral financing, multilateral loans, and national financial coordination.",
         },
@@ -320,12 +220,6 @@ export const boardMembers: BoardMember[] = [
         },
       ],
     },
-  },
-  {
-    slug: "dr-ali-sher-mohamad",
-    name: "Dr. Ali Sher Mohamad",
-    board: "governing",
-    tier: "member",
   },
 
   // Advisory Board

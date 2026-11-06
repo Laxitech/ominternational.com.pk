@@ -18,10 +18,10 @@ export default function PartnerUniversities() {
               id="home-partner-universities-heading"
               className="mt-3 text-balance font-serif text-[clamp(1.875rem,4vw,2.5rem)] font-semibold tracking-tight text-heading sm:text-[2.75rem] leading-[1.15]"
             >
-              Premier Partner Universities in Malaysia
+              Official Facilitation Center of Universiti Tun Abdul Razak (UNIRAZAK), Malaysia
             </h2>
             <p className="mt-3 text-sm text-body sm:text-base leading-relaxed">
-              OM International officially represents top-tier Malaysian institutions, bringing world-class degrees, professional credit exemptions, and flexible study modes to ambitious learners in Pakistan.
+              OM International officially represents UNIRAZAK University, Malaysia, bringing internationally recognised degrees, professional qualification exemptions, and flexible study options to ambitious learners in Pakistan.
             </p>
           </div>
 

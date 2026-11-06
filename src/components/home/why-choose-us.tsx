@@ -47,7 +47,7 @@ const features: FeatureCard[] = [
     category: "Value & Transparency",
     title: "Affordable Tuition & Installments",
     description:
-      "Earn an international qualification at a fraction of the cost of studying in the UK or Australia, supported by transparent installment plans.",
+      "Earn an internationally recognized qualification with transparent installment payment plans.",
 
     Icon: Coins,
   },
@@ -63,7 +63,7 @@ const features: FeatureCard[] = [
   {
     id: "local-support-centres",
     category: "Local Presence",
-    title: "12 Support Centers in PK & UK",
+    title: "Support Centers in PK",
     description:
       "Access face-to-face academic advisory, attend executive workshops, and utilize quiet study facilities across major cities and London.",
 
@@ -74,7 +74,7 @@ const features: FeatureCard[] = [
     category: "Global Mobility",
     title: "UAE & Global Attestation Pathway",
     description:
-      "Complete end-to-end facilitation for degree recognition and attestation with the Ministry of Foreign Affairs (MOFA), HEC, and UAE Embassy.",
+      "Complete end-to-end facilitation for degree recognition and attestation through MOFA, HEC, WES, NASBA, and the UAE Embassy.",
 
     Icon: ShieldCheck,
   },

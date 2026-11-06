@@ -48,14 +48,4 @@ export const stats: Stat[] = [
     icon: GraduationCap,
     pad: 2,
   },
-  {
-    id: "london",
-    value: 1,
-    suffix: "",
-    tag: "Global Hub",
-    label: "UK Flagship Center",
-    description: "Connecting students with worldwide mobility",
-    icon: Landmark,
-    pad: 2,
-  },
 ];

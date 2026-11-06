@@ -51,7 +51,7 @@ export default function StatsStrip() {
             </h2>
 
             <p className="mt-4 text-base sm:text-lg text-body leading-relaxed">
-              Connecting ambitious learners across Pakistan, the UK, and Malaysia to
+              Connecting ambitious learners across Pakistan and Malaysia to
               globally recognised, accredited university degree pathways.
             </p>
 

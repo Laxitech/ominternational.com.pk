@@ -180,33 +180,90 @@ export default function MobileNav() {
                           isExpanded ? "block" : "hidden",
                         )}
                       >
-                        <ul className="flex flex-col gap-1">
-                          {item.children.map((child) => {
-                            const isChildActive =
-                              !child.href.includes("?") &&
-                              isNavigationItemActive(pathname, child.href);
-
+                        {(() => {
+                          const hasGroups = item.children.some((c) => Boolean(c.group));
+                          if (!hasGroups) {
                             return (
-                              <li key={child.href}>
-                                <Link
-                                  href={child.href}
-                                  onClick={() => setIsOpen(false)}
-                                  aria-current={
-                                    isChildActive ? "page" : undefined
-                                  }
-                                  className={cn(
-                                    "flex rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none",
-                                    isChildActive
-                                      ? "bg-primary-subtle text-primary"
-                                      : "text-body hover:bg-primary-subtle hover:text-primary",
-                                  )}
-                                >
-                                  {child.label}
-                                </Link>
-                              </li>
+                              <ul className="flex flex-col gap-1">
+                                {item.children.map((child) => {
+                                  const isChildActive =
+                                    !child.href.includes("?") &&
+                                    isNavigationItemActive(pathname, child.href);
+
+                                  return (
+                                    <li key={child.href}>
+                                      <Link
+                                        href={child.href}
+                                        onClick={() => setIsOpen(false)}
+                                        aria-current={
+                                          isChildActive ? "page" : undefined
+                                        }
+                                        className={cn(
+                                          "flex rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none",
+                                          isChildActive
+                                            ? "bg-primary-subtle text-primary font-semibold"
+                                            : "text-body hover:bg-primary-subtle hover:text-primary",
+                                        )}
+                                      >
+                                        {child.label}
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
                             );
-                          })}
-                        </ul>
+                          }
+
+                          const groups: { name: string; items: typeof item.children }[] = [];
+                          item.children.forEach((child) => {
+                            const groupName = child.group || "General";
+                            let existing = groups.find((g) => g.name === groupName);
+                            if (!existing) {
+                              existing = { name: groupName, items: [] };
+                              groups.push(existing);
+                            }
+                            existing.items.push(child);
+                          });
+
+                          return (
+                            <div className="flex flex-col gap-3 py-1">
+                              {groups.map((group) => (
+                                <div key={group.name} className="flex flex-col gap-1">
+                                  <p className="px-3 pt-1 text-[11px] font-bold uppercase tracking-wider text-muted">
+                                    {group.name}
+                                  </p>
+                                  <ul className="flex flex-col gap-0.5">
+                                    {group.items.map((child) => {
+                                      const isChildActive =
+                                        !child.href.includes("?") &&
+                                        isNavigationItemActive(pathname, child.href);
+
+                                      return (
+                                        <li key={child.href}>
+                                          <Link
+                                            href={child.href}
+                                            onClick={() => setIsOpen(false)}
+                                            aria-current={
+                                              isChildActive ? "page" : undefined
+                                            }
+                                            className={cn(
+                                              "flex rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none",
+                                              isChildActive
+                                                ? "bg-primary-subtle text-primary font-semibold"
+                                                : "text-body hover:bg-primary-subtle hover:text-primary",
+                                            )}
+                                          >
+                                            {child.label}
+                                          </Link>
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          );
+                        })()}
                       </div>
                     </li>
                   );

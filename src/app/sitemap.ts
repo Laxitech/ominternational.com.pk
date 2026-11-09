@@ -12,18 +12,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
+    { url: `${baseUrl}/who-we-are`, lastModified: new Date() },
+    { url: `${baseUrl}/why-study-with-us`, lastModified: new Date() },
+    { url: `${baseUrl}/what-to-expect-from-us`, lastModified: new Date() },
     { url: `${baseUrl}/governing-board`, lastModified: new Date() },
     { url: `${baseUrl}/advisory-board`, lastModified: new Date() },
     { url: `${baseUrl}/programmes`, lastModified: new Date() },
     { url: `${baseUrl}/universities`, lastModified: new Date() },
     { url: `${baseUrl}/centers`, lastModified: new Date() },
+    { url: `${baseUrl}/events-book`, lastModified: new Date() },
+    { url: `${baseUrl}/testimonials`, lastModified: new Date() },
     { url: `${baseUrl}/contact`, lastModified: new Date() },
     { url: `${baseUrl}/apply`, lastModified: new Date() },
     { url: `${baseUrl}/scholarships`, lastModified: new Date() },
   ];
 
   const boardRoutes: MetadataRoute.Sitemap = boardMembers.map((member) => ({
-    url: `${baseUrl}/governing-board/${member.slug}`,
+    url: `${baseUrl}/${member.board}-board/${member.slug}`,
     lastModified: new Date(),
   }));
 

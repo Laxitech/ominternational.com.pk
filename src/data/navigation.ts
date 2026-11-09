@@ -1,6 +1,7 @@
 export type NavigationChild = {
   label: string;
   href: string;
+  group?: string;
 };
 
 export type NavigationItem = {
@@ -13,20 +14,32 @@ export const navigation: NavigationItem[] = [
   { label: "Home", href: "/" },
   {
     label: "About Us",
-    href: "/about",
-  },
-  {
-    label: "Management",
-    href: "/governing-board",
-
+    href: "/who-we-are",
     children: [
+      {
+        label: "Who We Are",
+        href: "/who-we-are",
+        group: "About Us",
+      },
+      {
+        label: "Why Study With Us",
+        href: "/why-study-with-us",
+        group: "About Us",
+      },
+      {
+        label: "What to Expect From Us",
+        href: "/what-to-expect-from-us",
+        group: "About Us",
+      },
       {
         label: "Governing Board",
         href: "/governing-board",
+        group: "Management",
       },
       {
         label: "Advisory Board",
         href: "/advisory-board",
+        group: "Management",
       },
     ],
   },
@@ -34,26 +47,10 @@ export const navigation: NavigationItem[] = [
     label: "UNIRAZAK",
     href: "/universities/unirazak",
   },
-  {
-    label: "Programmes",
-    href: "/programmes",
-    children: [
-      {
-        label: "Master of Business Administration (MBA)",
-        href: "/programmes/master-of-business-administration",
-      },
-      {
-        label: "BS Accounting and Finance",
-        href: "/programmes/bs-accounting-and-finance",
-      },
-      {
-        label: "Phd Programme",
-        href: "/programmes/doctor-of-philosophy",
-      },
-    ],
-  },
   { label: "INCEIF Collaboration", href: "/inceif" },
   { label: "Learning Centers", href: "/centers" },
+  { label: "Events Book", href: "/events-book" },
+  { label: "Testimonials", href: "/testimonials" },
 ];
 
 export function isNavigationItemActive(

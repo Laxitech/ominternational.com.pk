@@ -9,17 +9,23 @@ interface ProfilePageProps {
 }
 
 function getMemberBySlug(slug: string): BoardMember | undefined {
-  if (slug === "mian-masood-ahmed" || slug === "mian-masood") {
-    return boardMembers.find((member) => member.slug === "mian-masood-ahmad");
+  if (
+    slug === "brigadier-tahir-malik" ||
+    slug === "tahir-malik" ||
+    slug === "brig-dr-tahir-nawaz"
+  ) {
+    return boardMembers.find(
+      (member) => member.slug === "brigadier-tahir-malik",
+    );
   }
-  if (slug === "prof-dr-omar-masood" || slug === "omar-masood") {
-    return boardMembers.find((member) => member.slug === "dr-omar-masood");
-  }
-  if (slug === "muhammad-maqbool") {
-    return boardMembers.find((member) => member.slug === "mohammad-maqbool");
-  }
-  if (slug === "malik-mumtaz") {
-    return boardMembers.find((member) => member.slug === "prof-malik-mumtaz");
+  if (
+    slug === "dr-kiran-javaria" ||
+    slug === "kiran-javaria" ||
+    slug === "dr-kiran"
+  ) {
+    return boardMembers.find(
+      (member) => member.slug === "dr-kiran-javaria",
+    );
   }
   return boardMembers.find((member) => member.slug === slug);
 }
@@ -29,12 +35,10 @@ export function generateStaticParams() {
     slug: member.slug,
   }));
 
-  params.push({ slug: "mian-masood-ahmed" });
-  params.push({ slug: "mian-masood" });
-  params.push({ slug: "prof-dr-omar-masood" });
-  params.push({ slug: "omar-masood" });
-  params.push({ slug: "muhammad-maqbool" });
-  params.push({ slug: "malik-mumtaz" });
+  params.push({ slug: "tahir-malik" });
+  params.push({ slug: "brig-dr-tahir-nawaz" });
+  params.push({ slug: "kiran-javaria" });
+  params.push({ slug: "dr-kiran" });
 
   return params;
 }

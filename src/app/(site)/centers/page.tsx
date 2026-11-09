@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import PageHeader from "@/components/shared/page-header";
 import CenterList from "@/components/centers/center-list";
-import CenterServices from "@/components/centers/center-services";
 import { centers } from "@/data/centers";
 import { cn } from "@/lib/utils";
 
 const cityNames = centers.map((center) => center.city).join(", ");
 
 export const metadata: Metadata = {
-  title: "Learning Centers | OM International",
+  title: "OM Facilitation Centres | OM International",
   description:
-    "Speak to an advisor at our centers in " +
+    "Speak to an advisor at our centres in " +
     cityNames +
     ". We help you choose a programme and complete your admission.",
 };
@@ -20,23 +18,22 @@ export const metadata: Metadata = {
 export default function CentersPage() {
   return (
     <main className="min-h-full bg-surface">
-      {/* 1. Page header */}
-      <PageHeader
-        title="Learning Centers"
-        subtitle={
-          "Speak to an advisor in person or online. Our centers help you choose a programme and complete your admission."
-        }
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Learning Centers" },
-        ]}
-      />
+      {/* 1. Page heading */}
+      <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20">
+        <h1
+          id="centers-list-heading"
+          className={cn(
+            "text-balance font-display",
+            "text-[clamp(2rem,6vw,3.5rem)] leading-[1.1]",
+            "font-semibold tracking-tight text-heading",
+          )}
+        >
+          OM Facilitation Centres
+        </h1>
+      </div>
 
       {/* 2. Centers list */}
       <CenterList centers={centers} />
-
-      {/* 3. How a center can help */}
-      <CenterServices />
 
       {/* 4. Closing call to action */}
       <section

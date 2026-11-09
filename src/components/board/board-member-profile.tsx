@@ -41,7 +41,11 @@ export default function BoardMemberProfile({
     profile?.specializations?.length ||
     profile?.governmentsAdvised?.length ||
     profile?.books?.length ||
-    profile?.portfolio?.length,
+    profile?.portfolio?.length ||
+    profile?.awards?.length ||
+    profile?.publications?.length ||
+    profile?.editorialPositions?.length ||
+    profile?.memberships?.length,
   );
 
   return (
@@ -189,6 +193,20 @@ export default function BoardMemberProfile({
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-24">
           <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
             <article className="overflow-hidden rounded-3xl border border-border bg-surface shadow-xs lg:col-span-8">
+              {!hasProfileSections && (
+                <div className="p-8 sm:p-12 text-center">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                    Executive Profile
+                  </p>
+                  <h2 className="mt-2 text-xl font-bold text-heading">
+                    Detailed Profile Coming Soon
+                  </h2>
+                  <p className="mt-3 text-sm text-body max-w-md mx-auto">
+                    Full biographical details, academic qualifications, and professional portfolio will be updated shortly.
+                  </p>
+                </div>
+              )}
+
               {profile.bio && profile.bio.length > 0 && (
                 <section
                   id="biography"
@@ -337,9 +355,7 @@ export default function BoardMemberProfile({
                     </div>
                   </div>
                   <p className="mt-4 max-w-2xl text-sm leading-7 text-body sm:text-base">
-                    Author of ten published books with leading international
-                    publishers, including three International Best Sellers in
-                    financial economics and corporate risk.
+                    Published works, research volumes, and international reference texts.
                   </p>
 
                   <ul className="mt-6 space-y-3">
@@ -424,6 +440,189 @@ export default function BoardMemberProfile({
                       </li>
                     ))}
                   </ol>
+                </section>
+              )}
+
+              {profile.awards && profile.awards.length > 0 && (
+                <section
+                  id="awards"
+                  aria-labelledby="awards-heading"
+                  className="scroll-mt-28 border-t border-border bg-secondary/25 p-6 sm:p-8 lg:p-10"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-primary-subtle text-primary">
+                      <Award className="size-5" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                        Honours &amp; Accolades
+                      </p>
+                      <h2
+                        id="awards-heading"
+                        className="mt-1 font-display text-xl font-bold tracking-tight text-heading sm:text-2xl"
+                      >
+                        Awards &amp; Recognition
+                      </h2>
+                    </div>
+                  </div>
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-body sm:text-base">
+                    Distinguished honors received for leadership, business excellence, and societal impact.
+                  </p>
+
+                  <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-surface">
+                    <table className="min-w-full divide-y divide-border text-left">
+                      <thead className="bg-surface-alt">
+                        <tr>
+                          <th
+                            scope="col"
+                            className="px-5 py-3.5 text-xs font-semibold uppercase tracking-wider text-muted"
+                          >
+                            Year
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-5 py-3.5 text-xs font-semibold uppercase tracking-wider text-muted"
+                          >
+                            Award
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border">
+                        {profile.awards.map((item) => (
+                          <tr key={`${item.year}-${item.award}`}>
+                            <td className="whitespace-nowrap px-5 py-4 font-mono text-sm font-semibold text-primary">
+                              {item.year}
+                            </td>
+                            <td className="px-5 py-4 text-sm font-medium text-heading">
+                              {item.award}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              )}
+
+              {profile.publications && profile.publications.length > 0 && (
+                <section
+                  id="academic-publications"
+                  aria-labelledby="academic-publications-heading"
+                  className="scroll-mt-28 border-t border-border p-6 sm:p-8 lg:p-10"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-primary-subtle text-primary">
+                      <BookOpen className="size-5" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                        Research &amp; Scholarship
+                      </p>
+                      <h2
+                        id="academic-publications-heading"
+                        className="mt-1 font-display text-xl font-bold tracking-tight text-heading sm:text-2xl"
+                      >
+                        Academic Publications
+                      </h2>
+                    </div>
+                  </div>
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-body sm:text-base">
+                    Peer-reviewed research published in leading international finance, forecasting, and economics journals.
+                  </p>
+
+                  <ul className="mt-6 divide-y divide-border border-y border-border">
+                    {profile.publications.map((journal) => (
+                      <li
+                        key={journal}
+                        className="flex items-start gap-3 py-3.5 text-sm font-medium leading-6 text-heading sm:text-base"
+                      >
+                        <BookOpen
+                          className="mt-1 size-4 shrink-0 text-primary"
+                          aria-hidden="true"
+                        />
+                        <span>{journal}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {profile.editorialPositions && profile.editorialPositions.length > 0 && (
+                <section
+                  id="editorial-positions"
+                  aria-labelledby="editorial-positions-heading"
+                  className="scroll-mt-28 border-t border-border bg-secondary/25 p-6 sm:p-8 lg:p-10"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-primary-subtle text-primary">
+                      <Globe2 className="size-5" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                        Journal Editorships
+                      </p>
+                      <h2
+                        id="editorial-positions-heading"
+                        className="mt-1 font-display text-xl font-bold tracking-tight text-heading sm:text-2xl"
+                      >
+                        Editorial Positions
+                      </h2>
+                    </div>
+                  </div>
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-body sm:text-base">
+                    Editorial board service for international scholarly publications across finance, security, and economics.
+                  </p>
+
+                  <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {profile.editorialPositions.map((journal) => (
+                      <li
+                        key={journal}
+                        className="flex items-start gap-3 rounded-2xl border border-border bg-surface p-4 text-sm font-medium leading-6 text-heading"
+                      >
+                        <CheckCircle2
+                          className="mt-0.5 size-4 shrink-0 text-primary"
+                          aria-hidden="true"
+                        />
+                        <span>{journal}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {profile.memberships && profile.memberships.length > 0 && (
+                <section
+                  id="memberships"
+                  aria-labelledby="memberships-heading"
+                  className="scroll-mt-28 border-t border-border p-6 sm:p-8 lg:p-10"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-primary-200 bg-primary-subtle text-primary">
+                      <Award className="size-5" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                        Affiliations
+                      </p>
+                      <h2
+                        id="memberships-heading"
+                        className="mt-1 font-display text-xl font-bold tracking-tight text-heading sm:text-2xl"
+                      >
+                        Professional Memberships
+                      </h2>
+                    </div>
+                  </div>
+                  <ul className="mt-6 flex flex-wrap gap-2.5">
+                    {profile.memberships.map((membership) => (
+                      <li
+                        key={membership}
+                        className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-2 text-xs sm:text-sm font-medium text-heading shadow-xs"
+                      >
+                        <span className="size-1.5 rounded-full bg-primary" />
+                        <span>{membership}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </section>
               )}
             </article>

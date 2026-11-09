@@ -5,5 +5,7 @@ export interface Center {
   country: string;
   name: string;
   role: string;
-  summary: string;
+  summary?: string;
+  address?: string;
+  contactName?: string;
 }

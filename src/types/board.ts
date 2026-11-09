@@ -18,6 +18,11 @@ export type BoardBookItem = {
   bestSeller?: boolean;
 };
 
+export type BoardAwardItem = {
+  year: string;
+  award: string;
+};
+
 export type BoardMemberProfile = {
   qualification?: string;
   headline?: string;
@@ -28,6 +33,10 @@ export type BoardMemberProfile = {
   highlights?: BoardHighlightItem[];
   books?: BoardBookItem[];
   governmentsAdvised?: string[];
+  awards?: BoardAwardItem[];
+  publications?: string[];
+  memberships?: string[];
+  editorialPositions?: string[];
 };
 
 export type BoardMember = {

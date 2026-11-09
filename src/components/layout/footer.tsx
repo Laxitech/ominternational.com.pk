@@ -13,9 +13,14 @@ const PROGRAMME_LINKS = [
 
 const COMPANY_LINKS = [
   { label: "About OM International", href: "/about" },
+  { label: "Who We Are", href: "/who-we-are" },
+  { label: "Why Study With Us", href: "/why-study-with-us" },
   { label: "Governing Board", href: "/governing-board" },
+  { label: "Advisory Board", href: "/advisory-board" },
   { label: "INCEIF Collaboration", href: "/inceif" },
   { label: "Learning Centers", href: "/centers" },
+  { label: "Events Book", href: "/events-book" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "Contact Us", href: "/contact" },
 ];
 

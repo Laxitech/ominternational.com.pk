@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { MapPin } from "lucide-react";
 import type { Center } from "@/types/center";
 import { cn } from "@/lib/utils";
 
@@ -11,23 +12,10 @@ export default function CenterList({ centers }: { centers: Center[] }) {
       className="relative isolate overflow-hidden bg-surface py-12 sm:py-16 lg:py-24"
     >
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2
-          id="centers-list-heading"
-          className={cn(
-            "text-balance font-display",
-            "text-[clamp(1.75rem,5vw,2.5rem)] leading-[1.15]",
-            "font-semibold tracking-tight text-heading",
-            "sm:text-[2.25rem] lg:text-[3rem]",
-          )}
-        >
-          Our centers
-        </h2>
-
         <ul
           className={cn(
             "mt-10 sm:mt-14 grid gap-8 list-none",
-            // Auto-fit: two columns with two centers, three with three.
-            "grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]",
+            "grid-cols-1 sm:grid-cols-2",
           )}
         >
           {centers.map((center, index) => (
@@ -36,8 +24,8 @@ export default function CenterList({ centers }: { centers: Center[] }) {
                 className={cn(
                   "relative overflow-hidden rounded-lg border border-border",
                   "flex flex-col p-6 sm:p-8",
-                  // Alternating surface / secondary backgrounds.
-                  index % 2 === 0 ? "bg-surface" : "bg-secondary",
+
+                  index % 2 === 0 ? "bg-surface" : "bg-surface",
                 )}
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted">
@@ -50,11 +38,24 @@ export default function CenterList({ centers }: { centers: Center[] }) {
                     "sm:text-[2.75rem] lg:text-[3rem] xl:text-[4rem]",
                   )}
                 >
-                  {center.city}
+                  {center.contactName ?? center.city}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-body sm:text-base sm:leading-7">
-                  {center.summary}
-                </p>
+                {center.summary && (
+                  <p className="mt-3 text-sm leading-relaxed text-body sm:text-base sm:leading-7">
+                    {center.summary}
+                  </p>
+                )}
+                {center.address && (
+                  <>
+                    <hr className="my-4 border-border" />
+                    <div className="flex items-start gap-2 text-muted">
+                      <MapPin className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                      <p className="text-xs leading-relaxed sm:text-sm">
+                        {center.address}
+                      </p>
+                    </div>
+                  </>
+                )}
                 <Link
                   href="/contact"
                   className={cn(

@@ -7,6 +7,7 @@ import type { FocusEvent, KeyboardEvent, PointerEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import {
   isNavigationItemActive,
+  type NavigationChild,
   type NavigationItem,
 } from "@/data/navigation";
 import { cn } from "@/lib/utils";
@@ -124,11 +125,24 @@ export default function MegaMenu({
   }
 
   function handleBlur(event: FocusEvent<HTMLDivElement>) {
-    if (
-      !event.currentTarget.contains(event.relatedTarget as Node | null)
-    ) {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
       onOpenChange(false);
     }
+  }
+
+  const hasGroups = item.children?.some((child) => Boolean(child.group));
+
+  const groups: { name: string; items: NavigationChild[] }[] = [];
+  if (hasGroups) {
+    item.children?.forEach((child) => {
+      const groupName = child.group || "General";
+      let existing = groups.find((g) => g.name === groupName);
+      if (!existing) {
+        existing = { name: groupName, items: [] };
+        groups.push(existing);
+      }
+      existing.items.push(child);
+    });
   }
 
   return (
@@ -168,36 +182,78 @@ export default function MegaMenu({
         id={panelId}
         ref={panelRef}
         className={cn(
-          "absolute left-0 top-full z-50 pt-5",
+          "absolute left-0 top-full z-50 pt-2",
           isOpen ? "block" : "hidden",
         )}
         onKeyDown={handlePanelKeyDown}
       >
-        <ul className="w-72 sm:w-80 overflow-hidden rounded-xl border border-border bg-surface p-2 shadow-xl shadow-primary/10">
-          {item.children?.map((child) => {
-            const isChildActive =
-              !child.href.includes("?") &&
-              isNavigationItemActive(pathname, child.href);
+        <div className="w-72 sm:w-80 overflow-hidden rounded-2xl border border-border bg-surface p-2 shadow-xl shadow-primary/10">
+          {!hasGroups ? (
+            <ul className="flex flex-col gap-0.5">
+              {item.children?.map((child) => {
+                const isChildActive =
+                  !child.href.includes("?") &&
+                  isNavigationItemActive(pathname, child.href);
 
-            return (
-              <li key={child.href}>
-                <Link
-                  href={child.href}
-                  onClick={() => onOpenChange(false)}
-                  aria-current={isChildActive ? "page" : undefined}
-                  className={cn(
-                    "block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none",
-                    isChildActive
-                      ? "bg-primary-subtle text-primary"
-                      : "text-body hover:bg-primary-subtle hover:text-primary",
-                  )}
+                return (
+                  <li key={child.href}>
+                    <Link
+                      href={child.href}
+                      onClick={() => onOpenChange(false)}
+                      aria-current={isChildActive ? "page" : undefined}
+                      className={cn(
+                        "block rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none",
+                        isChildActive
+                          ? "bg-primary-subtle text-primary font-semibold"
+                          : "text-body hover:bg-primary-subtle hover:text-primary",
+                      )}
+                    >
+                      {child.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <div className="divide-y divide-border">
+              {groups.map((group, groupIdx) => (
+                <div
+                  key={group.name}
+                  className={cn("py-1.5", groupIdx === 0 ? "pt-1" : "pt-2")}
                 >
-                  {child.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+                  <p className="px-3 pb-1 text-[11px] font-bold uppercase tracking-wider text-muted">
+                    {group.name}
+                  </p>
+                  <ul className="flex flex-col gap-0.5">
+                    {group.items.map((child) => {
+                      const isChildActive =
+                        !child.href.includes("?") &&
+                        isNavigationItemActive(pathname, child.href);
+
+                      return (
+                        <li key={child.href}>
+                          <Link
+                            href={child.href}
+                            onClick={() => onOpenChange(false)}
+                            aria-current={isChildActive ? "page" : undefined}
+                            className={cn(
+                              "block rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring motion-reduce:transition-none",
+                              isChildActive
+                                ? "bg-primary-subtle text-primary font-semibold"
+                                : "text-body hover:bg-primary-subtle hover:text-primary",
+                            )}
+                          >
+                            {child.label}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

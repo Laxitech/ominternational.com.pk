@@ -84,7 +84,7 @@ const ADMISSION_STEPS = [
     step: "02",
     title: "Pathway & University Selection",
     description:
-      "Our senior advisors match your background with optimal degree programs at UNIRAZAK or Asia e University.",
+      "Our senior advisors match your background with optimal degree programs at UNIRAZAK.",
   },
   {
     step: "03",
@@ -371,7 +371,7 @@ export default function UniversitiesPage() {
               Ready to Accelerate Your Degree?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-surface/85 sm:text-lg">
-              Get in touch with an OM International academic advisor today for a comprehensive qualification audit and free guidance on enrolling at UNIRAZAK or Asia e University.
+              Get in touch with an OM International academic advisor today for a comprehensive qualification audit and free guidance on enrolling at UNIRAZAK.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -15,6 +15,7 @@ const HIERARCHICAL_ORDER = [
   "dr-gokhan-bora-aktan",
   "dr-shazaib-butt",
   "prof-dr-muhammad-sarwar",
+  "brig-dr-muhammad-tahir-nawaz",
 ];
 
 export default function AdvisoryBoardSection({

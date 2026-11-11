@@ -17,6 +17,16 @@ export const navigation: NavigationItem[] = [
     href: "/who-we-are",
     children: [
       {
+        label: "Governing Board",
+        href: "/governing-board",
+        group: "Management",
+      },
+      {
+        label: "Advisory Board",
+        href: "/advisory-board",
+        group: "Management",
+      },
+      {
         label: "Who We Are",
         href: "/who-we-are",
         group: "About Us",
@@ -30,16 +40,6 @@ export const navigation: NavigationItem[] = [
         label: "What to Expect From Us",
         href: "/what-to-expect-from-us",
         group: "About Us",
-      },
-      {
-        label: "Governing Board",
-        href: "/governing-board",
-        group: "Management",
-      },
-      {
-        label: "Advisory Board",
-        href: "/advisory-board",
-        group: "Management",
       },
     ],
   },

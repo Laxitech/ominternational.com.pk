@@ -39,6 +39,16 @@ function getMemberBySlug(slug: string): BoardMember | undefined {
       (member) => member.slug === "prof-dr-muhammad-sarwar",
     );
   }
+  if (
+    slug === "brig-dr-muhammad-tahir-nawaz" ||
+    slug === "dr-muhammad-tahir-nawaz" ||
+    slug === "tahir-nawaz" ||
+    slug === "tahir-nazaz"
+  ) {
+    return boardMembers.find(
+      (member) => member.slug === "brig-dr-muhammad-tahir-nawaz",
+    );
+  }
   return boardMembers.find((member) => member.slug === slug);
 }
 
@@ -55,6 +65,9 @@ export function generateStaticParams() {
   params.push({ slug: "shazaib-butt" });
   params.push({ slug: "dr-muhammad-sarwar" });
   params.push({ slug: "muhammad-sarwar" });
+  params.push({ slug: "dr-muhammad-tahir-nawaz" });
+  params.push({ slug: "tahir-nawaz" });
+  params.push({ slug: "tahir-nazaz" });
 
   return params;
 }

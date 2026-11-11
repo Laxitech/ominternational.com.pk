@@ -175,65 +175,55 @@ export const boardMembers: BoardMember[] = [
   {
     slug: "brigadier-tahir-malik",
     name: "Brigadier Tahir Malik (Retd)",
-    role: "Governing Board Member",
+    role: "Advisor, OM Group of Companies",
     board: "governing",
     tier: "lead",
     photo: "/images/management/Brig-Tahir.jpeg",
     profile: {
       headline:
-        "Director Quality Assurance at National University of Technology (NUTECH) Islamabad, Approved PhD Supervisor (HEC), Performance Enhancement Advisor and Author.",
+        "Advisor, OM Group of Companies. Military officer and strategic leader with over three decades of service in the Pakistan Army.",
       qualification:
-        "MS & PhD in Engineering Management (UET Taxila) | BSc Electrical Engineering (UET Lahore) | BSc (Balochistan University)",
+        "Over three decades of service in the Pakistan Army",
       bio: [
-        "Dr. Muhammad Tahir Nawaz was born in Faisalabad on 2nd October 1967. After his Matric from Faisalabad, BSc Degree from Balochistan University and Graduation in Electrical Engineering from UET Lahore, he clinched MS and PhD in Engineering Management from UET, Taxila. He is one of the best orators, performance enhancement advisor and well known for his work in the areas of personal mastery, happiness and success, total wellness and art of positive living. He is keen observant of nature, life, folk wisdom and strongly professes the goal setting, individual productivity enhancement, spiritual comfort, freedom of thoughts, actions, and expression within ambit of religious obligations, ethics and social norms. He has a diverse and varying experience of management of technical organizations at National and International level. He also remained involved in various professional training schemes focused on organizational productivity enhancement, team building, effective management and has done excellent work in enhancement of productivity at organizational level through Female empowerment.",
-        "Moreover, His areas of interest are Productivity Management, Conflict Management, Good Governance, Technology Management and application of total productivity management in industry, HRD, Leadership Organizational behavior and Business Management, Supply Chain Management, Marketing of Technology, Services marketing, TQM, Project Management, Conflict Resolution Management, Self Management, Stress Management, Attitude Building, Relationship Management, Building of High Performance Teams, Professional Ethics and Project Management. Performance audit linked with goal orientation like management by objectives is also a special area of interest of Dr. Muhammad Tahir Nawaz.",
-        "He has served as Head of Engineering Management Department and Director Counselling and student affairs at NUST College of EME and also served as highly significant Instructional, Managerial and Executive positions at various training and service organizations. Presently he is serving as Director Quality Assurance at National University of Technology Islamabad. He is frequently sought for as Guest Speaker in seminars and conferences at renowned Military and Higher Educational institutions. He is an approved PhD supervisor of HEC and a life time member of Pakistan Engineering Council. He has contributed many research papers, published in National / International journals. He has inculcated the same research spirit in young scholars by supervising PhD theses.",
-        "He is a man of multidimensional capabilities. He has made his mark as a writer by recently published two bilingual books; Moving towards the Happy Lanes and Tameer-e-Shakhsiyat Khushion Bhari Zindagi ka Aghaz. He is a great motivator and professional in stress related issues.",
+        "Military officer and strategic leader with over three decades of service in the Pakistan Army.",
+        "Experienced in leading and executing high-impact national projects in collaboration with various arms of the Government of Pakistan.",
+        "Extensive leadership in defense planning, operational command, infrastructure development, national security strategy, and inter-agency coordination.",
+        "Spearheaded mega projects after retirement from active military service.",
+        "Currently serves as Advisor to OM Group of Companies. Continues to play an advisory role on national projects, contributing to Pakistan's long-term strategic planning and development goals.",
       ],
       highlights: [
-        { label: "Academic Career", value: "PhD & MS" },
-        { label: "Current Position", value: "Director QA" },
-        { label: "Published Books", value: "2 Bilingual Books" },
+        { label: "Designation", value: "Advisor, OM Group" },
+        { label: "Experience", value: "Over 3 Decades" },
+        { label: "Service", value: "Pakistan Army" },
       ],
       specializations: [
-        "Productivity Management & TQM",
-        "Conflict Resolution & Management",
-        "Good Governance & Public Policy",
-        "Technology & Innovation Management",
-        "HRD, Leadership & Organizational Behavior",
-        "Supply Chain & Operations Management",
-        "Stress Management & Emotional Wellness",
-        "Building High-Performance Teams",
+        "Defense Planning",
+        "Operational Command",
+        "Infrastructure Development",
+        "National Security Strategy",
+        "Inter-agency Coordination",
+        "Stakeholder Engagement",
+        "Policy Execution",
+        "Crisis Management",
       ],
-      books: [
-        {
-          title: "Moving towards the Happy Lanes",
-          bestSeller: true,
-        },
-        {
-          title: "Tameer-e-Shakhsiyat Khushion Bhari Zindagi ka Aghaz",
-          bestSeller: true,
-        },
+      governmentsAdvised: [
+        "Infrastructure Projects (Government of Pakistan)",
+        "Security Strategy Initiatives",
+        "Governance Reform Programs",
+        "Public Sector Transformation",
       ],
       portfolio: [
         {
-          role: "Director Quality Assurance",
-          organization: "National University of Technology (NUTECH) Islamabad",
+          role: "Advisor",
+          organization: "OM Group of Companies",
           description:
-            "Executive leadership ensuring institutional quality assurance, academic governance, and accreditation standards.",
+            "Advisor to OM Group of Companies. Continues to play an advisory role on national projects, contributing to Pakistan's long-term strategic planning and development goals.",
         },
         {
-          role: "Former Head of Department & Director Counselling",
-          organization: "NUST College of EME",
+          role: "Strategic Leader & Project Director",
+          organization: "High-Impact National Projects",
           description:
-            "Led the Engineering Management Department and directed student counseling, psychological support, and student affairs.",
-        },
-        {
-          role: "Approved PhD Supervisor & Lifetime Member",
-          organization:
-            "Higher Education Commission (HEC) & Pakistan Engineering Council (PEC)",
-          description:
-            "Supervising doctoral theses, guiding postgraduate research, and active contribution to engineering education.",
+            "Leading and executing high-impact national projects across infrastructure, security, governance reform, and public sector transformation in collaboration with various arms of the Government of Pakistan.",
         },
       ],
     },
@@ -541,6 +531,94 @@ export const boardMembers: BoardMember[] = [
         "Higher Education Commission (HEC) Approved PhD Supervisor",
         "Member of ~24 National & International Professional Bodies",
         "Postdoctoral Researcher, University of Worcester, United Kingdom",
+      ],
+    },
+  },
+  {
+    slug: "brig-dr-muhammad-tahir-nawaz",
+    name: "Brig. Dr. Muhammad Tahir Nawaz",
+    role: "Director Quality Assurance, National University of Technology (NUTECH)",
+    board: "advisory",
+    tier: "lead",
+    photo: "/images/advisory/tahir-nazaz.jpg",
+    profile: {
+      headline:
+        "Director Quality Assurance, National University of Technology (NUTECH) Islamabad. HEC-Approved PhD Supervisor, Performance Enhancement Advisor, and Author.",
+      qualification:
+        "PhD & MS in Engineering Management (UET Taxila) | BSc Electrical Engineering (UET Lahore) | BSc (Balochistan University)",
+      bio: [
+        "Dr. Muhammad Tahir Nawaz was born in Faisalabad on 2 October 1967. After his Matriculation from Faisalabad, BSc Degree from Balochistan University, and Graduation in Electrical Engineering from UET Lahore, he clinched an MS and PhD in Engineering Management from UET Taxila.",
+        "He has extensive experience in the management of technical organizations at national and international levels. He has also been deeply involved in various professional training schemes focused on organizational productivity enhancement, team building, effective management, and organizational productivity enhancement through female empowerment.",
+        "He has served as Head of the Engineering Management Department and Director Counselling and Student Affairs at NUST College of EME, as well as holding instructional, managerial, and executive positions at various training and service organizations. Presently, he serves as Director Quality Assurance at the National University of Technology (NUTECH), Islamabad.",
+        "An HEC-approved PhD supervisor and lifetime member of the Pakistan Engineering Council, he has contributed published research papers to national and international journals and supervised doctoral theses. He is frequently sought after as a guest speaker at seminars and conferences at military and higher educational institutions.",
+        "He is also a recognized author and motivator, having published two bilingual books: 'Moving Towards the Happy Lanes' and 'Tameer-e-Shakhsiyat Khushion Bhari Zindagi ka Aghaz'. His focus areas include personal mastery, happiness and success, total wellness, the art of positive living, and stress management.",
+      ],
+      highlights: [
+        { label: "Designation", value: "Director Quality Assurance" },
+        { label: "Institution", value: "NUTECH Islamabad" },
+        { label: "Doctorate", value: "PhD (UET Taxila)" },
+        { label: "Books Authored", value: "2 Published Books" },
+      ],
+      specializations: [
+        "Productivity Management",
+        "Conflict Management",
+        "Good Governance",
+        "Technology Management",
+        "Total Productivity Management",
+        "Human Resource Development (HRD)",
+        "Leadership",
+        "Organizational Behaviour",
+        "Business Management",
+        "Supply Chain Management",
+        "Marketing of Technology",
+        "Services Marketing",
+        "Total Quality Management (TQM)",
+        "Project Management",
+        "Conflict Resolution Management",
+        "Self Management",
+        "Stress Management",
+        "Attitude Building",
+        "Relationship Management",
+        "Building High-Performance Teams",
+        "Professional Ethics",
+        "Performance Audit",
+        "Management by Objectives",
+      ],
+      books: [
+        {
+          title: "Moving Towards the Happy Lanes",
+          bestSeller: true,
+        },
+        {
+          title: "Tameer-e-Shakhsiyat Khushion Bhari Zindagi ka Aghaz",
+          bestSeller: true,
+        },
+      ],
+      portfolio: [
+        {
+          role: "Director Quality Assurance",
+          organization: "National University of Technology (NUTECH), Islamabad",
+          description:
+            "Executive leadership ensuring institutional quality assurance frameworks, academic governance, and educational standards.",
+        },
+        {
+          role: "Former Head of Department & Director Counselling",
+          organization: "NUST College of EME",
+          description:
+            "Head of Engineering Management Department and Director Counselling and Student Affairs at NUST College of EME.",
+        },
+        {
+          role: "HEC-Approved PhD Supervisor & Lifetime Member",
+          organization:
+            "Higher Education Commission (HEC) & Pakistan Engineering Council",
+          description:
+            "Doctoral theses supervision, postgraduate research guidance, and lifetime contribution to engineering management.",
+        },
+      ],
+      memberships: [
+        "HEC-Approved PhD Supervisor",
+        "Lifetime Member, Pakistan Engineering Council",
+        "Director Quality Assurance, National University of Technology (NUTECH)",
       ],
     },
   },

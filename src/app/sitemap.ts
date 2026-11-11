@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/advisory-board`, lastModified: new Date() },
     { url: `${baseUrl}/programmes`, lastModified: new Date() },
     { url: `${baseUrl}/universities`, lastModified: new Date() },
+    { url: `${baseUrl}/unirazak-accreditation`, lastModified: new Date() },
     { url: `${baseUrl}/centers`, lastModified: new Date() },
     { url: `${baseUrl}/events-book`, lastModified: new Date() },
     { url: `${baseUrl}/testimonials`, lastModified: new Date() },

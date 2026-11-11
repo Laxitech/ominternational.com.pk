@@ -8,4 +8,7 @@ export interface Center {
   summary?: string;
   address?: string;
   contactName?: string;
+  phone?: string;
+  email?: string;
+  isInternational?: boolean;
 }

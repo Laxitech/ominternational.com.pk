@@ -17,6 +17,8 @@ const COMPANY_LINKS = [
   { label: "Why Study With Us", href: "/why-study-with-us" },
   { label: "Governing Board", href: "/governing-board" },
   { label: "Advisory Board", href: "/advisory-board" },
+  { label: "UNIRAZAK", href: "/universities/unirazak" },
+  { label: "UniRazak Accreditation", href: "/unirazak-accreditation" },
   { label: "INCEIF Collaboration", href: "/inceif" },
   { label: "Learning Centers", href: "/centers" },
   { label: "Events Book", href: "/events-book" },

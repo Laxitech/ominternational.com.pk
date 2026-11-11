@@ -46,6 +46,16 @@ export const navigation: NavigationItem[] = [
   {
     label: "UNIRAZAK",
     href: "/universities/unirazak",
+    children: [
+      {
+        label: "About UNIRAZAK",
+        href: "/universities/unirazak",
+      },
+      {
+        label: "UniRazak Accreditation",
+        href: "/unirazak-accreditation",
+      },
+    ],
   },
   { label: "INCEIF Collaboration", href: "/inceif" },
   { label: "Learning Centers", href: "/centers" },

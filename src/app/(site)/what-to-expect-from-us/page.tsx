@@ -46,7 +46,7 @@ export default function WhatToExpectFromUsPage() {
               Learning has no boundaries and our options are not limited by geography. Every programme we offer can be studied from anywhere in the world – you can study on your own, at your own pace and place, with or without attending classes.
             </p>
             <p>
-              Whichever study method you choose, you&rsquo;ll experience the same high quality, highly engaging programme of study. With nearly 30,000 students and 20,000 alumni, we offer a powerful network of like-minded individuals right across the globe and a learning experience that&rsquo;s both personalised and flexible.
+              Whichever study method you choose, you&rsquo;ll experience the same high quality, highly engaging programme of study. With nearly 15,000 active students studying from 37 different countries and 10,000+ graduate alumni, we offer a powerful network of like-minded individuals right across the globe and a learning experience that&rsquo;s both personalised and flexible.
             </p>
           </div>
 
@@ -57,8 +57,8 @@ export default function WhatToExpectFromUsPage() {
                 <Users className="size-5" />
               </span>
               <div>
-                <div className="font-display text-xl font-bold text-heading">Nearly 30,000</div>
-                <div className="text-xs text-body-muted">Active Global Students</div>
+                <div className="font-display text-xl font-bold text-heading">Nearly 15,000</div>
+                <div className="text-xs text-body-muted">Active Students from 37 Countries</div>
               </div>
             </div>
 
@@ -67,10 +67,23 @@ export default function WhatToExpectFromUsPage() {
                 <GraduationCap className="size-5" />
               </span>
               <div>
-                <div className="font-display text-xl font-bold text-heading">20,000+ Alumni</div>
-                <div className="text-xs text-body-muted">Graduates Worldwide</div>
+                <div className="font-display text-xl font-bold text-heading">10,000+</div>
+                <div className="text-xs text-body-muted">Graduate Alumni Worldwide</div>
               </div>
             </div>
+          </div>
+
+          {/* Global Students Map Section (Ready for map highlighting) */}
+          <div className="mt-6 rounded-2xl border border-dashed border-border bg-surface-alt/60 p-6 text-center">
+            <div className="inline-flex size-10 items-center justify-center rounded-xl bg-primary-subtle text-primary mb-3">
+              <Globe className="size-5" />
+            </div>
+            <h3 className="font-display text-base font-bold text-heading">
+              Global Student Community
+            </h3>
+            <p className="mt-1 text-xs sm:text-sm text-body max-w-xl mx-auto">
+              Nearly 15,000 active students studying from 37 different countries worldwide.
+            </p>
           </div>
         </section>
 

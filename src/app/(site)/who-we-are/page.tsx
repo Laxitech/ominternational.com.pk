@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Award, Building2, CheckCircle2, GraduationCap, ShieldCheck } from "lucide-react";
 import PageHeader from "@/components/shared/page-header";
+import ImpactNumbers from "@/components/shared/impact-numbers";
 
 export const metadata: Metadata = {
   title: "Who We Are | OM International",
   description:
-    "Learn about OM International, part of the OM Group of Companies. Pioneering accredited online degree pathways and partner university collaborations in Pakistan since 2015.",
+    "Learn about OM International, part of the OM Group of Companies. Pioneering accredited online degree pathways and partner university collaborations in Pakistan.",
 };
 
 export default function WhoWeArePage() {
@@ -14,7 +15,7 @@ export default function WhoWeArePage() {
     <main className="min-h-full bg-surface">
       <PageHeader
         title="Who We Are"
-        subtitle="Pioneering quality higher education opportunities and accredited Malaysian university partnerships across Pakistan since 2015."
+        subtitle="Pioneering quality higher education opportunities and accredited Malaysian university partnerships across Pakistan."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us", href: "/about" },
@@ -34,27 +35,27 @@ export default function WhoWeArePage() {
                 Part of the OM Group of Companies
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-body sm:text-base">
-                OM International is part of the OM Group of Companies, which deals in multiple business industries ranging from education, mining, technology and Human Resource Recruiting Services.
+                OM International is part of the OM Group of Companies, a highly diversified global business operating in finance, metals extraction &amp; processing, oil &amp; gas, international commodities trading, and human resource &amp; education services with an annual turnover of $3 billion USD and offices in London, Malaysia, Dubai, and Pakistan.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-subtle border border-primary-200 px-3 py-1 text-xs font-semibold text-primary">
-                  <CheckCircle2 className="size-3.5" /> Founded 2015
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-subtle border border-primary-200 px-3 py-1 text-xs font-semibold text-primary">
-                  <CheckCircle2 className="size-3.5" /> 10,000+ Graduates
+                  <CheckCircle2 className="size-3.5" /> 10,000 Graduates
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-subtle border border-primary-200 px-3 py-1 text-xs font-semibold text-primary">
                   <CheckCircle2 className="size-3.5" /> 12 Learning Centers
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-subtle border border-primary-200 px-3 py-1 text-xs font-semibold text-primary">
+                  <CheckCircle2 className="size-3.5" /> 5 Countries Facilitation Centers
                 </span>
               </div>
             </div>
 
             <div className="lg:col-span-7 space-y-6 text-sm leading-7 text-body sm:text-base">
               <p>
-                OM International has become a recognized name for providing quality online higher education opportunities since its inception in 2015. OM International has brought many notable names to Pakistan in the higher education sector from Malaysia.
+                OM International has become a recognized name for providing quality online higher education opportunities. OM International has brought many notable names to Pakistan in the higher education sector from Malaysia.
               </p>
               <p>
-                OM International Private Limited is headed by internationally renowned educationist <strong>Prof. Dr. Omar Masood</strong>. Prof. Masood has over 20 years of experience in teaching, consultancy, and senior administrative roles in some of the leading universities and financial institutions in the world. He has served as a lead advisor on finance, economy, and education (curriculum/skills development) for the Saudi Arabian, Malaysian, Turkish, and UK Governments.
+                OM International is headed by internationally renowned educationist <strong>Prof. Dr. Omar Masood</strong>, CEO of OM Group of Companies. Prof. Masood has over 20 years’ experience of teaching, consultancy, and administrative roles in leading universities including Oxford University and global financial institutions like HSBC and Goldman Sachs, as well as advising technology leaders like Intel and Microsoft. He has authored over 250 reviewed research papers and 16 books (6 international bestsellers).
               </p>
               <p>
                 Ever since the inception of OM International, our vision has been to embrace future trends in Higher Education from around the world and introduce them in Pakistan. After more than a decade of dedicated service, we have proudly achieved that goal by introducing accredited Online Degree Programmes to countless students across the length and breadth of the country.
@@ -64,7 +65,10 @@ export default function WhoWeArePage() {
         </div>
       </section>
 
-      {/* 2. Premier Partner University: UNIRAZAK */}
+      {/* 2. Reusable Numbering & Impact Section */}
+      <ImpactNumbers className="border-t border-border bg-surface-alt/40" />
+
+      {/* 3. Premier Partner University: UNIRAZAK */}
       <section className="border-y border-border bg-surface-alt py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -125,7 +129,7 @@ export default function WhoWeArePage() {
         </div>
       </section>
 
-      {/* 3. Our Facilitation Role */}
+      {/* 4. Our Facilitation Role */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-border bg-surface p-8 sm:p-12 shadow-sm text-center">
@@ -133,13 +137,13 @@ export default function WhoWeArePage() {
               <Building2 className="size-6" />
             </span>
             <h2 className="font-display text-2xl font-bold tracking-tight text-heading sm:text-3xl">
-              Transparent, Student-Centric Facilitation
+              Transparent, Student-Centric Facilitation Along with 5 (FIVE) International Centers
             </h2>
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-body max-w-3xl mx-auto">
               As the official facilitation partner of our partner university, OM International maintains complete academic independence: OM International has no role in marking, grading, checking, or evaluation in on-campus or distance learning programmes.
             </p>
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-body max-w-3xl mx-auto">
-              Our role is solely to provide seamless, end-to-end guidance, documentation review, counseling, and admission processing through our 12 facilitation centers nationwide at significantly discounted tuition rates, alongside our flagship international center at <strong>Edgware Road, Central London, United Kingdom</strong>.
+              Our role is solely to provide seamless, end-to-end guidance, documentation review, counseling, and admission processing through our 3 plus centers nationwide at significantly discounted tuition rates, <strong>Along with 5 (FIVE) International Centers</strong>.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

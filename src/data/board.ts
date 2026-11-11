@@ -13,6 +13,166 @@ export const ADVISORY_BOARD_INTRO =
 export const boardMembers: BoardMember[] = [
   // Governing Board
   {
+    slug: "mian-masood-ahmed",
+    name: "Mian Masood Ahmed",
+    role: "Chairman, OM Group of Companies",
+    board: "governing",
+    tier: "lead",
+    photo: "/images/management/Msood.jpeg",
+    profile: {
+      headline:
+        "Chairman of OM Group of Companies, distinguished industrialist, entrepreneur, and corporate leader with over five decades of executive leadership in business management, industrial development, and strategic planning.",
+      qualification:
+        "Distinguished Industrialist, Corporate Leader & Entrepreneur (Over 5 Decades Experience)",
+      bio: [
+        "Mian Masood Ahmed is a distinguished industrialist, entrepreneur, and corporate leader with over five decades of experience in business management, industrial development, and strategic leadership. Throughout his career, he has held senior leadership positions in several prominent business organisations, contributing to their growth and long-term success.",
+        "He currently serves as the Chairman of OM Group of Companies, where he provides strategic direction and leadership for the group's overall business operations and development.",
+        "His extensive professional experience includes serving as Chairman of Chrome Ore Services (Pvt.) Ltd. since 2012 and Chairman of Sunrise International since 1995. He has also been Managing Director of Akbar Textile Mill Ltd., Mirpur, Azad Jammu and Kashmir, since 1990. Earlier, he served as Managing Director of Nishat Mills Ltd., Faisalabad, from 1972 to 1990, and held the position of Director at Nishat Group. His experience in the textile and industrial sectors has provided him with substantial expertise in corporate governance, business operations, organisational management, and strategic planning.",
+        "With a distinguished professional journey spanning more than five decades, Mian Masood Ahmed brings extensive business knowledge, entrepreneurial vision, and leadership experience to the organisations he leads. His career reflects a longstanding commitment to business development, institutional growth, and sustainable enterprise management.",
+      ],
+      highlights: [
+        { label: "Leadership Experience", value: "50+ Years" },
+        { label: "Current Position", value: "Chairman" },
+        { label: "Key Sectors", value: "Industrial & Corporate" },
+      ],
+      specializations: [
+        "Corporate Governance & Board Leadership",
+        "Industrial Development & Manufacturing",
+        "Strategic Planning & Enterprise Growth",
+        "Business Operations & Management",
+        "Textile & Industrial Sector Expertise",
+        "Institutional Growth & Expansion",
+        "Sustainable Enterprise Management",
+      ],
+      portfolio: [
+        {
+          role: "Chairman",
+          organization: "OM Group of Companies",
+          description:
+            "Provides overarching strategic direction, corporate governance, and leadership for the group's business operations and educational development.",
+        },
+        {
+          role: "Chairman",
+          organization: "Chrome Ore Services (Pvt.) Ltd. (2012–Present)",
+          description:
+            "Executive leadership, strategic direction, and natural resource sector management.",
+        },
+        {
+          role: "Chairman",
+          organization: "Sunrise International (1995–Present)",
+          description:
+            "Strategic governance, international business operations, and enterprise expansion.",
+        },
+        {
+          role: "Managing Director",
+          organization: "Akbar Textile Mill Ltd., Mirpur, AJK (1990–Present)",
+          description:
+            "Executive management of textile mill operations, industrial manufacturing, and corporate administration.",
+        },
+        {
+          role: "Former Managing Director",
+          organization: "Nishat Mills Ltd., Faisalabad (1972–1990)",
+          description:
+            "Eighteen years of executive leadership driving textile production, industrial growth, and commercial operations.",
+        },
+        {
+          role: "Former Director",
+          organization: "Nishat Group",
+          description:
+            "Served as Director contributing to strategic planning, corporate governance, and conglomerate growth.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "prof-dr-omar-masood",
+    name: "Prof. Dr. Omar Masood",
+    role: "CEO, OM Group of Companies",
+    board: "governing",
+    tier: "lead",
+    photo: "/images/management/Dr Omer.jpeg",
+    profile: {
+      headline:
+        "Chief Executive Officer of OM Group of Companies, internationally renowned educationist, private equity expert, and lead advisor on finance, economy, and education to governments and global financial institutions.",
+      qualification:
+        "PhD / Internationally Renowned Educationist & Private Equity Expert (20+ Years Experience)",
+      bio: [
+        "Prof. Dr. Omar Masood is the Chief Executive Officer of OM Group of Companies. He is an internationally renowned educationist and private equity expert with over 20 years’ experience of teaching, consultancy, and administrative roles in some of the leading universities including Oxford University and leading financial institutions in the world.",
+        "He has worked as a financial advisor in areas of risk and private equity to premier institutions like HSBC and Goldman Sachs. He has also advised leading technology companies like Intel and Microsoft. Prof. Masood is the former Director of the Centre of Islamic Banking and Finance at the Royal Docks Business School, University of East London, United Kingdom.",
+        "Prof. Masood is the lead advisor and trainer in the areas of economy, privatization processes, financial risk management, and Islamic banking and finance worldwide to financial as well as academic institutions. He is a lead advisor on finance, economy, education (curriculum/skills development) and banking for Saudi Arabian, Malaysian, Turkish, and UK Governments.",
+        "Prof. Masood has authored over 250 reviewed internationally rated research papers, published in international journals and conferences. He has authored 16 books with all the leading publishers, 6 of which have been 'International Best Selling', including 'Truth about the Global Financial Crisis' and 'Multiplying Money through Financial Management'.",
+      ],
+      highlights: [
+        { label: "Executive Experience", value: "20+ Years" },
+        { label: "Research Papers", value: "250+ Published" },
+        { label: "Authored Books", value: "16 (6 Bestsellers)" },
+      ],
+      specializations: [
+        "Financial Risk Management & Private Equity",
+        "Islamic Banking & Finance",
+        "Higher Education Curriculum & Skills Development",
+        "Economic Policy & Privatisation Process",
+        "Government Advisory & Public Policy",
+        "Corporate Strategy & Financial Consultancy",
+        "Cross-Border University Partnerships",
+      ],
+      governmentsAdvised: [
+        "Government of the United Kingdom",
+        "Government of Malaysia",
+        "Government of Saudi Arabia",
+        "Government of Turkey",
+      ],
+      books: [
+        {
+          title: "Truth about the Global Financial Crisis",
+          bestSeller: true,
+        },
+        {
+          title: "Multiplying Money through Financial Management",
+          bestSeller: true,
+        },
+        {
+          title: "Author of 14 Additional Finance & Banking Volumes",
+          bestSeller: false,
+        },
+      ],
+      portfolio: [
+        {
+          role: "Chief Executive Officer",
+          organization: "OM International Private Limited",
+          description:
+            "Directs overall executive operations, global university partnerships, and nationwide facilitation center networks across Pakistan.",
+        },
+        {
+          role: "Former Director",
+          organization:
+            "Centre of Islamic Banking and Finance, Royal Docks Business School, University of East London, UK",
+          description:
+            "Led academic research, international conferences, and postgraduate curriculum in Islamic banking and finance.",
+        },
+        {
+          role: "Financial & Risk Advisor",
+          organization: "HSBC & Goldman Sachs",
+          description:
+            "Advised global investment banking institutions on financial risk management, asset allocation, and private equity transactions.",
+        },
+        {
+          role: "Technology Sector Advisor",
+          organization: "Intel & Microsoft",
+          description:
+            "Provided strategic consulting and financial advisory services to global enterprise technology corporations.",
+        },
+        {
+          role: "Lead Government Advisor",
+          organization:
+            "Governments of Saudi Arabia, Malaysia, Turkey & United Kingdom",
+          description:
+            "High-level policy advisor on finance, national economy, privatization processes, and education/curriculum development.",
+        },
+      ],
+    },
+  },
+  {
     slug: "brigadier-tahir-malik",
     name: "Brigadier Tahir Malik (Retd)",
     role: "Governing Board Member",
@@ -148,13 +308,13 @@ export const boardMembers: BoardMember[] = [
   {
     slug: "asad-shamim",
     name: "Asad Shamim",
-    role: "Trailblazing Visionary, Investor & Entrepreneur",
+    role: "Chairman Advisory Board",
     board: "advisory",
     tier: "lead",
     photo: "/images/advisory/asadshamim.jpeg",
     profile: {
       headline:
-        "Trailblazing Visionary, Investor, and One of the Most Influential British Pakistani Businessmen of His Generation.",
+        "Chairman Advisory Board, Trailblazing Visionary, Investor, and One of the Most Influential British Pakistani Businessmen of His Generation.",
       qualification:
         "British Pakistani Entrepreneur, Visionary Businessman, Investor and Philanthropist",
       bio: [
@@ -163,9 +323,9 @@ export const boardMembers: BoardMember[] = [
         "A passionate philanthropist and champion of sports diplomacy, he serves as Vice President of the International Football Association (IFA7) across the UK and UAE, championing grassroots youth football and athlete inclusivity. Among his celebrated philanthropic interventions, he notably supported British diabetic boxer Muhammad Ali in triumphantly securing his professional boxing licence.",
       ],
       highlights: [
+        { label: "Advisory Board", value: "Chairman" },
         { label: "Company Founded", value: "Furniture in Fashion" },
         { label: "Diplomatic Advisory", value: "UAE Royal Office" },
-        { label: "Global Role", value: "Vice President IFA7" },
       ],
       specializations: [
         "Entrepreneurship & Business Leadership",
@@ -178,6 +338,12 @@ export const boardMembers: BoardMember[] = [
         "Sports Diplomacy & Philanthropy",
       ],
       portfolio: [
+        {
+          role: "Chairman",
+          organization: "OM International Advisory Board",
+          description:
+            "Executive leadership of the Advisory Board, driving strategic international academic partnerships, institutional growth, and global advisory input.",
+        },
         {
           role: "Senior Advisor",
           organization: "His Highness Sheikh Ahmed Bin Faisal Al Qassimi",

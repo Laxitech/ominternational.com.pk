@@ -13,6 +13,7 @@ import {
   Mail,
 } from "lucide-react";
 import type { BoardMember } from "@/types/board";
+import { cn } from "@/lib/utils";
 
 interface BoardMemberProfileProps {
   member: BoardMember;
@@ -154,7 +155,12 @@ export default function BoardMemberProfile({
             </div>
 
             <div className="lg:col-span-5 xl:col-span-4">
-              <div className="relative mx-auto max-w-sm lg:ml-auto lg:mr-0">
+              <div
+                className={cn(
+                  "relative mx-auto lg:ml-auto lg:mr-0",
+                  !isGoverningMember ? "max-w-[220px]" : "max-w-sm",
+                )}
+              >
                 <div
                   aria-hidden="true"
                   className="absolute -inset-3 rounded-[2rem] border border-surface/10"

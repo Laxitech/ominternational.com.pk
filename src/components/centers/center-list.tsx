@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import type { Center } from "@/types/center";
 import { cn } from "@/lib/utils";
 
@@ -34,12 +34,16 @@ export default function CenterList({ centers }: { centers: Center[] }) {
                 <h2
                   className={cn(
                     "mt-2 text-balance font-display",
-                    "text-[clamp(2rem,5vw,4rem)] leading-none tracking-tight text-heading",
-                    "sm:text-[2.75rem] lg:text-[3rem] xl:text-[4rem]",
+                    "text-[clamp(1.75rem,4vw,2.75rem)] leading-tight tracking-tight text-heading",
                   )}
                 >
-                  {center.contactName ?? center.city}
+                  {center.name || center.city}
                 </h2>
+                {center.contactName && center.contactName !== center.name && (
+                  <p className="mt-1 text-sm font-semibold text-accent">
+                    Contact: {center.contactName}
+                  </p>
+                )}
                 {center.summary && (
                   <p className="mt-3 text-sm leading-relaxed text-body sm:text-base sm:leading-7">
                     {center.summary}
@@ -55,6 +59,32 @@ export default function CenterList({ centers }: { centers: Center[] }) {
                       </p>
                     </div>
                   </>
+                )}
+                {(center.phone || center.email) && (
+                  <div className="mt-3 flex flex-col gap-1.5 text-xs text-muted sm:text-sm">
+                    {center.phone && (
+                      <div className="flex items-center gap-2">
+                        <Phone className="size-3.5 shrink-0 text-accent" aria-hidden="true" />
+                        <a
+                          href={`tel:${center.phone.replace(/\s+/g, "")}`}
+                          className="hover:text-primary transition-colors"
+                        >
+                          {center.phone}
+                        </a>
+                      </div>
+                    )}
+                    {center.email && (
+                      <div className="flex items-center gap-2">
+                        <Mail className="size-3.5 shrink-0 text-accent" aria-hidden="true" />
+                        <a
+                          href={`mailto:${center.email}`}
+                          className="hover:text-primary transition-colors"
+                        >
+                          {center.email}
+                        </a>
+                      </div>
+                    )}
+                  </div>
                 )}
                 <Link
                   href="/contact"

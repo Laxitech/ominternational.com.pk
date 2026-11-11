@@ -2,8 +2,6 @@ import HeroCarousel from "@/components/home/hero-carousel";
 import WhoWeAre from "@/components/home/who-we-are";
 import FacilitationCenters from "@/components/home/facilitation-centers";
 import WeOfferPrograms from "@/components/home/we-offer-programs";
-import DegreeSamples from "@/components/home/degree-samples";
-import EventBookSections from "@/components/home/event-book-sections";
 import StatsStrip from "@/components/home/stats-strip";
 import AboutPreview from "@/components/home/about-preview";
 import PartnerUniversities from "@/components/home/partner-universities";
@@ -49,8 +47,6 @@ export default function HomePage() {
 
       <FacilitationCenters />
       <WeOfferPrograms />
-      <DegreeSamples />
-      <EventBookSections />
 
 
       {/* //comment out the StatsStrip component for now, as it is not needed in the current design */}

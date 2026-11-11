@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock, Compass, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, Compass, Laptop, ShieldCheck } from "lucide-react";
 import PageHeader from "@/components/shared/page-header";
 
 export const metadata: Metadata = {
@@ -124,6 +124,48 @@ export default function WhyStudyWithUsPage() {
                 &ldquo;You&rsquo;re fully supported – however, whenever and wherever you need it.&rdquo;
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Section 4: UROX (UNIRAZAK Online Experience) & Video Walk-through */}
+        <section aria-labelledby="section-urox-heading" className="rounded-3xl border border-border bg-surface p-8 sm:p-12 shadow-xs">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="inline-flex size-9 items-center justify-center rounded-xl bg-primary-subtle text-primary border border-primary-200">
+              <Laptop className="size-4.5" />
+            </span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-accent">
+              Learning Management System
+            </span>
+          </div>
+
+          <h2
+            id="section-urox-heading"
+            className="font-display text-2xl font-bold tracking-tight text-heading sm:text-3xl lg:text-4xl"
+          >
+            UROX (UNIRAZAK Online Experience)
+          </h2>
+
+          <div className="mt-6 space-y-4 text-sm sm:text-base leading-relaxed text-body">
+            <p>
+              UROX (UNIRAZAK Online Experience) is the award-winning Learning Management System (LMS) utilized by Universiti Tun Abdul Razak (UNIRAZAK). Built on the powerful, globally recognized Canvas LMS framework, the platform operates as a centralized hub for online and Open Distance Learning (ODL).
+            </p>
+            <p>
+              If you are looking for video walk-throughs or system demonstrations, UNIRAZAK provides video walk-throughs covering key features of the platform as below:
+            </p>
+          </div>
+
+          {/* YouTube Video Embed */}
+          <div
+            className="relative mt-8 w-full overflow-hidden rounded-2xl border border-border shadow-lg bg-surface-dark"
+            style={{ paddingBottom: "56.25%" }}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/EawawErYGpo"
+              title="UNIRAZAK Online Experience (UROX) Platform Walk-through"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full border-0"
+            />
           </div>
         </section>
 

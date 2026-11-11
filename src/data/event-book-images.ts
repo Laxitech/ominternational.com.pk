@@ -206,11 +206,6 @@ export const EVENT_BOOK_PHOTOS: EventPhoto[] = [
     "alt": "OM International Event photo 40"
   },
   {
-    "id": "event-photo-41",
-    "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.36 (1).jpeg",
-    "alt": "OM International Event photo 41"
-  },
-  {
     "id": "event-photo-42",
     "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.36.jpeg",
     "alt": "OM International Event photo 42"
@@ -221,26 +216,6 @@ export const EVENT_BOOK_PHOTOS: EventPhoto[] = [
     "alt": "OM International Event photo 43"
   },
   {
-    "id": "event-photo-44",
-    "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.37.jpeg",
-    "alt": "OM International Event photo 44"
-  },
-  {
-    "id": "event-photo-45",
-    "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.38 (1).jpeg",
-    "alt": "OM International Event photo 45"
-  },
-  {
-    "id": "event-photo-46",
-    "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.38.jpeg",
-    "alt": "OM International Event photo 46"
-  },
-  {
-    "id": "event-photo-47",
-    "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.39 (1).jpeg",
-    "alt": "OM International Event photo 47"
-  },
-  {
     "id": "event-photo-48",
     "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.39.jpeg",
     "alt": "OM International Event photo 48"
@@ -249,11 +224,6 @@ export const EVENT_BOOK_PHOTOS: EventPhoto[] = [
     "id": "event-photo-49",
     "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.40 (1).jpeg",
     "alt": "OM International Event photo 49"
-  },
-  {
-    "id": "event-photo-50",
-    "src": "/images/event-book-page/WhatsApp Image 2026-11-09 at 06.12.40 (2).jpeg",
-    "alt": "OM International Event photo 50"
   },
   {
     "id": "event-photo-51",

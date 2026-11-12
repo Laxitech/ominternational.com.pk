@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHeader from "@/components/shared/page-header";
 
 export const metadata: Metadata = {
@@ -59,6 +60,55 @@ export default function TestimonialsPage() {
 
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
+          {/* Section: Ashfaq Tola Testimonial */}
+          <div className="rounded-3xl border border-border bg-surface-alt p-6 sm:p-8 lg:p-10 shadow-xs">
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center gap-1.5 rounded-full   py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                Featured Endorsement
+              </span>
+              <h2 className="mt-3 font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-heading">
+                ASHFAQ TOLA TESTIMONIAL
+              </h2>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-body">
+                <span className="inline-flex items-center rounded-lg bg-surface px-3 py-1.5 border border-border shadow-2xs">
+                  Former Minister of State of the Islamic Republic of Pakistan
+                </span>
+                <span className="inline-flex items-center rounded-lg bg-surface px-3 py-1.5 border border-border shadow-2xs">
+                  Former President ICAP for the term 2022-2023
+                </span>
+                <span className="inline-flex items-center rounded-lg bg-surface px-3 py-1.5 border border-border shadow-2xs">
+                  Member of the ICAP&apos;s Council since 2017
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8 items-start">
+              <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/40">
+                <div className="relative w-full overflow-hidden bg-secondary">
+                  <Image
+                    src="/images/testimonials/AshfaqTola1.jpeg"
+                    alt="Ashfaq Tola Testimonial"
+                    width={1200}
+                    height={901}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/40">
+                <div className="relative w-full overflow-hidden bg-secondary">
+                  <Image
+                    src="/images/testimonials/AshfaqTola2.jpeg"
+                    alt="Ashfaq Tola Testimonial"
+                    width={1080}
+                    height={1350}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Section: Video Testimonials from Students */}
           <div>
             <div className="mb-8">

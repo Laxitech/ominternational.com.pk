@@ -181,15 +181,13 @@ export const boardMembers: BoardMember[] = [
     photo: "/images/management/Brig-Tahir.jpeg",
     profile: {
       headline:
-        "Advisor, OM Group of Companies. Military officer and strategic leader with over three decades of service in the Pakistan Army.",
+        "Advisor, OM Group of Companies. Seasoned military officer and strategic leader with over three decades of distinguished service in the Pakistan Army.",
       qualification:
         "Over three decades of service in the Pakistan Army",
       bio: [
-        "Military officer and strategic leader with over three decades of service in the Pakistan Army.",
-        "Experienced in leading and executing high-impact national projects in collaboration with various arms of the Government of Pakistan.",
-        "Extensive leadership in defense planning, operational command, infrastructure development, national security strategy, and inter-agency coordination.",
-        "Spearheaded mega projects after retirement from active military service.",
-        "Currently serves as Advisor to OM Group of Companies. Continues to play an advisory role on national projects, contributing to Pakistan's long-term strategic planning and development goals.",
+        "Brigadier Tahir Malik (Retd) is a seasoned military officer and strategic leader with over three decades of distinguished service in the Pakistan Army, complemented by extensive experience in leading and executing high-impact, high-level national projects in collaboration with various arms of the Government of Pakistan. He is Advisor of OM Group of Companies.",
+        "Throughout his career, Brigadier Tahir Malik has demonstrated exceptional leadership in defense planning, operational command, infrastructure development, national security strategy, and inter-agency coordination. After retiring from active military service, he continued to serve the nation by spearheading multiple mega projects in sectors such as infrastructure, security, governance reform, and public sector transformation.",
+        "Known for his results-driven approach, Brigadier Tahir brings together the discipline of military leadership with the complexity of civilian project execution. His expertise in stakeholder engagement, policy execution, and crisis management has earned him deep respect across both military and civilian institutions. He continues to play a key advisory role on national projects, contributing to Pakistan’s long-term strategic planning and development goals.",
       ],
       highlights: [
         { label: "Designation", value: "Advisor, OM Group" },

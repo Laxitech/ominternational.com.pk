@@ -2,16 +2,12 @@
 
 import {
   Award,
-  Building2,
   Calendar,
   Globe,
   GraduationCap,
 } from "lucide-react";
 import type { University } from "@/types/university";
 import type { Programme } from "@/types/programme";
-import { useInView } from "@/hooks/use-in-view";
-import { useCountUp } from "@/hooks/use-count-up";
-import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { cn } from "@/lib/utils";
 
 type UniversityFactsProps = {
@@ -30,20 +26,7 @@ type FactItem = {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 };
 
-function AnimatedFactCard({
-  fact,
-  index,
-  active,
-}: {
-  fact: FactItem;
-  index: number;
-  active: boolean;
-}) {
-  const { display, isComplete } = useCountUp(fact.targetNumber, {
-    duration: 1500,
-    start: active,
-  });
-
+function FactCard({ fact }: { fact: FactItem }) {
   const Icon = fact.icon;
 
   return (
@@ -52,9 +35,7 @@ function AnimatedFactCard({
         "group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-border",
         "bg-gradient-to-b from-surface via-surface to-secondary/30 p-6 sm:p-7 shadow-xs",
         "transition-all duration-300 hover:-translate-y-1.5 hover:border-primary-300 hover:shadow-xl",
-        active ? "stat-rise" : "opacity-0 motion-reduce:opacity-100",
       )}
-      style={active ? { animationDelay: `${index * 120}ms` } : undefined}
     >
       {/* Subtle ambient light glow on hover */}
       <div
@@ -74,26 +55,23 @@ function AnimatedFactCard({
           </span>
         </div>
 
-        {/* Counter & Value */}
-        <div className="mt-6">
-          <p
-            className="font-serif text-[clamp(2.25rem,4.5vw,3.25rem)] font-bold tracking-tight text-heading tabular-nums leading-none transition-colors duration-300 group-hover:text-primary"
-            aria-label={`${fact.prefix ?? ""}${fact.targetNumber}${fact.suffix ?? ""} ${fact.label}`}
-          >
-            {fact.prefix && <span>{fact.prefix}</span>}
-            <span aria-hidden="true">{display}</span>
+        {/* Value & Label (Fixed: robust typography, no shrinking) */}
+        <div className="mt-6 shrink-0">
+          <div className="flex items-baseline gap-1.5 flex-wrap">
+            {fact.prefix && (
+              <span className="font-display text-2xl sm:text-3xl font-bold text-accent shrink-0">
+                {fact.prefix}
+              </span>
+            )}
+            <span className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-heading transition-colors duration-300 group-hover:text-primary shrink-0">
+              {fact.targetNumber}
+            </span>
             {fact.suffix && (
-              <span
-                aria-hidden="true"
-                className={cn(
-                  "ml-0.5 align-top text-[0.55em] text-accent transition-opacity duration-300",
-                  isComplete ? "opacity-100" : "opacity-0",
-                )}
-              >
+              <span className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-accent shrink-0">
                 {fact.suffix}
               </span>
             )}
-          </p>
+          </div>
 
           <h3 className="mt-2 text-base font-semibold text-heading transition-colors group-hover:text-primary">
             {fact.label}
@@ -125,16 +103,9 @@ export default function UniversityFacts({
   university,
   programmes,
 }: UniversityFactsProps) {
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const { ref: sectionRef, inView } = useInView<HTMLElement>({ threshold: 0.15 });
-  const active = prefersReducedMotion || inView;
-
   const uniProgrammes = programmes.filter(
     (programme) => programme.universitySlug === university.slug,
   );
-  const schoolCount =
-    university.schools?.length ||
-    new Set(uniProgrammes.map((programme) => programme.schoolSlug)).size;
   const modeCount = university.modes.length;
 
   const facts: FactItem[] = [
@@ -146,7 +117,6 @@ export default function UniversityFacts({
       badge: "Legacy",
       icon: Calendar,
     },
-
     {
       id: "programmes",
       targetNumber: uniProgrammes.length > 0 ? uniProgrammes.length : 15,
@@ -169,7 +139,6 @@ export default function UniversityFacts({
 
   return (
     <section
-      ref={sectionRef}
       aria-labelledby="university-facts-heading"
       className="relative isolate overflow-hidden border-b border-border bg-gradient-to-b from-secondary/40 via-secondary/20 to-surface py-12 sm:py-16 lg:py-20"
     >
@@ -185,34 +154,24 @@ export default function UniversityFacts({
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
-          <div>
-
-            <h2
-              id="university-facts-heading"
-              className={cn(
-                "text-balance font-serif",
-                "text-[clamp(1.75rem,4vw,2.5rem)] leading-[1.18]",
-                "font-semibold tracking-tight text-heading",
-                "sm:text-[2.5rem]",
-              )}
-            >
-              Academic Capacity &amp; Global Standing
-            </h2>
-          </div>
-
-
+        <div className="mb-10 sm:mb-12">
+          <h2
+            id="university-facts-heading"
+            className={cn(
+              "text-balance font-serif",
+              "text-[clamp(1.75rem,4vw,2.5rem)] leading-[1.18]",
+              "font-semibold tracking-tight text-heading",
+              "sm:text-[2.5rem]",
+            )}
+          >
+            Academic Capacity &amp; Global Standing
+          </h2>
         </div>
 
-        {/* Animated Fact Cards Grid */}
+        {/* Fact Cards Grid */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
-          {facts.map((fact, index) => (
-            <AnimatedFactCard
-              key={fact.id}
-              fact={fact}
-              index={index}
-              active={active}
-            />
+          {facts.map((fact) => (
+            <FactCard key={fact.id} fact={fact} />
           ))}
         </div>
       </div>

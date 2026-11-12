@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { WhatsappIcon } from "@/components/shared/whatsapp-icon";
 import type { Center } from "@/types/center";
 import { cn } from "@/lib/utils";
 
@@ -60,30 +61,69 @@ export default function CenterList({ centers }: { centers: Center[] }) {
                     </div>
                   </>
                 )}
-                {(center.phone || center.email) && (
+                {(center.phone || center.phones || center.whatsapp || center.email || center.emails) && (
                   <div className="mt-3 flex flex-col gap-1.5 text-xs text-muted sm:text-sm">
+                    {center.whatsapp && (
+                      <div className="flex items-center gap-2">
+                        <WhatsappIcon className="size-3.5 shrink-0 text-success" aria-hidden="true" />
+                        <a
+                          href={`https://wa.me/${center.whatsapp.replace(/[^0-9]/g, "")}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 hover:text-primary transition-colors font-medium"
+                        >
+                          <span>{center.whatsapp}</span>
+                          <span className="rounded-sm bg-success-50 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-success">
+                            WhatsApp
+                          </span>
+                        </a>
+                      </div>
+                    )}
                     {center.phone && (
                       <div className="flex items-center gap-2">
                         <Phone className="size-3.5 shrink-0 text-accent" aria-hidden="true" />
                         <a
                           href={`tel:${center.phone.replace(/\s+/g, "")}`}
-                          className="hover:text-primary transition-colors"
+                          className="hover:text-primary transition-colors font-medium"
                         >
                           {center.phone}
                         </a>
                       </div>
                     )}
-                    {center.email && (
+                    {center.phones?.map((p) => (
+                      <div key={p} className="flex items-center gap-2">
+                        <Phone className="size-3.5 shrink-0 text-accent" aria-hidden="true" />
+                        <a
+                          href={`tel:${p.replace(/\s+/g, "")}`}
+                          className="hover:text-primary transition-colors font-medium"
+                        >
+                          {p}
+                        </a>
+                      </div>
+                    ))}
+                    {center.emails && center.emails.length > 0 ? (
+                      center.emails.map((email) => (
+                        <div key={email} className="flex items-center gap-2">
+                          <Mail className="size-3.5 shrink-0 text-accent" aria-hidden="true" />
+                          <a
+                            href={`mailto:${email}`}
+                            className="hover:text-primary transition-colors break-all"
+                          >
+                            {email}
+                          </a>
+                        </div>
+                      ))
+                    ) : center.email ? (
                       <div className="flex items-center gap-2">
                         <Mail className="size-3.5 shrink-0 text-accent" aria-hidden="true" />
                         <a
                           href={`mailto:${center.email}`}
-                          className="hover:text-primary transition-colors"
+                          className="hover:text-primary transition-colors break-all"
                         >
                           {center.email}
                         </a>
                       </div>
-                    )}
+                    ) : null}
                   </div>
                 )}
                 <Link

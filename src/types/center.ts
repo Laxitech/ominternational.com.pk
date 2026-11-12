@@ -9,6 +9,9 @@ export interface Center {
   address?: string;
   contactName?: string;
   phone?: string;
+  phones?: string[];
+  whatsapp?: string;
   email?: string;
+  emails?: string[];
   isInternational?: boolean;
 }

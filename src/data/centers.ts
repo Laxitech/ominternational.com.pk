@@ -13,6 +13,13 @@ export const centers: Center[] = [
       "Our head office team advises students on programme choice, entry requirements and the admissions process for our partner universities.",
     address:
       "OM Building, Plot 1B, Street-2, Al-Fatah Market, G-9/3, Islamabad.",
+    whatsapp: "+92 300 8370568",
+    phone: "+92 51 8438171",
+    email: "Headoffice@ominternational.com.pk",
+    emails: [
+      "Headoffice@ominternational.com.pk",
+      "Ceo@ominternational.com.pk",
+    ],
   },
   {
     id: "london",

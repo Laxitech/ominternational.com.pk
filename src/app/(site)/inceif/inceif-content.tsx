@@ -402,9 +402,11 @@ export default function InceifContent() {
                 <span className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
                   Online · Weekend
                 </span>
-                <span className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
-                  {final ? "Final Assessment" : "Assessment Included"}
-                </span>
+
+                {final && <span className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
+                  {final ? "Final Assessment" : null}
+                </span>}
+
               </div>
             </div>
           ))}
@@ -538,6 +540,18 @@ export default function InceifContent() {
               who have built Shariah-compliant institutions from the inside —
               starting with the programme&apos;s lead advisor.
             </p>
+
+            <div className="mt-6 sm:mt-8">
+              <div className="relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl border border-border bg-secondary shadow-sm">
+                <Image
+                  src="/images/DrOmer2.jpeg"
+                  alt="Prof. Dr. Omar Masood"
+                  fill
+                  sizes="(min-width: 1024px) 280px, 260px"
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
           </div>
 
           <article className="rounded-3xl border border-border bg-surface p-6 shadow-xs sm:p-8 lg:col-span-8 lg:p-10">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, ArrowRight, Phone, Mail, Globe2 } from "lucide-react";
+import { WhatsappIcon } from "@/components/shared/whatsapp-icon";
 import { centers } from "@/data/centers";
 import { cn } from "@/lib/utils";
 
@@ -82,8 +83,22 @@ export default function FacilitationCenters() {
               </div>
 
               {/* Contact Info (Phone / Email) */}
-              {(center.phone || center.email) && (
+              {(center.phone || center.phones || center.whatsapp || center.email || center.emails) && (
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-muted mt-4 pt-3 border-t border-border">
+                  {center.whatsapp && (
+                    <div className="flex items-center gap-1.5">
+                      <WhatsappIcon className="size-3.5 text-success shrink-0" aria-hidden="true" />
+                      <a
+                        href={`https://wa.me/${center.whatsapp.replace(/[^0-9]/g, "")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors font-medium inline-flex items-center gap-1"
+                      >
+                        <span>{center.whatsapp}</span>
+                        <span className="text-[10px] font-semibold text-success bg-success-50 px-1 py-0.5 rounded">WhatsApp</span>
+                      </a>
+                    </div>
+                  )}
                   {center.phone && (
                     <div className="flex items-center gap-1.5">
                       <Phone className="size-3.5 text-accent shrink-0" aria-hidden="true" />
@@ -95,7 +110,30 @@ export default function FacilitationCenters() {
                       </a>
                     </div>
                   )}
-                  {center.email && (
+                  {center.phones?.map((p) => (
+                    <div key={p} className="flex items-center gap-1.5">
+                      <Phone className="size-3.5 text-accent shrink-0" aria-hidden="true" />
+                      <a
+                        href={`tel:${p.replace(/\s+/g, "")}`}
+                        className="hover:text-primary transition-colors font-medium"
+                      >
+                        {p}
+                      </a>
+                    </div>
+                  ))}
+                  {center.emails && center.emails.length > 0 ? (
+                    center.emails.map((email) => (
+                      <div key={email} className="flex items-center gap-1.5">
+                        <Mail className="size-3.5 text-accent shrink-0" aria-hidden="true" />
+                        <a
+                          href={`mailto:${email}`}
+                          className="hover:text-primary transition-colors font-medium"
+                        >
+                          {email}
+                        </a>
+                      </div>
+                    ))
+                  ) : center.email ? (
                     <div className="flex items-center gap-1.5">
                       <Mail className="size-3.5 text-accent shrink-0" aria-hidden="true" />
                       <a
@@ -105,7 +143,7 @@ export default function FacilitationCenters() {
                         {center.email}
                       </a>
                     </div>
-                  )}
+                  ) : null}
                 </div>
               )}
             </li>

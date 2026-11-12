@@ -60,6 +60,6 @@ export const faqs: FAQItem[] = [
     category: "Contact",
     question: "How can I get in touch with the admissions team?",
     answer:
-      "You can submit the contact form on this page, send an email to ceo@ominternational.com.pk, or contact our support lines to book an online or in-person advisory session at any of our learning centers across Pakistan.",
+      "You can submit the contact form on this page, send an email to learning@ominternational.com.pk, or contact our support lines to book an online or in-person advisory session at any of our learning centers across Pakistan.",
   },
 ];

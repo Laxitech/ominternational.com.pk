@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
@@ -100,6 +101,24 @@ export default async function UniversityPage({
           </a>
         )}
       </PageHeader>
+
+      {/* Raw image for UNIRAZAK right after page header */}
+      {slug === "unirazak" && (
+        <section className="bg-surface pt-8 pb-4 sm:pt-12 sm:pb-6">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="overflow-hidden rounded-2xl border border-border bg-surface-alt shadow-xs">
+              <Image
+                src="/images/AboutUni.jpeg"
+                alt="About UNIRAZAK"
+                width={1080}
+                height={786}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 2. Key Facts Strip */}
       <UniversityFacts university={university} programmes={programmes} />

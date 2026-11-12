@@ -18,7 +18,7 @@ export const centers: Center[] = [
     email: "Headoffice@ominternational.com.pk",
     emails: [
       "Headoffice@ominternational.com.pk",
-      "Ceo@ominternational.com.pk",
+      "learning@ominternational.com.pk",
     ],
   },
   {
@@ -31,7 +31,9 @@ export const centers: Center[] = [
     isInternational: true,
     summary:
       "Our flagship international center supports students based in the United Kingdom and Europe who wish to study with our partner universities.",
-    address: "Om International Edgware Road London",
+    address:
+      "M D Omer & Co, Chartered Certified Accountant & Registered Auditor, OM International, Office 207, Second floor, Old Marylebone Road/ Edgware Road , London, NW1 5RA, UK",
+    phone: "+44 7940 756986",
   },
   {
     id: "syria",

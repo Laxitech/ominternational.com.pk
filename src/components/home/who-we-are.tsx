@@ -69,7 +69,7 @@ export default function WhoWeAre() {
           <p>
             <strong className="font-semibold text-heading">OM International</strong> is offering following programmes in Pakistan through its facilitation centres across Pakistan. OM International has opened its international offices in{" "}
             <strong className="font-semibold text-heading">Malaysia, Dubai, Syria</strong> as well as its flagship international facilitation centre at{" "}
-            <strong className="font-semibold text-heading">Edgware Road, Central London, United Kingdom</strong>.
+            <strong className="font-semibold text-heading">OM International, Office 207, Second floor, Old Marylebone Road/ Edgware Road , London, NW1 5RA, UK</strong>.
           </p>
         </div>
       </div>

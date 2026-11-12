@@ -29,7 +29,7 @@ const MODES: StudyModeItem[] = [
     features: [
       "Study from Pakistan without relocating",
       "Weekend & evening live academic lectures",
-      "Local OM International exam center proctoring",
+      "Local Facilitation from OM international",
     ],
     Icon: Laptop,
   },

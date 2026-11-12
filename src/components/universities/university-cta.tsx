@@ -3,6 +3,8 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
+import { WhatsappIcon } from "@/components/shared/whatsapp-icon";
+
 
 type UniversityCtaProps = {
   universityName?: string;
@@ -79,11 +81,33 @@ export default function UniversityCta({
                     Official Inquiries Email
                   </p>
                   <a
-                    href={`mailto:${contact.email}`}
+                    href={`mailto:${contact.learning}`}
                     className="text-sm text-surface font-medium hover:text-gold transition-colors"
                   >
-                    {contact.email}
+                    {contact.learning}
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 border-t border-surface/10 pt-4">
+                <WhatsappIcon className="size-5 shrink-0 text-success mt-0.5" aria-hidden="true" />
+                <div>
+                  <p className="text-xs font-semibold text-surface/70 uppercase tracking-wider">
+                    WhatsApp Advisory
+                  </p>
+                  <div className="mt-1">
+                    <a
+                      href={`https://wa.me/${contact.whatsapp.replace(/[^0-9]/g, "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-medium text-surface transition-colors hover:text-gold"
+                    >
+                      <span className="text-sm font-semibold">{contact.whatsapp}</span>
+                      <span className="rounded-sm bg-success-50 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-success">
+                        WhatsApp
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -93,14 +117,18 @@ export default function UniversityCta({
                   <p className="text-xs font-semibold text-surface/70 uppercase tracking-wider">
                     Direct Helpline
                   </p>
-                  <p className="text-sm text-surface font-medium">
+                  <a
+                    href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}
+                    className="mt-1 inline-block text-sm font-semibold text-surface transition-colors hover:text-gold"
+                  >
                     {contact.phoneDisplay}
-                  </p>
+                  </a>
                   <p className="mt-0.5 text-xs text-surface/70">
                     {contact.hours}
                   </p>
                 </div>
               </div>
+
 
               <div className="flex items-start gap-3 border-t border-surface/10 pt-4">
                 <MapPin className="size-5 shrink-0 text-primary-200 mt-0.5" aria-hidden="true" />

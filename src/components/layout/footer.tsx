@@ -70,8 +70,7 @@ export default function Footer() {
 
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-300/90 sm:text-[15px]">
               OM International facilitates accelerated academic degree pathways with premier
-              Malaysian universities, connecting professional qualifications with accredited global
-              degrees.
+              Malaysian universities, connecting professional qualifications with World Class Global Degrees.
             </p>
 
             {/* 5 Circular Solid White Social Buttons */}

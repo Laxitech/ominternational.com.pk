@@ -15,7 +15,7 @@ export default function HomePage() {
     <main>
       <HeroCarousel images={getCarouselImages()} />
       <WhoWeAre />
-
+      <WeOfferPrograms />
 
       {/* OM intro video — after Programmes */}
       <section className="bg-surface py-12 sm:py-16 lg:py-20">
@@ -46,7 +46,6 @@ export default function HomePage() {
       </section>
 
       <FacilitationCenters />
-      <WeOfferPrograms />
 
 
       {/* //comment out the StatsStrip component for now, as it is not needed in the current design */}
